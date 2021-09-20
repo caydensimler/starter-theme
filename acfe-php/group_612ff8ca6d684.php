@@ -223,12 +223,20 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_61453b9d4d12d',
-			'label' => 'Vertically Alignment',
-			'name' => 'grid_item_vertically-alignment',
+			'label' => 'Vertical Alignment',
+			'name' => 'grid_item_vertical-alignment',
 			'type' => 'button_group',
 			'instructions' => 'Vertically align elements in the same row in regards to the tallest row.',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_613a8cde9bc94',
+						'operator' => '==',
+						'value' => 'standard',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -273,7 +281,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'settings' => 'Settings',
 	),
-	'modified' => 1632112544,
+	'modified' => 1632162660,
 ));
 
 endif;

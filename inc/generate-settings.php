@@ -97,6 +97,7 @@ function generateSettings($settings) {
 		}
 	}
 
+
 	// Custom Classes
 	if (get_sub_field('container_classes')) {
 		$wrapperClasses .= get_sub_field('container_classes') . ' ';
@@ -111,6 +112,7 @@ function generateSettings($settings) {
 			$wrapperClasses .= get_sub_field('content_wrapper_classes')['content_wrapper_class'] . ' ';
 		}
 	}
+
 
 	// Horizontal Alignment
 	if (get_sub_field('alignment')) { $wrapperClasses .= horizontalAlignment(get_sub_field('alignment')) . ' '; }

@@ -219,12 +219,20 @@
         },
         {
             "key": "field_61453b9d4d12d",
-            "label": "Vertically Alignment",
-            "name": "grid_item_vertically-alignment",
+            "label": "Vertical Alignment",
+            "name": "grid_item_vertical-alignment",
             "type": "button_group",
             "instructions": "Vertically align elements in the same row in regards to the tallest row.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_613a8cde9bc94",
+                        "operator": "==",
+                        "value": "standard"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -266,7 +274,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1632112544,
+    "modified": 1632162660,
     "acfe_categories": {
         "settings": "Settings"
     }
