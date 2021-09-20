@@ -441,18 +441,23 @@ div.sub-menu .menu-container ul > li {
 /* ------------------------------------------ */
 /* Theme Styles ----------------------------- */
 /* ------------------------------------------ */
-#content hr {
+
+/* Line Separator Component */
+.component.line-separator-component hr {
   margin-bottom: 1rem; margin-top: 1rem;
 }
 
-div.text-component:last-of-type > div > * {
+/* Text Component */
+.component.text-component:last-of-type > div > * {
   margin-bottom: 0px;
 }
 
-#content .box-shadow-1 {
-  box-shadow: 2px 2px 6px rgba(0,0,0,.5);
-}
-
+/* Link Component */
 .component.link-component button { padding: 0; }
 .component.link-component a.button { padding: 15px 30px; }
 .component.link-component a.link { background-color: none; }
+
+/* List Component */
+.component.list-component > ul { margin-left: 10px; list-style-position: inside; }
+
+.component.list-component > ul li.list-icon { background-size: 20px; padding: 5px 0px 5px 35px; }

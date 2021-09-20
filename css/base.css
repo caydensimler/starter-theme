@@ -986,3 +986,15 @@ input[type="submit"],
   .mobile-ls-center { margin-left: auto !important; margin-right: auto !important; }
   .mobile-ls-right  { margin-right: 0 !important; margin-left: auto !important; }
 }
+
+
+
+
+/* ------------------------------------------ */
+/* Miscellaneous ---------------------------- */
+/* ------------------------------------------ */
+.list-style-none { list-style-type: none; }
+
+li.list-icon { background-position: left center; background-repeat: no-repeat; background-size: contain; }
+ul.list-circle { list-style-type: circle; }
+ul.list-square { list-style-type: square; }

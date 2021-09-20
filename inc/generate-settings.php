@@ -124,6 +124,24 @@ function generateSettings($settings) {
 		$contentStyles .= $sizing;
 	}
 
+	// List Style Type
+	if (get_sub_field('list_style_type')) {
+		$listStyle = get_sub_field('list_style_type');
+
+		if ($listStyle !== 'unset' && $listStyle !== 'icon' && $listStyle !== 'custom') {
+			$wrapperClasses .= 'list-' . $listStyle . ' ';
+		} elseif ($listStyle == 'custom') {
+			$wrapperStyles .= 'list-style-type: \'' . get_sub_field('custom_list_style') . '\'; ';
+			$wrapperClasses .= 'list-custom ';
+		} elseif ($listStyle == 'icon') {
+			if (get_sub_field('list_icon')) {
+				$contentStyles .= 'background-image: url(' . get_sub_field('list_icon') . '); ';
+				$wrapperClasses .= 'list-style-none ';
+				$contentClasses .= 'list-icon ';
+			}
+		}
+	}
+
 	// Responsive Display
 	if (get_sub_field('responsive_display')) { $wrapperClasses .= generateResponsiveDisplay(get_sub_field('responsive_display')) . ' '; }
 

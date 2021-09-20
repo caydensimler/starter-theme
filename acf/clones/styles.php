@@ -8,9 +8,9 @@
 	}
 
 	if ($settingsArray['wrapper-classes']) {
-		$gridWrapperClasses = substr($settingsArray['wrapper-classes'], 0, -1) . ' clearfix"';
+		$gridWrapperClasses = substr($settingsArray['wrapper-classes'], 0, -1) . '"';
 	} else {
-		$gridWrapperClasses = 'class="clearfix"';
+		$gridWrapperClasses = '';
 	}
 ?>
 
