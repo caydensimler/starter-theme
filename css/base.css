@@ -353,6 +353,7 @@ input[type="submit"],
 .max-width-3    { max-width: 48rem; }
 .max-width-4    { max-width: 64rem; }
 
+.max-width-300  { max-width: 300px; }
 .max-width-400  { max-width: 400px; }
 .max-width-500  { max-width: 500px; }
 .max-width-600  { max-width: 600px; }
@@ -985,3 +986,15 @@ input[type="submit"],
   .mobile-ls-center { margin-left: auto !important; margin-right: auto !important; }
   .mobile-ls-right  { margin-right: 0 !important; margin-left: auto !important; }
 }
+
+
+
+
+/* ------------------------------------------ */
+/* Miscellaneous ---------------------------- */
+/* ------------------------------------------ */
+.list-style-none { list-style-type: none; }
+
+li.list-icon { background-position: left center; background-repeat: no-repeat; background-size: contain; }
+ul.list-circle { list-style-type: circle; }
+ul.list-square { list-style-type: square; }

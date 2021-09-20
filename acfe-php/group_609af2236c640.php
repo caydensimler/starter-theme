@@ -141,6 +141,74 @@ acf_add_local_field_group(array(
 							'acfe_flexible_thumbnail' => false,
 							'acfe_flexible_modal_edit_size' => false,
 						),
+						'layout_6148facf16347' => array(
+							'key' => 'layout_6148facf16347',
+							'name' => 'list',
+							'label' => 'List',
+							'display' => 'block',
+							'sub_fields' => array(
+								array(
+									'key' => 'field_6148fae116348',
+									'label' => 'List Items',
+									'name' => 'list_items',
+									'type' => 'repeater',
+									'instructions' => '',
+									'required' => 0,
+									'conditional_logic' => 0,
+									'wrapper' => array(
+										'width' => '',
+										'class' => '',
+										'id' => '',
+									),
+									'acfe_repeater_stylised_button' => 0,
+									'collapsed' => 'field_6148faef16349',
+									'min' => 1,
+									'max' => 0,
+									'layout' => 'block',
+									'button_label' => 'Add List Item',
+									'sub_fields' => array(
+										array(
+											'key' => 'field_6148faef16349',
+											'label' => 'Item',
+											'name' => 'item',
+											'type' => 'text',
+											'instructions' => '',
+											'required' => 0,
+											'conditional_logic' => 0,
+											'wrapper' => array(
+												'width' => '',
+												'class' => '',
+												'id' => '',
+											),
+											'default_value' => '',
+											'placeholder' => '',
+											'prepend' => '',
+											'append' => '',
+											'maxlength' => '',
+										),
+									),
+								),
+							),
+							'min' => '',
+							'max' => '',
+							'acfe_flexible_category' => array(
+								0 => 'Basic',
+							),
+							'acfe_flexible_settings' => array(
+								0 => 'group_6148f7cd423b2',
+								1 => 'group_613fcf2ca952e',
+								2 => 'group_613fc3855ad6c',
+								3 => 'group_613efa13331d6',
+								4 => 'group_613fce1fc2c57',
+								5 => 'group_6147fc6e7869a',
+							),
+							'acfe_flexible_settings_size' => 'large',
+							'acfe_flexible_render_template' => false,
+							'acfe_flexible_render_style' => false,
+							'acfe_flexible_render_script' => false,
+							'acfe_flexible_thumbnail' => false,
+							'acfe_flexible_modal_edit_size' => false,
+						),
 						'layout_6147ff7cae6bc' => array(
 							'key' => 'layout_6147ff7cae6bc',
 							'name' => 'wysiwyg',
@@ -503,7 +571,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'layout' => 'Layout',
 	),
-	'modified' => 1632112328,
+	'modified' => 1632172816,
 ));
 
 endif;
