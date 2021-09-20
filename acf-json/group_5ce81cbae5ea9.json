@@ -1,0 +1,131 @@
+{
+    "key": "group_5ce81cbae5ea9",
+    "title": "Layout Settings",
+    "fields": [
+        {
+            "key": "field_6145071e7de85",
+            "label": "Background Options",
+            "name": "background_options",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_614504eb5a3ac"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_61450c93abfa1",
+            "label": "Advanced Properties",
+            "name": "advanced_properties",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_613fce1fc2c57"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_6148113251828",
+            "label": "Content & Content Wrapper Classes",
+            "name": "content_&_content_wrapper_classes",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_6147fc6e7869a"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_6148129ece0dd",
+            "label": "Content Width",
+            "name": "content_width",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_61451e3801d09"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "content-block"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "!=",
+                "value": "block-type:sub-menu"
+            }
+        ],
+        [
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "category:uncategorized"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "tooltip",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "Used in addition to ACF: Extended, the Layouts settings include options for updating background attributes, responsiveness, sizing, and spacing for each layout or group of layouts added to a page.",
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "php",
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1632113326,
+    "acfe_categories": {
+        "settings": "Settings"
+    }
+}

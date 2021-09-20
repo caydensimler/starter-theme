@@ -1,0 +1,148 @@
+<?php 
+
+if( function_exists('acf_add_local_field_group') ):
+
+acf_add_local_field_group(array(
+	'key' => 'group_613fc3855ad6c',
+	'title' => 'Horizontal Alignment',
+	'fields' => array(
+		array(
+			'key' => 'field_6147a85475212',
+			'label' => 'Horizontal Alignment',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_613fc3fee2c4c',
+			'label' => 'Alignment',
+			'name' => 'alignment',
+			'type' => 'group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'layout' => 'block',
+			'acfe_seamless_style' => 1,
+			'acfe_group_modal' => 0,
+			'sub_fields' => array(
+				array(
+					'key' => 'field_613fc406e2c4d',
+					'label' => 'Desktop',
+					'name' => 'desktop',
+					'type' => 'button_group',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33',
+						'class' => '',
+						'id' => '',
+					),
+					'choices' => array(
+						'unset' => 'Unset',
+						'left-align' => '«',
+						'center' => 'Center',
+						'right-align' => '»',
+					),
+					'allow_null' => 0,
+					'default_value' => 'unset',
+					'layout' => 'horizontal',
+					'return_format' => 'value',
+				),
+				array(
+					'key' => 'field_613fc440e2c4e',
+					'label' => 'Tablet',
+					'name' => 'tablet',
+					'type' => 'button_group',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33',
+						'class' => '',
+						'id' => '',
+					),
+					'choices' => array(
+						'unset' => 'Unset',
+						'tablet-left-align' => '«',
+						'tablet-center' => 'Center',
+						'tablet-right-align' => '»',
+					),
+					'allow_null' => 0,
+					'default_value' => 'unset',
+					'layout' => 'horizontal',
+					'return_format' => 'value',
+				),
+				array(
+					'key' => 'field_613fc45ee2c4f',
+					'label' => 'Mobile',
+					'name' => 'mobile',
+					'type' => 'button_group',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '33',
+						'class' => '',
+						'id' => '',
+					),
+					'choices' => array(
+						'unset' => 'Unset',
+						'mobile-left-align' => '«',
+						'mobile-center' => 'Center',
+						'mobile-right-align' => '»',
+					),
+					'allow_null' => 0,
+					'default_value' => 'unset',
+					'layout' => 'horizontal',
+					'return_format' => 'value',
+				),
+			),
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'post',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'left',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => false,
+	'description' => '',
+	'acfe_display_title' => '',
+	'acfe_autosync' => array(
+		0 => 'php',
+		1 => 'json',
+	),
+	'acfe_form' => 0,
+	'acfe_meta' => '',
+	'acfe_note' => '',
+	'acfe_categories' => array(
+		'settings' => 'Settings',
+	),
+	'modified' => 1632112179,
+));
+
+endif;
