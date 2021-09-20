@@ -150,6 +150,37 @@ acf_add_local_field_group(array(
 			),
 		),
 		array(
+			'key' => 'field_61453b9d4d12d',
+			'label' => 'Vertical Alignment',
+			'name' => 'grid_item_vertical-alignment',
+			'type' => 'button_group',
+			'instructions' => 'Vertically align elements in the same row in regards to the tallest row.',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_613a8cde9bc94',
+						'operator' => '==',
+						'value' => 'standard',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'unset' => 'Top',
+				'valign-center' => 'Center',
+				'valign-bottom' => 'Bottom',
+			),
+			'allow_null' => 0,
+			'default_value' => '',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+		),
+		array(
 			'key' => 'field_613a99412a66f',
 			'label' => 'Masonry Layout',
 			'name' => 'masonry_layout',
@@ -222,18 +253,18 @@ acf_add_local_field_group(array(
 			'maxlength' => '',
 		),
 		array(
-			'key' => 'field_61453b9d4d12d',
-			'label' => 'Vertical Alignment',
-			'name' => 'grid_item_vertical-alignment',
-			'type' => 'button_group',
-			'instructions' => 'Vertically align elements in the same row in regards to the tallest row.',
+			'key' => 'field_6148eb66768bc',
+			'label' => 'Masonry ID',
+			'name' => 'masonry_id',
+			'type' => 'text',
+			'instructions' => 'ID used to create the Masonry layout inside theme.js',
 			'required' => 0,
 			'conditional_logic' => array(
 				array(
 					array(
 						'field' => 'field_613a8cde9bc94',
 						'operator' => '==',
-						'value' => 'standard',
+						'value' => 'masonry',
 					),
 				),
 			),
@@ -242,15 +273,11 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => '',
 			),
-			'choices' => array(
-				'unset' => 'Top',
-				'valign-center' => 'Center',
-				'valign-bottom' => 'Bottom',
-			),
-			'allow_null' => 0,
 			'default_value' => '',
-			'layout' => 'horizontal',
-			'return_format' => 'value',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
 		),
 	),
 	'location' => array(
@@ -281,7 +308,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'settings' => 'Settings',
 	),
-	'modified' => 1632162660,
+	'modified' => 1632168844,
 ));
 
 endif;

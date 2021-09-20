@@ -21,8 +21,16 @@
 			$mobileColumns = 'mobile-display-grid' . $mobileColumnCount;
 
 			$wrapperClasses .= 'content-grid ' . $desktopColumns . ' ' . $tabletColumns . ' ' . $mobileColumns . ' ';
+			$masonryID = '';
 		} elseif ($gridType == 'masonry') {
 			$contentClasses .= 'content-grid masonry ' . $masonryLayout;
+
+			if (get_sub_field('masonry_id')) {
+				$masonryID = 'id="' . get_sub_field('masonry_id') . '"';
+			} else {
+				$masonryID = '';
+			}
+
 		}
 	}
 
@@ -43,7 +51,7 @@
 endwhile; ?>
 
 <?php if (have_rows('grid_items')): ?>
-	<div <?= $wrapperClasses; ?>>
+	<div <?= $wrapperClasses; ?> <?= $masonryID; ?>>
 
 
 		<?php while(have_rows('grid_items')) : the_row(); ?>

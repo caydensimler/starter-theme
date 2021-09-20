@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_6147fc888047f",
-            "label": "Content & Content Wrapper Class(es)",
+            "label": "Content & Content Wrapper",
             "name": "content_wrapper_classes",
             "type": "group",
             "instructions": "",
@@ -85,7 +85,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1632108469,
+    "modified": 1632169147,
     "acfe_categories": {
         "settings": "Settings"
     }
