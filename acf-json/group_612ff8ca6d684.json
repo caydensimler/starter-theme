@@ -146,6 +146,37 @@
             ]
         },
         {
+            "key": "field_61453b9d4d12d",
+            "label": "Vertical Alignment",
+            "name": "grid_item_vertical-alignment",
+            "type": "button_group",
+            "instructions": "Vertically align elements in the same row in regards to the tallest row.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_613a8cde9bc94",
+                        "operator": "==",
+                        "value": "standard"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "unset": "Top",
+                "valign-center": "Center",
+                "valign-bottom": "Bottom"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
             "key": "field_613a99412a66f",
             "label": "Masonry Layout",
             "name": "masonry_layout",
@@ -218,18 +249,18 @@
             "maxlength": ""
         },
         {
-            "key": "field_61453b9d4d12d",
-            "label": "Vertical Alignment",
-            "name": "grid_item_vertical-alignment",
-            "type": "button_group",
-            "instructions": "Vertically align elements in the same row in regards to the tallest row.",
+            "key": "field_6148eb66768bc",
+            "label": "Masonry ID",
+            "name": "masonry_id",
+            "type": "text",
+            "instructions": "ID used to create the Masonry layout inside theme.js",
             "required": 0,
             "conditional_logic": [
                 [
                     {
                         "field": "field_613a8cde9bc94",
                         "operator": "==",
-                        "value": "standard"
+                        "value": "masonry"
                     }
                 ]
             ],
@@ -238,15 +269,11 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "unset": "Top",
-                "valign-center": "Center",
-                "valign-bottom": "Bottom"
-            },
-            "allow_null": 0,
             "default_value": "",
-            "layout": "horizontal",
-            "return_format": "value"
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -274,7 +301,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1632162660,
+    "modified": 1632168844,
     "acfe_categories": {
         "settings": "Settings"
     }

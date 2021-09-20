@@ -21,29 +21,37 @@
 			$mobileColumns = 'mobile-display-grid' . $mobileColumnCount;
 
 			$wrapperClasses .= 'content-grid ' . $desktopColumns . ' ' . $tabletColumns . ' ' . $mobileColumns . ' ';
+			$masonryID = '';
 		} elseif ($gridType == 'masonry') {
 			$contentClasses .= 'content-grid masonry ' . $masonryLayout;
+
+			if (get_sub_field('masonry_id')) {
+				$masonryID = 'id="' . get_sub_field('masonry_id') . '"';
+			} else {
+				$masonryID = '';
+			}
+
 		}
 	}
 
-	if (get_sub_field('grid_item_classes')) {
-		$contentClasses .= get_sub_field('grid_item_classes') . ' ';
-	}
-
-	if (get_sub_field('grid_container_classes')) {
-		$wrapperClasses .= get_sub_field('grid_container_classes') . ' ';
-	}
+	if (get_sub_field('grid_container_classes')) { $wrapperClasses .= get_sub_field('grid_container_classes') . ' '; }
+	if (get_sub_field('grid_item_classes')) { $contentClasses .= get_sub_field('grid_item_classes') . ' '; }
 
 	if (get_sub_field('grid_item_vertically-alignment') !== 'unset' && get_sub_field('grid_type') == 'standard') {
 		$contentClasses .= get_sub_field('grid_item_vertical-alignment') . ' ';
 	}
 
 	$contentClasses = rtrim($contentClasses) . '"';
-	$wrapperClasses = rtrim($wrapperClasses) . '"';
+	if (strlen($wrapperClasses) > 7) {
+		$wrapperClasses = rtrim($wrapperClasses) . '"';
+	} else {
+		$wrapperClasses = '';
+	}
+
 endwhile; ?>
 
 <?php if (have_rows('grid_items')): ?>
-	<div <?= $wrapperClasses; ?>>
+	<div <?= $wrapperClasses; ?> <?= $masonryID; ?>>
 
 
 		<?php while(have_rows('grid_items')) : the_row(); ?>

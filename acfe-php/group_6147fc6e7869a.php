@@ -8,7 +8,7 @@ acf_add_local_field_group(array(
 	'fields' => array(
 		array(
 			'key' => 'field_6147fc888047f',
-			'label' => 'Content & Content Wrapper Class(es)',
+			'label' => 'Content & Content Wrapper',
 			'name' => 'content_wrapper_classes',
 			'type' => 'group',
 			'instructions' => '',
@@ -92,7 +92,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'settings' => 'Settings',
 	),
-	'modified' => 1632108469,
+	'modified' => 1632169147,
 ));
 
 endif;
