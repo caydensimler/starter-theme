@@ -3,7 +3,9 @@
 get_header();
 
 	// Content Wrapper
-	if (get_field('content_wrapper_classes')) { echo '<div class="custom-content-wrapper ' . get_field('content_wrapper_classes') . '">'; }
+	if (get_field('content_wrapper_classes')) {
+		echo '<div class="custom-content-wrapper ' . get_field('content_wrapper_classes') . '">';
+	}
 
 		// Page Banner
 		get_template_part('acf/layouts/page-banner');
