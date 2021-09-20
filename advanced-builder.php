@@ -2,8 +2,6 @@
 // Template Name: Advanced Builder
 get_header();
 
-	// Test github integration.
-
 	// Content Wrapper
 	if (get_field('content_wrapper_classes')) { echo '<div class="custom-content-wrapper ' . get_field('content_wrapper_classes') . '">'; }
 
