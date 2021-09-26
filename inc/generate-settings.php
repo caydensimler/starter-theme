@@ -98,20 +98,13 @@ function generateSettings($settings) {
 	}
 
 
-	// Custom Classes
-	if (get_sub_field('container_classes')) {
-		$wrapperClasses .= get_sub_field('container_classes') . ' ';
-	}
+	// Layout Class(es)
+	if (get_sub_field('layout_wrapper_classes')) { $wrapperClasses .= get_sub_field('layout_wrapper_classes') . ' '; }
+	if (get_sub_field('layout_classes')) { $contentClasses .= get_sub_field('layout_classes') . ' '; }
 
-	if (get_sub_field('content_wrapper_classes')) {
-		if (get_sub_field('content_wrapper_classes')['content_class']) {
-			$contentClasses .= get_sub_field('content_wrapper_classes')['content_class'] . ' ';
-		}
-
-		if (get_sub_field('content_wrapper_classes')['content_wrapper_class']) {
-			$wrapperClasses .= get_sub_field('content_wrapper_classes')['content_wrapper_class'] . ' ';
-		}
-	}
+	// Content Class(es)
+	if (get_sub_field('content_classes')) { $contentClasses .= get_sub_field('content_classes') . ' '; }
+	if (get_sub_field('content_wrapper_classes')) { $wrapperClasses .= get_sub_field('content_wrapper_classes') . ' '; }
 
 
 	// Horizontal Alignment

@@ -45,9 +45,9 @@
             "prefix_name": 0
         },
         {
-            "key": "field_6148113251828",
-            "label": "Content & Content Wrapper Classes",
-            "name": "content_&_content_wrapper_classes",
+            "key": "field_614fefa42570f",
+            "label": "Layout Class(es)",
+            "name": "layout_classes",
             "type": "clone",
             "instructions": "",
             "required": 0,
@@ -58,7 +58,7 @@
                 "id": ""
             },
             "clone": [
-                "group_6147fc6e7869a"
+                "group_614fee02432fb"
             ],
             "display": "seamless",
             "layout": "block",
@@ -124,7 +124,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1632113326,
+    "modified": 1632628702,
     "acfe_categories": {
         "settings": "Settings"
     }

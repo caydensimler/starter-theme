@@ -859,43 +859,61 @@ input[type="submit"],
 
 
 /* ------------------------------------------ */
-/* BaseCSS Display Grid --------------------- */
+/* Display Grid --------------------- */
 /* ------------------------------------------ */
-.display-grid1 { display: grid; grid-template-columns: repeat(1, 100%); }
-.display-grid2 { display: grid; grid-template-columns: repeat(2, 50%); }
-.display-grid3 { display: grid; grid-template-columns: repeat(3, 33.3333334%); }
-.display-grid4 { display: grid; grid-template-columns: repeat(4, 25%); }
-.display-grid5 { display: grid; grid-template-columns: repeat(5, 20%); }
-.display-grid6 { display: grid; grid-template-columns: repeat(6, 16.6666667%); }
+.display-grid { display: grid; }
+
+.dg-1 { grid-template-columns: 1fr; }
+.dg-2 { grid-template-columns: 1fr 1fr; }
+.dg-3 { grid-template-columns: repeat(3, 1fr); }
+.dg-4 { grid-template-columns: repeat(4, 1fr); }
+.dg-5 { grid-template-columns: repeat(5, 1fr); }
+.dg-6 { grid-template-columns: repeat(6, 1fr); }
+
+.dg-1-2 { grid-template-columns: 1fr 2fr; }
+.dg-1-3 { grid-template-columns: 1fr 3fr; }
+.dg-1-4 { grid-template-columns: 1fr 4fr; }
+.dg-2-1 { grid-template-columns: 2fr 1fr; }
+.dg-2-3 { grid-template-columns: 2fr 3fr; }
+.dg-3-1 { grid-template-columns: 3fr 1fr; }
+.dg-3-2 { grid-template-columns: 3fr 2fr; }
+.dg-4-1 { grid-template-columns: 4fr 1fr; }
+
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .display-grid4 { grid-template-columns: repeat(2, 50%); }
-  .display-grid5 { grid-template-columns: repeat(3, 33.3333334%); }
-  .display-grid6 { grid-template-columns: repeat(4, 25%); }
+  .tablet-dg-1 { grid-template-columns: 1fr; }
+  .tablet-dg-2 { grid-template-columns: 1fr 1fr; }
+  .tablet-dg-3 { grid-template-columns: repeat(3, 1fr); }
+  .tablet-dg-4 { grid-template-columns: repeat(4, 1fr); }
+  .tablet-dg-5 { grid-template-columns: repeat(5, 1fr); }
+  .tablet-dg-6 { grid-template-columns: repeat(6, 1fr); }
 
-  .tablet-display-grid1 { display: grid; grid-template-columns: repeat(1, 100%); }
-  .tablet-display-grid2 { display: grid; grid-template-columns: repeat(2, 50%); }
-  .tablet-display-grid3 { display: grid; grid-template-columns: repeat(3, 33.3333334%); }
-  .tablet-display-grid4 { display: grid; grid-template-columns: repeat(4, 25%); }
-  .tablet-display-grid5 { display: grid; grid-template-columns: repeat(5, 20%); }
-  .tablet-display-grid6 { display: grid; grid-template-columns: repeat(6, 16.6666667%); }
+  .tablet-dg-1-2 { grid-template-columns: 1fr 2fr; }
+  .tablet-dg-1-3 { grid-template-columns: 1fr 3fr; }
+  .tablet-dg-1-4 { grid-template-columns: 1fr 4fr; }
+  .tablet-dg-2-1 { grid-template-columns: 2fr 1fr; }
+  .tablet-dg-2-3 { grid-template-columns: 2fr 3fr; }
+  .tablet-dg-3-1 { grid-template-columns: 3fr 1fr; }
+  .tablet-dg-3-2 { grid-template-columns: 3fr 2fr; }
+  .tablet-dg-4-1 { grid-template-columns: 4fr 1fr; }
 }
 
 @media (max-width: 767px) {
-  .display-grid3,
-  .display-grid2,
-  .display-grid4,
-  .display-grid5,
-  .display-grid6 {
-    grid-template-columns: auto;
-  }
+  .mobile-dg-1 { grid-template-columns: 1fr; }
+  .mobile-dg-2 { grid-template-columns: 1fr 1fr; }
+  .mobile-dg-3 { grid-template-columns: repeat(3, 1fr); }
+  .mobile-dg-4 { grid-template-columns: repeat(4, 1fr); }
+  .mobile-dg-5 { grid-template-columns: repeat(5, 1fr); }
+  .mobile-dg-6 { grid-template-columns: repeat(6, 1fr); }
 
-  .mobile-display-grid1 { display: grid; grid-template-columns: repeat(1, 100%); }
-  .mobile-display-grid2 { display: grid; grid-template-columns: repeat(2, 50%); }
-  .mobile-display-grid3 { display: grid; grid-template-columns: repeat(3, 33.3333334%); }
-  .mobile-display-grid4 { display: grid; grid-template-columns: repeat(4, 25%); }
-  .mobile-display-grid5 { display: grid; grid-template-columns: repeat(5, 20%); }
-  .mobile-display-grid6 { display: grid; grid-template-columns: repeat(6, 16.6666667%); }
+  .mobile-dg-1-2 { grid-template-columns: 1fr 2fr; }
+  .mobile-dg-1-3 { grid-template-columns: 1fr 3fr; }
+  .mobile-dg-1-4 { grid-template-columns: 1fr 4fr; }
+  .mobile-dg-2-1 { grid-template-columns: 2fr 1fr; }
+  .mobile-dg-2-3 { grid-template-columns: 2fr 3fr; }
+  .mobile-dg-3-1 { grid-template-columns: 3fr 1fr; }
+  .mobile-dg-3-2 { grid-template-columns: 3fr 2fr; }
+  .mobile-dg-4-1 { grid-template-columns: 4fr 1fr; }
 }
 
 
