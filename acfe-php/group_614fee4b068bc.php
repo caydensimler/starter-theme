@@ -3,19 +3,19 @@
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
-	'key' => 'group_6147fc6e7869a',
-	'title' => 'Content Class(es)',
+	'key' => 'group_614fee4b068bc',
+	'title' => 'Grid Class(es)',
 	'fields' => array(
 		array(
-			'key' => 'field_6147fcb080481',
-			'label' => 'Content Wrapper Class',
-			'name' => 'content_wrapper_classes',
+			'key' => 'field_614fee4e4bed6',
+			'label' => 'Grid Wrapper Class(es)',
+			'name' => 'grid_wrapper_classes',
 			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
-				'width' => '50',
+				'width' => '',
 				'class' => '',
 				'id' => '',
 			),
@@ -26,15 +26,15 @@ acf_add_local_field_group(array(
 			'maxlength' => '',
 		),
 		array(
-			'key' => 'field_6147fca180480',
-			'label' => 'Content Class',
-			'name' => 'content_classes',
+			'key' => 'field_614fee544bed7',
+			'label' => 'Grid Item Class(es)',
+			'name' => 'grid_item_classes',
 			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
-				'width' => '50',
+				'width' => '',
 				'class' => '',
 				'id' => '',
 			),
@@ -73,7 +73,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'settings' => 'Settings',
 	),
-	'modified' => 1632628573,
+	'modified' => 1632628588,
 ));
 
 endif;
