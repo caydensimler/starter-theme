@@ -19,6 +19,4 @@ By integrating a kind of content-out development strategy, I've happened upon a 
 
 ### Layered Content Generation
 
-In order to propertly generate content, I've created the Advanced Builder template. This is the top-level file for adding content to a page. At the top of `/advanced-builder.php` ...
-
-1.
+...
