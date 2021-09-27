@@ -4,7 +4,7 @@ This is a starter theme that builds on top of the [GeneratePress Child Theme by 
 
 ## Changelog
 
-I use to have a dope changelog that I maintained in the early days of developing this. You can find those in the /changelogs folder. Note though that those changelogs are very old and a lot has changed since then. If I can figure out how to push the old version of a theme that I have saved to this repository I will as a different branch so the comparisons can be made. Actually I might just try to do that right now. That sounds fun.
+I use to have a dope changelog that I maintained in the early days of developing this. You can find those in the /changelogs folder and the old theme is in branch "v1.0".
 
 ## Core Concepts
 
@@ -13,4 +13,10 @@ I use to have a dope changelog that I maintained in the early days of developing
 3. Add-On Library
 4. Minimize Duplicate CSS
 
-I'll add more once I try getting the old version of this theme into a different branch.
+### Reusability and Scalability
+
+By integrating a kind of content-out development strategy, I've happened upon a MVC framework-type theme. The ACF data inputted on the backend acts as the Model, the theme templating files that generate content (stuff like acf/content/text and inc/generate-settings) reperesent the View, and WordPress acts as the Controller between the two.
+
+### Layered Content Generation
+
+...

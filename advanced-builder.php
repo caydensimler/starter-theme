@@ -3,8 +3,9 @@
 get_header();
 
 	// Content Wrapper
-	if (get_field('content_wrapper_classes')) {
-		echo '<div class="custom-content-wrapper ' . get_field('content_wrapper_classes') . '">';
+
+	if (get_post_meta(get_the_ID(), 'content_wrapper_classes', true)) {
+		echo '<div class="custom-content-wrapper ' . get_post_meta(get_the_ID(), 'content_wrapper_classes', true) . '">';
 	}
 
 		// Page Banner
