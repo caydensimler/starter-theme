@@ -2,6 +2,7 @@
 
 This is a child theme for the [GeneratePress](https://generatepress.com/) WordPress theme. I found myself using the same conventions over and over, so I thought it would be best standardize and include them here.
 
+<<<<<<< Updated upstream
 If you've never heard of GeneratePress, it's a solid, flexible, and lightweight "framework" theme that allows developers to get the most common components up and running quickly. It also includes lots of [hooks](https://generatepress.com/knowledgebase/hook-list/) and [filters](https://generatepress.com/knowledgebase/filter-list/) to help customize and extend.
 
 GeneratePress itself is free, but I highly recommend the [premium add-ons](https://generatepress.com/premium/). It's easily money well spent.
@@ -83,3 +84,17 @@ Lightweight Grid Columns is an outstanding plugin for creating grid columns with
 - [Autoptimize](https://wordpress.org/plugins/autoptimize/)
 - ~~[Display Widgets](https://wordpress.org/plugins/display-widgets/)~~
 - ~~[Black Studio TinyMCE Widget](https://wordpress.org/plugins/black-studio-tinymce-widget/)~~
+=======
+## Changelog
+
+I use to have a dope changelog that I maintained in the early days of developing this. You can find those in the /changelogs folder. Note though that those changelogs are very old and a lot has changed since then. If I can figure out how to push the old version of a theme that I have saved to this repository I will as a different branch so the comparisons can be made. Actually I might just try to do that right now. That sounds fun.
+
+## Core Concepts
+
+1. Reusability and Scalability
+2. Layered Content Generation
+3. Add-On Library
+4. Minimize Duplicate CSS
+
+I'll add more once I try getting the old version of this theme into a different branch.
+>>>>>>> Stashed changes
