@@ -1,0 +1,56 @@
+{
+    "key": "group_5bb7cf7827155",
+    "title": "Partials",
+    "fields": [
+        {
+            "key": "field_5bb7cf8e9d077",
+            "label": "Partial",
+            "name": "partial",
+            "type": "text",
+            "instructions": "This is the name of the file inside your partials folder that correlates to this part. For example, if your partial that you need is named 'cta-small.php', set this to 'cta-small'.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "reusable_parts"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1551376344
+}

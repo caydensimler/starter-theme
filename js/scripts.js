@@ -1,0 +1,255 @@
+/*global jQuery*/
+
+document.addEventListener("DOMContentLoaded",
+    function() {
+        var div, n,
+            v = document.getElementsByClassName("youtube-player");
+        for (n = 0; n < v.length; n++) {
+            div = document.createElement("div");
+            div.setAttribute("data-id", v[n].dataset.id);
+            div.innerHTML = labnolThumb(v[n].dataset.id);
+            div.onclick = labnolIframe;
+            v[n].appendChild(div);
+        }
+    });
+
+function labnolThumb(id) {
+    var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
+        play = '<div class="play"></div>';
+    return thumb.replace("ID", id) + play;
+}
+
+function labnolIframe() {
+    var iframe = document.createElement("iframe");
+    var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+    iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allowfullscreen", "1");
+    this.parentNode.replaceChild(iframe, this);
+}
+
+jQuery(document).ready(function ($) {
+  'use strict'
+
+  // Reverse stuff when necessary
+  $.fn.reverse = [].reverse;
+
+  // =========================================
+  // FIX LIGHTWEIGHT GRID COLUMN SPACING
+  // -----------------------------------------
+  if ($('.lgc-clear').length) {
+    $('.lgc-clear').each(function() {
+      $(this).prevAll('.lgc-column').reverse().wrapAll('<div class="lgc-row"></div>');
+    });
+  }
+
+  // Reset grid column height after Gravity Forms ajax submit
+  $(document).bind('gform_post_render', function() {
+    $('.lgc-equal-heights').matchHeight();
+  });
+
+  // =========================================
+  // SCROLL DOWN ON CLICK
+  // -----------------------------------------
+  $('.scroll-to').on('click', function (event) {
+    var target = $(this).attr('href');
+    if (target.length) {
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: $(target).offset().top
+      }, 1000);
+    }
+  });
+
+  // =========================================
+  // ACF GOOGLE MAP
+  // https://www.advancedcustomfields.com/resources/google-map/
+  // -----------------------------------------
+
+  (function($) {
+
+  /*
+  *  new_map
+  *
+  *  This function will render a Google Map onto the selected jQuery element
+  *
+  *  @type	function
+  *  @date	8/11/2013
+  *  @since	4.3.0
+  *
+  *  @param	$el (jQuery element)
+  *  @return	n/a
+  */
+
+  function new_map( $el ) {
+
+    // var
+    var $markers = $el.find('.marker');
+
+    // vars
+    var args = {
+      zoom: 16,
+      center: new google.maps.LatLng(0, 0),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    // create map
+    var map = new google.maps.Map( $el[0], args);
+
+    // add a markers reference
+    map.markers = [];
+
+    // add markers
+    $markers.each(function() {
+      add_marker( $(this), map );
+    });
+
+    // center map
+    center_map( map );
+
+    // return
+    return map;
+
+  }
+
+  /*
+  *  add_marker
+  *
+  *  This function will add a marker to the selected Google Map
+  *
+  *  @type function
+  *  @date 8/11/2013
+  *  @since 4.3.0
+  *
+  *  @param $marker (jQuery element)
+  *  @param map (Google Map object)
+  *  @return n/a
+  */
+
+  function add_marker( $marker, map ) {
+
+    // var
+    var latlng = new google.maps.LatLng( $marker.attr('data-lat'), $marker.attr('data-lng') );
+
+    // create marker
+    var marker = new google.maps.Marker({
+      position: latlng,
+      map: map
+    });
+
+    // add to array
+    map.markers.push( marker );
+
+    // if marker contains HTML, add it to an infoWindow
+    if( $marker.html() ) {
+      // create info window
+      var infowindow = new google.maps.InfoWindow({
+        content: $marker.html()
+      });
+
+      // show info window when marker is clicked
+      google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open( map, marker );
+      });
+    }
+
+  }
+
+  /*
+  *  center_map
+  *
+  *  This function will center the map, showing all markers attached to this map
+  *
+  *  @type function
+  *  @date 8/11/2013
+  *  @since 4.3.0
+  *
+  *  @param map (Google Map object)
+  *  @return n/a
+  */
+
+  function center_map( map ) {
+
+    // vars
+    var bounds = new google.maps.LatLngBounds();
+
+    // loop through all markers and create bounds
+    $.each( map.markers, function( i, marker ) {
+      var latlng = new google.maps.LatLng( marker.position.lat(), marker.position.lng() );
+      bounds.extend( latlng );
+    });
+
+    // only 1 marker?
+    if( map.markers.length == 1 ) {
+      // set center of map
+      map.setCenter( bounds.getCenter() );
+      map.setZoom( 16 );
+    } else {
+      // fit to bounds
+      map.fitBounds( bounds );
+    }
+
+  }
+
+  /*
+  *  document ready
+  *
+  *  This function will render each map when the document is ready (page has loaded)
+  *
+  *  @type function
+  *  @date 8/11/2013
+  *  @since 5.0.0
+  *
+  *  @param n/a
+  *  @return n/a
+  */
+  // global var
+  var map = null;
+
+  $(document).ready(function() {
+    $('.acf-map').each(function(){
+      // create map
+      map = new_map( $(this) );
+    });
+  });
+
+  })(jQuery);
+
+})
+
+jQuery(document).ready(function($){
+  if ($('#logo-slider')) {
+    var $slidesToShow = $('.slider-attributes').data('slides-to-show');
+    var $slidesToScroll = $('.slider-attributes').data('slides-to-scroll');
+    var $arrows = $('.slider-attributes').data('arrows');
+    var $dots = $('.slider-attributes').data('dots');
+    var $scrollStyle = $('.slider-attributes').data('scroll-style');
+    var $centerMode = $('.slider-attributes').data('center-mode');
+    var $autoplay = $('.slider-attributes').data('autoplay');
+    var $autoplaySpeed = $('.slider-attributes').data('autoplay-speed');
+    var $draggable = $('.slider-attributes').data('draggable');
+    var $infinite = $('.slider-attributes').data('infinite');
+    var $pauseOnHover = $('.slider-attributes').data('pause-on-hover');
+    var $speed = $('.slider-attributes').data('speed');
+    var $swipe = $('.slider-attributes').data('swipe');
+    var $centerPadding = $('.slider-attributes').data('center-padding') + 'px';
+
+    $('.logo-slider').slick({
+      slidesToShow: $slidesToShow,
+      slidesToScroll: $slidesToScroll,
+      arrows: $arrows,
+      dots: $dots,
+      fade: $scrollStyle,
+      centerMode: $centerMode,
+      autoplay: $autoplay,
+      autoplaySpeed: $autoplaySpeed,
+      draggable: $draggable,
+      infinite: $infinite,
+      mobileFirst: true,
+      pauseOnHover: $pauseOnHover,
+      speed: $speed,
+      swipe: $swipe,
+      centerPadding: $centerPadding,
+    });
+  }
+});
