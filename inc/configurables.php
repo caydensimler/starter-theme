@@ -114,6 +114,16 @@ if ( get_field( 'hover_css', 'option' ) == 1 ) {
 	add_action('wp_head', 'hover_css');
 }
 
+if ( get_field( 'masonry_js', 'option' ) == 1 ) {
+	wp_enqueue_style( 'masonry', get_stylesheet_directory_uri() . '/css/masonry.css', '1.6.0', 'all');
+	wp_enqueue_script( 'masonry-init', get_stylesheet_directory_uri() . '/js/masonry-init.js', array( 'jquery' ), GPC_VERSION, true );
+
+	function masonry_js_cdn() { ?>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+	<?php }
+
+	add_action('wp_footer', 'masonry_js_cdn');
+}
 
 
 

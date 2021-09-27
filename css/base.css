@@ -717,7 +717,7 @@ input[type="submit"],
   .mobile-pl5 { padding-left: 5rem !important }
   .mobile-px5 { padding-left: 5rem !important; padding-right: 5rem !important }
   .mobile-py5 { padding-top: 5rem !important; padding-bottom: 5rem !important }
-	
+
   .mobile-p6  { padding: 6rem !important }
   .mobile-pt6 { padding-top: 6rem !important }
   .mobile-pr6 { padding-right: 6rem !important }
@@ -741,7 +741,7 @@ input[type="submit"],
   .mobile-pl8 { padding-left: 8rem !important }
   .mobile-px8 { padding-left: 8rem !important; padding-right: 8rem !important }
   .mobile-py8 { padding-top: 8rem !important; padding-bottom: 8rem !important }
-	
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -817,7 +817,7 @@ input[type="submit"],
   .tablet-pl8 { padding-left: 8rem !important }
   .tablet-px8 { padding-left: 8rem !important; padding-right: 8rem !important }
   .tablet-py8 { padding-top: 8rem !important; padding-bottom: 8rem !important }
-	
+
 }
 
 @media (min-width: 1025px) {
@@ -861,7 +861,7 @@ input[type="submit"],
   .desktop-pl4 { padding-left: 4rem !important }
   .desktop-px4 { padding-left: 4rem !important; padding-right: 4rem !important }
   .desktop-py4 { padding-top: 4rem !important; padding-bottom: 4rem !important }
-	
+
   .desktop-p5  { padding: 5rem !important }
   .desktop-pt5 { padding-top: 5rem !important }
   .desktop-pr5 { padding-right: 5rem !important }
@@ -893,7 +893,7 @@ input[type="submit"],
   .desktop-pl8 { padding-left: 8rem !important }
   .desktop-px8 { padding-left: 8rem !important; padding-right: 8rem !important }
   .desktop-py8 { padding-top: 8rem !important; padding-bottom: 8rem !important }
-	
+
 }
 
 /* Basscss Responsive Layout */
@@ -1143,17 +1143,36 @@ input[type="submit"],
 
 /* Basscss Background Images */
 
-.bg-cover   { background-size: cover !important }
-.bg-contain { background-size: contain !important }
-.bg-center  { background-position: center !important }
-.bg-top     { background-position: top !important }
-.bg-right   { background-position: right !important }
-.bg-bottom  { background-position: bottom !important }
-.bg-left    { background-position: left !important }
-.bg-no-repeat { background-repeat: no-repeat !important }
-.bg-repeat-x { background-repeat: repeat-x !important }
-.bg-repeat-y { background-repeat: repeat-y !important }
-.bg-parallax { background-attachment: fixed !important; }
+.bg-cover         { background-size: cover !important }
+.bg-contain       { background-size: contain !important }
+.bg-auto          { background-size: auto !important; }
+
+.bg-left-top      { background-position: left top !important }
+.bg-center-top    { background-position: center top !important }
+.bg-right-top     { background-position: right top !important }
+.bg-left-center   { background-position: left center !important }
+.bg-center-center { background-position: center center !important }
+.bg-right-center  { background-position: right center !important }
+.bg-left-bottom   { background-position: left bottom !important }
+.bg-center-bottom { background-position: center bottom !important }
+.bg-right-bottom  { background-position: right bottom !important }
+
+.bg-repeat        { background-repeat: repeat !important; }
+.bg-no-repeat     { background-repeat: no-repeat !important }
+.bg-repeat-x      { background-repeat: repeat-x !important }
+.bg-repeat-y      { background-repeat: repeat-y !important }
+
+.bg-local         { background-attachemt: local !important; }
+.bg-scroll        { background-attachment: scroll !important; }
+.bg-fixed         { background-attachment: fixed !important; }
+
+.bg-border-box    { background-clip: border-box !important; }
+.bg-padding-box   { background-clip: padding-box !important; }
+.bg-content-box   { background-clip: content-box !important; }
+
+.bg-origin-border-box    { background-origin: border-box !important; }
+.bg-origin-padding-box   { background-origin: padding-box !important; }
+.bg-origin-content-box   { background-origin: content-box !important; }
 
 /* Basscss All */
 
@@ -1256,4 +1275,32 @@ h1, h2, h3, h4, h5, h6 {
 /* Fix for odd negative margin in the footer */
 .site-footer .footer-widgets-container .inside-footer-widgets {
   margin-left: 0px !important;
+}
+
+/* Auto Grid Formatting */
+.display-grid2 {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.display-grid3 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.display-grid4 {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .display-grid4 {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .display-grid3, .display-grid2, .display-grid4 {
+    grid-template-columns: auto;
+  }
 }

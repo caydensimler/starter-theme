@@ -19,8 +19,3 @@ endif; ?>
 	style="background: linear-gradient(<?php the_sub_field( 'overlay' ); ?>, <?php the_sub_field( 'overlay' ); ?>), url('<?php the_sub_field( 'background_image' ); ?>');
 	">
 <?php endif; ?>
-	<div class="grid-container clearfix py4">
-		<?php $shortcode = get_sub_field( 'shortcode' ); ?>
-		<?php echo do_shortcode($shortcode); ?>
-	</div>
-</div>
