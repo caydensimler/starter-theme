@@ -1,7 +1,246 @@
 {
     "key": "group_5cdc441b58a0f",
-    "title": "General Settings",
-    "fields": [],
+    "title": "Site Settings",
+    "fields": [
+        {
+            "key": "field_5ce56d3441fee",
+            "label": "Admin Functionality",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ce439d75f9c9",
+            "label": "Site Comments",
+            "name": "site_comments",
+            "type": "true_false",
+            "instructions": "Enables or disables the comment functionality within WordPress.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        },
+        {
+            "key": "field_5ce596233f46d",
+            "label": "File Editor",
+            "name": "file_editor",
+            "type": "true_false",
+            "instructions": "Enables or disables the file editor under the Appearance tab.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        },
+        {
+            "key": "field_5ce596da6fce5",
+            "label": "Custom Fields",
+            "name": "custom_fields",
+            "type": "true_false",
+            "instructions": "Enables or disables the Custom Fields tab on the sidebar.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        },
+        {
+            "key": "field_5ce56ced41fed",
+            "label": "Libraries",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ce449edda617",
+            "label": "Slick Slider",
+            "name": "slick_slider_enqueu",
+            "type": "true_false",
+            "instructions": "Enqueue the <a href=\"https:\/\/kenwheeler.github.io\/slick\/\" target=\"_blank\">Slick<\/a> assets for use within the site files.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No"
+        },
+        {
+            "key": "field_5ce56a91d7b13",
+            "label": "Font Awesome",
+            "name": "font_awesome",
+            "type": "true_false",
+            "instructions": "Enqueue the <a href=\"https:\/\/fontawesome.com\/icons?d=gallery\" target=\"_blank\">Font Awesome<\/a> assets for use within the site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ce56b76067cd",
+            "label": "Animate on Scroll",
+            "name": "animate_on_scroll",
+            "type": "true_false",
+            "instructions": "Enqueue the <a href=\"https:\/\/michalsnik.github.io\/aos\/\" target=\"_blank\">Animate on Scroll<\/a> assets for use within the site files.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ce59077ba150",
+            "label": "Hover CSS",
+            "name": "hover_css",
+            "type": "true_false",
+            "instructions": "Enqueue the <a href=\"https:\/\/ianlunn.github.io\/Hover\/\" target=\"_blank\">Hover CSS<\/a> assets for use within the site files.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ce59255be445",
+            "label": "Custom Post Types",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5ce448ab439d8",
+            "label": "Testimonials",
+            "name": "testimonials_configuration",
+            "type": "true_false",
+            "instructions": "Adds the Testimonials custom post type on the WordPress backend.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        },
+        {
+            "key": "field_5ce592390cba6",
+            "label": "Projects",
+            "name": "projects_configuration",
+            "type": "true_false",
+            "instructions": "Adds the Projects custom post type on the WordPress backend.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        },
+        {
+            "key": "field_5ce5944ef8af8",
+            "label": "Team Members",
+            "name": "team_configuration",
+            "type": "true_false",
+            "instructions": "Adds the Team custom post type on the WordPress backend.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "On",
+            "ui_off_text": "Off"
+        }
+    ],
     "location": [
         [
             {
@@ -19,5 +258,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1557939239
+    "modified": 1558550437
 }
