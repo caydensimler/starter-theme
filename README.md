@@ -25,7 +25,7 @@ Honestly, the best way I can explain this is to break it down based on the divs 
 
 ![Content Generation Graphic](https://i.imgur.com/Oy1YzYa.png)
 
-1. Layout Start `<div class="clearfix flexible-grid">`
+1. Layout Start `<div class="layout">`
 
 	- The layout name is added as a class in order to allow CSS targeting for individual layout types.
 
