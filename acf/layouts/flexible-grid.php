@@ -16,7 +16,7 @@
 		$masonryLayout = get_sub_field('masonry_layout') . ' masonry-item ';
 
 		if ($gridType == 'standard') {
-			$wrapperClasses .= 'display-grid ' . $desktopArrangement . ' ' . $tabletArrangement . ' ' . $mobileArrangement . ' ';
+			$wrapperClasses .= 'grid-display ' . $desktopArrangement . ' ' . $tabletArrangement . ' ' . $mobileArrangement . ' ';
 			$masonryID = '';
 		} elseif ($gridType == 'masonry') {
 			$contentClasses .= 'content-grid masonry ' . $masonryLayout;
@@ -35,6 +35,7 @@
 
 	$contentClasses = rtrim($contentClasses) . '"';
 	if (strlen($wrapperClasses) > 7) {
+		$wrapperClasses .= 'display-wrapper ';
 		$wrapperClasses = rtrim($wrapperClasses) . '"';
 	} else {
 		$wrapperClasses = '';
@@ -45,23 +46,29 @@ endwhile; ?>
 <?php if (have_rows('grid_items')): ?>
 	<div <?= $wrapperClasses; ?> <?= $masonryID; ?>>
 
+		<?php $itemNumber = 1; ?>
+
 		<?php while(have_rows('grid_items')) : the_row(); ?>
 
 			<div <?= $contentClasses; ?>>
-				<?php if (have_rows('content_type')) { while (have_rows('content_type')) { the_row(); ?>
+				<div class="item-<?= $itemNumber; ?>">
+					<?php if (have_rows('content_type')) { while (have_rows('content_type')) { the_row(); ?>
 
-					<?php if (get_row_layout() == 'wrapper'): ?>
-						<?php get_template_part('acf/content/' . get_row_layout()); ?>
-					<?php elseif (get_row_layout() == 'wrapper_end'): ?>
-						<?php echo '</div>'; ?>
-					<?php else: ?>
-						<div class="component <?= get_row_layout(); ?>-component">
+						<?php if (get_row_layout() == 'wrapper'): ?>
 							<?php get_template_part('acf/content/' . get_row_layout()); ?>
-						</div>
-					<?php endif; ?>
+						<?php elseif (get_row_layout() == 'wrapper_end'): ?>
+							<?php echo '</div>'; ?>
+						<?php else: ?>
+							<div class="component <?= get_row_layout(); ?>-component">
+								<?php get_template_part('acf/content/' . get_row_layout()); ?>
+							</div>
+						<?php endif; ?>
 
-				<?php }} ?>
+					<?php }} ?>
+				</div>
 			</div>
+
+			<?php $itemNumber++; ?>
 
 		<?php endwhile ?>
 
