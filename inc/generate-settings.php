@@ -14,14 +14,6 @@ function generateSettings($settings) {
 		$contentClasses .= $textColor . ' ';
 	}
 
-	// Background Colors
-	if (get_sub_field('background_color') && get_sub_field('background') !== 'unset') {
-		$colorSwatch = strip_tags(get_sub_field('background_color'));
-		$backgroundColor = get_string_between($colorSwatch, '[', ']');
-
-		$contentClasses .= $backgroundColor . ' ';
-	}
-
 	// Border Colors
 	if (get_sub_field('border_color') && get_sub_field('border_color') !== 'unset') {
 		$colorSwatch = strip_tags(get_sub_field('border_color'));
@@ -47,7 +39,7 @@ function generateSettings($settings) {
 	}
 
 	// Background Options
-	if (get_sub_field('background_type')) {
+	if (get_sub_field('background_type') !== 'unset') {
 		$backgroundType = get_sub_field( 'background_type' );
 
 		// Background Type: Color
@@ -99,6 +91,8 @@ function generateSettings($settings) {
 
 
 	// Layout Class(es)
+	if (get_sub_field('layout_id')) { $dataAttributes .= 'id="' . get_sub_field('layout_id') . '" '; }
+
 	if (get_sub_field('layout_wrapper_classes')) { $wrapperClasses .= get_sub_field('layout_wrapper_classes') . ' '; }
 	if (get_sub_field('layout_classes')) { $contentClasses .= get_sub_field('layout_classes') . ' '; }
 

@@ -70,6 +70,25 @@ acf_add_local_field_group(array(
 			'prefix_name' => 0,
 		),
 		array(
+			'key' => 'field_61652697aca20',
+			'label' => 'Layout ID',
+			'name' => 'layout_id',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
 			'key' => 'field_6148129ece0dd',
 			'label' => 'Content Width',
 			'name' => 'content_width',
@@ -131,7 +150,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'settings' => 'Settings',
 	),
-	'modified' => 1632628702,
+	'modified' => 1634018979,
 ));
 
 endif;

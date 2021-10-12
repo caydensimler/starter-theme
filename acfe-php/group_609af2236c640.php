@@ -4,7 +4,7 @@ if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
 	'key' => 'group_609af2236c640',
-	'title' => 'Flexible Grid',
+	'title' => 'Flexible Content',
 	'fields' => array(
 		array(
 			'key' => 'field_609af2c7cde69',
@@ -22,7 +22,7 @@ acf_add_local_field_group(array(
 			'acfe_repeater_stylised_button' => 0,
 			'collapsed' => 'field_609af33bcde6a',
 			'min' => 1,
-			'max' => 6,
+			'max' => 0,
 			'layout' => 'block',
 			'button_label' => 'Add Grid Item',
 			'sub_fields' => array(
@@ -120,6 +120,52 @@ acf_add_local_field_group(array(
 									'default_value' => '',
 									'layout' => '',
 									'return_format' => '',
+								),
+							),
+							'min' => '',
+							'max' => '',
+							'acfe_flexible_category' => array(
+								0 => 'Basic',
+							),
+							'acfe_flexible_settings' => array(
+								0 => 'group_613fcf2ca952e',
+								1 => 'group_613fc3855ad6c',
+								2 => 'group_613efa13331d6',
+								3 => 'group_613fce1fc2c57',
+								4 => 'group_6147fc6e7869a',
+							),
+							'acfe_flexible_settings_size' => 'large',
+							'acfe_flexible_render_template' => false,
+							'acfe_flexible_render_style' => false,
+							'acfe_flexible_render_script' => false,
+							'acfe_flexible_thumbnail' => false,
+							'acfe_flexible_modal_edit_size' => false,
+						),
+						'layout_616528305e78b' => array(
+							'key' => 'layout_616528305e78b',
+							'name' => 'text-area',
+							'label' => 'Text Area',
+							'display' => 'block',
+							'sub_fields' => array(
+								array(
+									'key' => 'field_616528305e78c',
+									'label' => '',
+									'name' => 'text',
+									'type' => 'textarea',
+									'instructions' => '',
+									'required' => 0,
+									'conditional_logic' => 0,
+									'wrapper' => array(
+										'width' => '',
+										'class' => '',
+										'id' => '',
+									),
+									'default_value' => '',
+									'placeholder' => '',
+									'maxlength' => '',
+									'rows' => '',
+									'new_lines' => 'br',
+									'acfe_textarea_code' => 0,
 								),
 							),
 							'min' => '',
@@ -571,7 +617,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'layout' => 'Layout',
 	),
-	'modified' => 1632629636,
+	'modified' => 1634019463,
 ));
 
 endif;

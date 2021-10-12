@@ -63,7 +63,6 @@ require get_stylesheet_directory() . '/inc/cpts.php';
 require get_stylesheet_directory() . '/inc/dashboard-widgets.php';
 require get_stylesheet_directory() . '/inc/generate-settings.php';
 require get_stylesheet_directory() . '/inc/hooks.php';
-require get_stylesheet_directory() . '/inc/image-sizes.php';
 require get_stylesheet_directory() . '/inc/libraries.php';
 require get_stylesheet_directory() . '/inc/menus.php';
 require get_stylesheet_directory() . '/inc/shortcodes.php';

@@ -36,11 +36,12 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
+				'unset' => 'Unset',
 				'color' => 'Color',
 				'image' => 'Image',
 			),
 			'allow_null' => 0,
-			'default_value' => '',
+			'default_value' => 'unset',
 			'layout' => 'horizontal',
 			'return_format' => 'value',
 		),
@@ -187,7 +188,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'settings' => 'Settings',
 	),
-	'modified' => 1632112264,
+	'modified' => 1634018956,
 ));
 
 endif;
