@@ -95,7 +95,7 @@
             "append": "",
             "min": 250,
             "max": "",
-            "step": 250
+            "step": 1
         },
         {
             "key": "field_613efd2283486",
@@ -124,7 +124,7 @@
             "append": "",
             "min": 0,
             "max": "",
-            "step": 100
+            "step": 1
         }
     ],
     "location": [
@@ -152,7 +152,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1632112261,
+    "modified": 1634184432,
     "acfe_categories": {
         "settings": "Settings"
     }
