@@ -99,7 +99,7 @@ acf_add_local_field_group(array(
 			'append' => '',
 			'min' => 250,
 			'max' => '',
-			'step' => 250,
+			'step' => 1,
 		),
 		array(
 			'key' => 'field_613efd2283486',
@@ -128,7 +128,7 @@ acf_add_local_field_group(array(
 			'append' => '',
 			'min' => 0,
 			'max' => '',
-			'step' => 100,
+			'step' => 1,
 		),
 	),
 	'location' => array(
@@ -159,7 +159,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'settings' => 'Settings',
 	),
-	'modified' => 1632112261,
+	'modified' => 1634184432,
 ));
 
 endif;

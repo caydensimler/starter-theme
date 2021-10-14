@@ -59,7 +59,7 @@ endwhile; ?>
 						<?php elseif (get_row_layout() == 'wrapper_end'): ?>
 							<?php echo '</div>'; ?>
 						<?php else: ?>
-							<div class="component <?= get_row_layout(); ?>-component">
+							<div class="content <?= get_row_layout(); ?>">
 								<?php get_template_part('acf/content/' . get_row_layout()); ?>
 							</div>
 						<?php endif; ?>
