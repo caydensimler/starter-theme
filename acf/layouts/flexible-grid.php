@@ -5,21 +5,19 @@
 	// Grid Type
 	if (get_sub_field('grid_type')) {
 		if (have_rows('grid-arrangement')) { while (have_rows('grid-arrangement')) { the_row();
-			$desktopArrangement = get_sub_field('desktop');
-			$tabletArrangement = get_sub_field('tablet');
-			$mobileArrangement = get_sub_field('mobile');
+			$gridArrangement = get_sub_field('desktop') . ' ' . get_sub_field('tablet') . ' ' . get_sub_field('mobile');
 		}}
 
-		$contentClasses .= 'grid-item ';
-
 		$gridType = get_sub_field('grid_type');
-		$masonryLayout = get_sub_field('masonry_layout') . ' masonry-item ';
+		$masonryLayout = get_sub_field('masonry_layout');
 
 		if ($gridType == 'standard') {
-			$wrapperClasses .= 'grid-display ' . $desktopArrangement . ' ' . $tabletArrangement . ' ' . $mobileArrangement . ' ';
+			$wrapperClasses .= 'grid-display ' . $gridArrangement . ' ';
+			$contentClasses .= 'grid-item ';
 			$masonryID = '';
 		} elseif ($gridType == 'masonry') {
-			$contentClasses .= 'content-grid masonry ' . $masonryLayout;
+			$contentClasses .= 'content-grid masonry-item grid-parent ' . $masonryLayout . ' ';
+			$wrapperClasses .= 'grid-100 grid-parent ';
 
 			if (get_sub_field('masonry_id')) { $masonryID = 'id="' . get_sub_field('masonry_id') . '"';
 			} else { $masonryID = ''; }
@@ -27,6 +25,7 @@
 	}
 
 	if (get_sub_field('grid_wrapper_classes')) { $wrapperClasses .= get_sub_field('grid_wrapper_classes') . ' '; }
+
 	if (get_sub_field('grid_item_classes')) { $contentClasses .= get_sub_field('grid_item_classes') . ' '; }
 
 	if (get_sub_field('grid_item_vertically-alignment') !== 'unset' && get_sub_field('grid_type') == 'standard') {
@@ -34,17 +33,14 @@
 	}
 
 	$contentClasses = rtrim($contentClasses) . '"';
-	if (strlen($wrapperClasses) > 7) {
-		$wrapperClasses .= 'display-wrapper ';
-		$wrapperClasses = rtrim($wrapperClasses) . '"';
-	} else {
-		$wrapperClasses = '';
-	}
+
+	$wrapperClasses .= 'display-wrapper ';
+	$wrapperClasses = rtrim($wrapperClasses) . '"';
 
 endwhile; ?>
 
 <?php if (have_rows('grid_items')): ?>
-	<div <?= $wrapperClasses; ?> <?= $masonryID; ?>>
+	<div <?= $masonryID; ?> <?= $wrapperClasses; ?>>
 
 		<?php $itemNumber = 1; ?>
 

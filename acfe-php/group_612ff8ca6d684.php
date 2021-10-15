@@ -51,7 +51,15 @@ acf_add_local_field_group(array(
 			'type' => 'group',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_613a8cde9bc94',
+						'operator' => '==',
+						'value' => 'standard',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -226,7 +234,7 @@ acf_add_local_field_group(array(
 				'grid-50' => '50%',
 			),
 			'allow_null' => 0,
-			'default_value' => '',
+			'default_value' => 'grid-50',
 			'layout' => 'horizontal',
 			'return_format' => 'value',
 		),
@@ -307,7 +315,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'settings' => 'Settings',
 	),
-	'modified' => 1632628628,
+	'modified' => 1634246465,
 ));
 
 endif;

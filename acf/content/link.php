@@ -7,6 +7,8 @@
 
 <?php if ( $link ) : ?>
 	<div <?= $settingsArray['wrapper-classes']; ?> <?= $settingsArray['data-attributes']; ?>>
-		<a <?= $linkContentClass; ?> href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>"><?php echo $link['title']; ?></a>
+		<a <?= $linkContentClass; ?> href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>">
+			<span><?php echo $link['title']; ?></span>
+		</a>
 	</div>
 <?php endif; ?>
