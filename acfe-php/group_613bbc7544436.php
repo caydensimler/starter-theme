@@ -202,8 +202,8 @@ acf_add_local_field_group(array(
 					'acfe_flexible_render_style' => 'css/base.css',
 					'acfe_flexible_render_script' => 'js/theme.js',
 					'acfe_flexible_settings' => array(
-						0 => 'group_5ce81cbae5ea9',
-						1 => 'group_612ff8ca6d684',
+						0 => 'group_612ff8ca6d684',
+						1 => 'group_5ce81cbae5ea9',
 					),
 					'acfe_flexible_settings_size' => 'xlarge',
 					'acfe_flexible_thumbnail' => '',
@@ -378,7 +378,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'template' => 'Template',
 	),
-	'modified' => 1634017821,
+	'modified' => 1634277464,
 ));
 
 endif;

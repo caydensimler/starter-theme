@@ -3,34 +3,39 @@
 	$wrapperClasses = 'class="';
 
 	// Grid Type
-	if (get_sub_field('grid_type')) {
-		if (have_rows('grid-arrangement')) { while (have_rows('grid-arrangement')) { the_row();
-			$gridArrangement = get_sub_field('desktop') . ' ' . get_sub_field('tablet') . ' ' . get_sub_field('mobile');
-		}}
+	$gridType = get_sub_field('layout_type');
 
-		$gridType = get_sub_field('grid_type');
-		$masonryLayout = get_sub_field('masonry_layout');
-
-		if ($gridType == 'standard') {
-			$wrapperClasses .= 'grid-display ' . $gridArrangement . ' ';
-			$contentClasses .= 'grid-item ';
-			$masonryID = '';
-		} elseif ($gridType == 'masonry') {
-			$contentClasses .= 'content-grid masonry-item grid-parent ' . $masonryLayout . ' ';
-			$wrapperClasses .= 'grid-100 grid-parent ';
-
-			if (get_sub_field('masonry_id')) { $masonryID = 'id="' . get_sub_field('masonry_id') . '"';
-			} else { $masonryID = ''; }
+	if ($gridType == 'standard') {
+		if (have_rows('standard_columns')) { 
+			while (have_rows('standard_columns')) { the_row();
+				$layoutStructure = get_sub_field( 'desktop' ) . ' ' . get_sub_field('tablet') . ' ' . get_sub_field('mobile');
+			}
 		}
+
+		$contentClasses .= 'grid-item ';
+		if (get_sub_field('vertical-alignment') !== 'unset') {
+			$contentClasses .= get_sub_field('vertical-alignment') . ' ';
+		}
+
+		$wrapperClasses .= 'grid-display ' . $layoutStructure . ' ';
+	} elseif ($gridType == 'masonry') {
+		if (have_rows('masonry_columns')) { 
+			while (have_rows('masonry_columns')) { the_row();
+				$desktopMasonry = get_sub_field( 'desktop' );
+				$containerCount = $desktopMasonry['label'];
+				$layoutStructure = $desktopMasonry['value'] . ' ' . get_sub_field('tablet') . ' ' . get_sub_field('mobile') . ' grid-display grid-masonry items-start ';
+			}
+		}
+
+		$wrapperClasses .= 'masonry-layout ' . $layoutStructure;
+		$contentClasses .= 'masonry-item ';
 	}
 
-	if (get_sub_field('grid_wrapper_classes')) { $wrapperClasses .= get_sub_field('grid_wrapper_classes') . ' '; }
-
-	if (get_sub_field('grid_item_classes')) { $contentClasses .= get_sub_field('grid_item_classes') . ' '; }
-
-	if (get_sub_field('grid_item_vertically-alignment') !== 'unset' && get_sub_field('grid_type') == 'standard') {
-		$contentClasses .= get_sub_field('grid_item_vertical-alignment') . ' ';
+	if (get_sub_field('layout_id')) { $layoutID = 'id="' . get_sub_field('layout_id') . '"'; } else {
+		$layoutID = '';
 	}
+	if (get_sub_field('layout_classes')) { $wrapperClasses .= get_sub_field('layout_classes') . ' '; }
+	if (get_sub_field('layout_item_classes')) { $contentClasses .= get_sub_field('layout_item_classes') . ' '; }
 
 	$contentClasses = rtrim($contentClasses) . '"';
 
@@ -39,34 +44,38 @@
 
 endwhile; ?>
 
-<?php if (have_rows('grid_items')): ?>
-	<div <?= $masonryID; ?> <?= $wrapperClasses; ?>>
+<?php if (have_rows('layout_items')): ?>
+	<div <?= $layoutID; ?> <?= $wrapperClasses; ?>>
 
 		<?php $itemNumber = 1; ?>
 
-		<?php while(have_rows('grid_items')) : the_row(); ?>
+		<?php if ($gridType === 'masonry'): ?>
+			<?php for ($i = 1; $i <= $containerCount; $i++): ?>
+				<div class="grid-item column-<?= $i; ?>"></div>
+			<?php endfor; ?>
+		<?php endif; ?>
 
-			<div <?= $contentClasses; ?>>
-				<div class="item-<?= $itemNumber; ?>">
-					<?php if (have_rows('content_type')) { while (have_rows('content_type')) { the_row(); ?>
+		<?php while(have_rows('layout_items')) : the_row(); ?>
 
-						<?php if (get_row_layout() == 'wrapper'): ?>
-							<?php get_template_part('acf/content/' . get_row_layout()); ?>
-						<?php elseif (get_row_layout() == 'wrapper_end'): ?>
-							<?php echo '</div>'; ?>
-						<?php else: ?>
-							<div class="content <?= get_row_layout(); ?>">
+				<div <?= $contentClasses; ?>>
+					<div class="item-<?= $itemNumber; ?>">
+						<?php if (have_rows('content_type')) { while (have_rows('content_type')) { the_row(); ?>
+
+							<?php if (get_row_layout() == 'wrapper'): ?>
 								<?php get_template_part('acf/content/' . get_row_layout()); ?>
-							</div>
-						<?php endif; ?>
+							<?php elseif (get_row_layout() == 'wrapper_end'): ?>
+								<?php echo '</div>'; ?>
+							<?php else: ?>
+								<div class="content <?= get_row_layout(); ?>">
+									<?php get_template_part('acf/content/' . get_row_layout()); ?>
+								</div>
+							<?php endif; ?>
 
-					<?php }} ?>
+						<?php }} ?>
+					</div>
 				</div>
-			</div>
-
+			
 			<?php $itemNumber++; ?>
-
 		<?php endwhile ?>
-
 	</div>
 <?php endif; ?>

@@ -4,7 +4,7 @@ if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
 	'key' => 'group_5ce81cbae5ea9',
-	'title' => 'Layout Settings',
+	'title' => 'Container Options',
 	'fields' => array(
 		array(
 			'key' => 'field_6145071e7de85',
@@ -49,10 +49,10 @@ acf_add_local_field_group(array(
 			'prefix_name' => 0,
 		),
 		array(
-			'key' => 'field_614fefa42570f',
-			'label' => 'Layout Class(es)',
-			'name' => 'layout_classes',
-			'type' => 'clone',
+			'key' => 'field_61652697aca20',
+			'label' => 'Container ID',
+			'name' => 'container_id',
+			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
@@ -61,18 +61,35 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => '',
 			),
-			'clone' => array(
-				0 => 'group_614fee02432fb',
-			),
-			'display' => 'seamless',
-			'layout' => 'block',
-			'prefix_label' => 0,
-			'prefix_name' => 0,
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
 		),
 		array(
-			'key' => 'field_61652697aca20',
-			'label' => 'Layout ID',
-			'name' => 'layout_id',
+			'key' => 'field_616916406223c',
+			'label' => 'Container Wrapper Class(es)',
+			'name' => 'container_wrapper_classes',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_616916516223d',
+			'label' => 'Container Class(es)',
+			'name' => 'layout_container_classes',
 			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,
@@ -90,8 +107,8 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_6148129ece0dd',
-			'label' => 'Content Width',
-			'name' => 'content_width',
+			'label' => 'Container Width',
+			'name' => 'container_width',
 			'type' => 'clone',
 			'instructions' => '',
 			'required' => 0,
@@ -150,7 +167,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'settings' => 'Settings',
 	),
-	'modified' => 1634018979,
+	'modified' => 1634336564,
 ));
 
 endif;

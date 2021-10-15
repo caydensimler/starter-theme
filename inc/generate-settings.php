@@ -79,8 +79,8 @@ function generateSettings($settings) {
 	} // Close background_type check
 
 	$contentWidth = '';
-	if (get_sub_field('content_width')) {
-		$contentWidth = get_sub_field('content_width');
+	if (get_sub_field('container_width')) {
+		$contentWidth = get_sub_field('container_width');
 
 		if ($contentWidth !== 'contained' && $contentWidth !== 'full-width') {
 			$contentStyles .= 'max-width: ' . $contentWidth . 'px; ';
@@ -91,10 +91,10 @@ function generateSettings($settings) {
 
 
 	// Layout Class(es)
-	if (get_sub_field('layout_id')) { $dataAttributes .= 'id="' . get_sub_field('layout_id') . '" '; }
+	if (get_sub_field('container_id')) { $dataAttributes .= 'id="' . get_sub_field('container_id') . '" '; }
 
-	if (get_sub_field('layout_wrapper_classes')) { $wrapperClasses .= get_sub_field('layout_wrapper_classes') . ' '; }
-	if (get_sub_field('layout_classes')) { $contentClasses .= get_sub_field('layout_classes') . ' '; }
+	if (get_sub_field('container_wrapper_classes')) { $wrapperClasses .= get_sub_field('container_wrapper_classes') . ' '; }
+	if (get_sub_field('layout_container_classes')) { $contentClasses .= get_sub_field('layout_container_classes') . ' '; }
 
 	// Content Class(es)
 	if (get_sub_field('content_classes')) { $contentClasses .= get_sub_field('content_classes') . ' '; }

@@ -4,8 +4,8 @@
     "fields": [
         {
             "key": "field_609af2c7cde69",
-            "label": "Grid Items",
-            "name": "grid_items",
+            "label": "Layout Items",
+            "name": "layout_items",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -20,7 +20,7 @@
             "min": 1,
             "max": 0,
             "layout": "block",
-            "button_label": "Add Grid Item",
+            "button_label": "Add Item",
             "sub_fields": [
                 {
                     "key": "field_609af33bcde6a",
@@ -609,7 +609,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1634019463,
+    "modified": 1634277437,
     "acfe_categories": {
         "layout": "Layout"
     }
