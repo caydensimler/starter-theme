@@ -4,12 +4,12 @@ if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
 	'key' => 'group_61451e3801d09',
-	'title' => 'Content Width',
+	'title' => 'Container Width',
 	'fields' => array(
 		array(
 			'key' => 'field_61451e3b01f7f',
-			'label' => 'Content Width',
-			'name' => 'content_width',
+			'label' => 'Container Width',
+			'name' => 'container_width',
 			'type' => 'radio',
 			'instructions' => 'You can use a custom pixel size for the container by typing in the pixel count for the grid in the blank box. The "Contained" option defaults to the default container properties in the Customizer settings under Layout > Container Width.',
 			'required' => 0,
@@ -59,7 +59,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'settings' => 'Settings',
 	),
-	'modified' => 1632112148,
+	'modified' => 1634336553,
 ));
 
 endif;

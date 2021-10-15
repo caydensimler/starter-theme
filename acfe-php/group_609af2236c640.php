@@ -8,8 +8,8 @@ acf_add_local_field_group(array(
 	'fields' => array(
 		array(
 			'key' => 'field_609af2c7cde69',
-			'label' => 'Grid Items',
-			'name' => 'grid_items',
+			'label' => 'Layout Items',
+			'name' => 'layout_items',
 			'type' => 'repeater',
 			'instructions' => '',
 			'required' => 0,
@@ -24,7 +24,7 @@ acf_add_local_field_group(array(
 			'min' => 1,
 			'max' => 0,
 			'layout' => 'block',
-			'button_label' => 'Add Grid Item',
+			'button_label' => 'Add Item',
 			'sub_fields' => array(
 				array(
 					'key' => 'field_609af33bcde6a',
@@ -617,7 +617,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'layout' => 'Layout',
 	),
-	'modified' => 1634019463,
+	'modified' => 1634277437,
 ));
 
 endif;

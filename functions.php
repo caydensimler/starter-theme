@@ -189,3 +189,8 @@ add_action( 'parse_query', 'global_vars' );
 
 
 add_filter('acf/settings/remove_wp_meta_box', '__return_true');
+
+
+function custom_admin_js() {
+  echo '"<script src="https://unpkg.com/colcade@0/colcade.js"></script>"';
+} add_action('admin_footer', 'custom_admin_js');

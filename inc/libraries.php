@@ -59,16 +59,9 @@ if (function_exists('get_field')) {
 
 	// Masonry.js
 	if ( get_field( 'masonry_js', 'option' ) == 1 ) {
-		function masonry_enqueue() {
-			wp_enqueue_style( 'masonry', get_stylesheet_directory_uri() . '/css/masonry/masonry.css', '1.6.0', 'all');
-			wp_enqueue_script( 'masonry-init', get_stylesheet_directory_uri() . '/js/masonry/masonry-init.js', array( 'jquery' ), GPC_VERSION, true );
-		}
-		add_action('wp_enqueue_scripts', 'masonry_enqueue');
-
-		add_action('wp_footer', 'masonry_js_cdn');
-
-		function masonry_js_cdn() { ?>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+		add_action('wp_footer', 'colcade_cdn');
+		function colcade_cdn() { ?>
+			<script src="https://unpkg.com/colcade@0/colcade.js"></script>
 		<?php }
 
 	}

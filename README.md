@@ -2,7 +2,15 @@
 
 This is a starter theme that builds on top of the [GeneratePress Child Theme by Addison Hall](https://github.com/addisonhall/generatepress-child "GitHub Link"). By integrating well-thought-out custom fields, I've created a content management system that, at it's core, can build most* designs. 
 
-*As more websites are built using this theme I will continue to update it to ensure that it can integrate any layout. \**
+*As more websites are built using this theme I will continue to update it to ensure that it can integrate new designs. \**
+
+---
+
+## In Progress
+
+- Re-writing the masonry grid to better adapt to situations where items are expanded and collapsed.
+
+- Adding an expand/collapse button that generates a basic toggle button for dropdowns and accordions. 
 
 ## Changelogs & Version Control
 
@@ -18,6 +26,8 @@ I have made a lot of changes since v1, so consider the current theme v2. Keep in
 1. Layered Content Generation
 2. Reusability and Scalability
 3. Add-On Library
+
+---
 
 ### Layered Content Generation
 
@@ -38,7 +48,7 @@ Honestly, the best way I can explain this is to break it down based on the eleme
 #### 3. Grid Container `<div class="grid-container">`
 
 - The grid container is primarily used to dictate the max-width of the content on the page, as well as its left and right padding when the viewport is less than the max-width. 
-- I'd honestly prefer to change this class name to `.layout-container`, but `.grid-container` is what's being used by GeneratePress and I don't have the motivation yet to change that.
+- I'd honestly prefer to change this class name to `.layout-container`, but `.grid-container` is what's being used by GeneratePress and I don't have the motivation to change that yet.
 
 #### 4. Grid/Masonry Display `<div class="grid-display">` `<div class="masonry-display">`
 
@@ -62,6 +72,8 @@ Honestly, the best way I can explain this is to break it down based on the eleme
 
 - The content layer holds individaul headings, paragraphs, lists, etc. 
 - I know it feels like, "Finally we've made it to the content!" but I swear I try to use each layer to the best of my ability in order to provide form and function.
+
+---
 
 ### Reusability and Scalability
 
