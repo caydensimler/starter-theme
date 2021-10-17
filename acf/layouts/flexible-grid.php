@@ -38,8 +38,6 @@
 	if (get_sub_field('layout_item_classes')) { $contentClasses .= get_sub_field('layout_item_classes') . ' '; }
 
 	$contentClasses = rtrim($contentClasses) . '"';
-
-	$wrapperClasses .= 'display-wrapper ';
 	$wrapperClasses = rtrim($wrapperClasses) . '"';
 
 endwhile; ?>

@@ -1465,8 +1465,8 @@ ul.list-circle { list-style-type: circle; }
 ul.list-square { list-style-type: square; }
 
 /* Default Grid Settings */
-.grid-display.display-wrapper { gap: 50px; }
-@media screen and (max-width: 1024px) { .grid-display.display-wrapper { gap: 25px; } }
+.grid-display { gap: 50px; }
+@media screen and (max-width: 1024px) { .grid-display { gap: 25px; } }
 
 /* Line Separator Component */
 .component.line-separator-component hr {
