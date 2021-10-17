@@ -49,7 +49,7 @@ endwhile; ?>
 
 		<?php if ($gridType === 'masonry'): ?>
 			<?php for ($i = 1; $i <= $containerCount; $i++): ?>
-				<div class="grid-item column-<?= $i; ?>"></div>
+				<div class="grid-item col-<?= $i; ?>"></div>
 			<?php endfor; ?>
 		<?php endif; ?>
 

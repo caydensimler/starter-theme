@@ -1,0 +1,9 @@
+/* Grid Item Spacing */
+.grid-display { gap: 50px; }
+.grid-item .masonry-item { margin-bottom: 50px; }
+.grid-item .masonry-item:last-child { margin-bottom: 0px; }
+
+@media screen and (max-width: 1024px) { 
+  .grid-display { gap: 25px; } 
+  .grid-item .masonry-item { margin-bottom: 25px; }
+}
