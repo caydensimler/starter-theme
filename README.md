@@ -8,9 +8,9 @@ This is a starter theme that builds on top of the [GeneratePress Child Theme by 
 
 ## In Progress
 
-- Re-writing the masonry grid to better adapt to situations where items are expanded and collapsed.
+- Implementing an expand/collapse content button that generates a basic toggle button for dropdowns and accordions. 
 
-- Adding an expand/collapse button that generates a basic toggle button for dropdowns and accordions. 
+- Adding content types for post object data (title, author, tags, etc..). This would allow for the advanced builder template to exist on any post type.
 
 ## Changelogs & Version Control
 

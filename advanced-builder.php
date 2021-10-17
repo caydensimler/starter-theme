@@ -5,7 +5,7 @@ get_header();
 	// Content Wrapper
 
 	if (get_post_meta(get_the_ID(), 'content_wrapper_classes', true)) {
-		echo '<div class="custom-content-wrapper ' . get_post_meta(get_the_ID(), 'content_wrapper_classes', true) . '">';
+		echo '<div class="' . get_post_meta(get_the_ID(), 'content_wrapper_classes', true) . '">';
 	}
 
 		// Page Banner

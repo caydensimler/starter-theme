@@ -3,25 +3,6 @@
     "title": "Page Options",
     "fields": [
         {
-            "key": "field_613bbcac62261",
-            "label": "Social Share",
-            "name": "enable_social-share",
-            "type": "true_false",
-            "instructions": "Enable the social sharing functionality that populates the social media share buttons on the left side of the page.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "Enabled",
-            "ui_off_text": "Disabled"
-        },
-        {
             "key": "field_613bbcac6244f",
             "label": "Content Wrapper Class(es)",
             "name": "content_wrapper_classes",
@@ -66,7 +47,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1632112394,
+    "modified": 1634449625,
     "acfe_categories": {
         "template": "Template"
     }
