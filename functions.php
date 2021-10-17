@@ -174,23 +174,4 @@ function get_string_between($string, $start, $end){
   return substr($string, $ini, $len);
 }
 
-
-
-// Creates global variables to differentiate styles of layouts.
-function global_vars() {
-  // $blockID is used for custom styling of content blocks when needed.
-  global $blockID;
-
-  // $linkID is used for custom styling of links when needed.
-  global $linkID;
-}
-add_action( 'parse_query', 'global_vars' );
-
-
-
 add_filter('acf/settings/remove_wp_meta_box', '__return_true');
-
-
-function custom_admin_js() {
-  echo '"<script src="https://unpkg.com/colcade@0/colcade.js"></script>"';
-} add_action('admin_footer', 'custom_admin_js');
