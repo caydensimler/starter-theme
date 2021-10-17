@@ -7,25 +7,6 @@ acf_add_local_field_group(array(
 	'title' => 'Page Options',
 	'fields' => array(
 		array(
-			'key' => 'field_613bbcac62261',
-			'label' => 'Social Share',
-			'name' => 'enable_social-share',
-			'type' => 'true_false',
-			'instructions' => 'Enable the social sharing functionality that populates the social media share buttons on the left side of the page.',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'default_value' => 0,
-			'ui' => 1,
-			'ui_on_text' => 'Enabled',
-			'ui_off_text' => 'Disabled',
-		),
-		array(
 			'key' => 'field_613bbcac6244f',
 			'label' => 'Content Wrapper Class(es)',
 			'name' => 'content_wrapper_classes',
@@ -73,7 +54,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'template' => 'Template',
 	),
-	'modified' => 1632112394,
+	'modified' => 1634449625,
 ));
 
 endif;

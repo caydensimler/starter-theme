@@ -9,9 +9,9 @@ if ($settingsArray['wrapper-classes']) {
 }
 
 if ($settingsArray['content-classes']) {
-	$gridContainerClasses = substr($settingsArray['content-classes'], 0, -1) . ' grid-container"';
+	$gridContainerClasses = substr($settingsArray['content-classes'], 0, -1) . ' layout-container grid-container"';
 } else {
-	$gridContainerClasses = 'class="grid-container"';
+	$gridContainerClasses = 'class="layout-container grid-container"';
 }
 
 ?>

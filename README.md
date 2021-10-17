@@ -8,9 +8,9 @@ This is a starter theme that builds on top of the [GeneratePress Child Theme by 
 
 ## In Progress
 
-- Re-writing the masonry grid to better adapt to situations where items are expanded and collapsed.
+- Implementing an expand/collapse content button that generates a basic toggle button for dropdowns and accordions. 
 
-- Adding an expand/collapse button that generates a basic toggle button for dropdowns and accordions. 
+- Adding content types for post object data (title, author, tags, etc..). This would allow for the advanced builder template to exist on any post type.
 
 ## Changelogs & Version Control
 
@@ -50,15 +50,16 @@ Honestly, the best way I can explain this is to break it down based on the eleme
 - The grid container is primarily used to dictate the max-width of the content on the page, as well as its left and right padding when the viewport is less than the max-width. 
 - I'd honestly prefer to change this class name to `.layout-container`, but `.grid-container` is what's being used by GeneratePress and I don't have the motivation to change that yet.
 
-#### 4. Grid/Masonry Display `<div class="grid-display">` `<div class="masonry-display">`
+#### 4. Grid Display `<div class="grid-display">`
 
-- The Grid/Masonry Display portion is a primary key to defining how content is laid out. 
-- On the backend, the user is presented with options between a Standard and Masonry layout. The Standard layout utilizes CSS Grid to organize the grid items, while the Masonry layout generates classes to create a masonry grid via the [Masonry JS library](https://masonry.desandro.com/ "Cascading grid layout library").
+- The Grid Display portion is a primary key to defining how content is laid out. 
+- Standard Grid Display layouts use CSS Grid for laying out each individual grid item into its own cell.
+- Masonry Grid Display layouts use CSS grid for aligning columns, but relies on the Colcade JS library to move individual items into each column. 
 
-#### 5. Grid/Masonry Item `<div class="grid-item">` `<div class="masonry-item">`
+#### 5. Grid Item `<div class="grid-item">`
 
-- The Grid/Masonry Item(s) inherit their width from the Grid/Masonry Display. 
-- Masonry Items utilize the Unsemantic grid system as that's the grid layout CSS that GeneratePress utilizes. 
+- Each Grid Item is split up into its own cell and the cells are positioned based on the Grid Display. 
+- Masonry Items - which are the direct decsandants of Grid Items inside a Masonry Grid Display - are assigned their column based on their height. 
 
 #### 6. Content Wrapper `<div class="content text">`
 

@@ -23,7 +23,7 @@
 			while (have_rows('masonry_columns')) { the_row();
 				$desktopMasonry = get_sub_field( 'desktop' );
 				$containerCount = $desktopMasonry['label'];
-				$layoutStructure = $desktopMasonry['value'] . ' ' . get_sub_field('tablet') . ' ' . get_sub_field('mobile') . ' grid-display grid-masonry items-start ';
+				$layoutStructure = $desktopMasonry['value'] . ' ' . get_sub_field('tablet') . ' ' . get_sub_field('mobile') . ' grid-display masonry-grid items-start ';
 			}
 		}
 
@@ -38,8 +38,6 @@
 	if (get_sub_field('layout_item_classes')) { $contentClasses .= get_sub_field('layout_item_classes') . ' '; }
 
 	$contentClasses = rtrim($contentClasses) . '"';
-
-	$wrapperClasses .= 'display-wrapper ';
 	$wrapperClasses = rtrim($wrapperClasses) . '"';
 
 endwhile; ?>
@@ -51,7 +49,7 @@ endwhile; ?>
 
 		<?php if ($gridType === 'masonry'): ?>
 			<?php for ($i = 1; $i <= $containerCount; $i++): ?>
-				<div class="grid-item column-<?= $i; ?>"></div>
+				<div class="grid-item col-<?= $i; ?>"></div>
 			<?php endfor; ?>
 		<?php endif; ?>
 
