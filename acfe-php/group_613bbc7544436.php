@@ -170,14 +170,14 @@ acf_add_local_field_group(array(
 				),
 				'layout_608af1574945b' => array(
 					'key' => 'layout_608af1574945b',
-					'name' => 'flexible-grid',
-					'label' => 'Flexible Grid',
+					'name' => 'flexible-content',
+					'label' => 'Flexible Content',
 					'display' => 'block',
 					'sub_fields' => array(
 						array(
 							'key' => 'field_613bbc754f2c2',
-							'label' => 'Flexible Grid Clone',
-							'name' => 'flexible_grid_clone',
+							'label' => 'Flexible Content Clone',
+							'name' => 'flexible_content_clone',
 							'type' => 'clone',
 							'instructions' => '',
 							'required' => 0,
@@ -378,7 +378,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'template' => 'Template',
 	),
-	'modified' => 1634277464,
+	'modified' => 1634844308,
 ));
 
 endif;
