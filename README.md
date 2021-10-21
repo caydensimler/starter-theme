@@ -19,7 +19,7 @@ I use to have changelogs that I maintained in the early days of developing this;
 
 ### Version Control
 
-I have made a lot of changes since v1, so consider the current theme v2. Keep in mind I have no idea what the best practices are for doing version control, so a lot of the jumps in versions might not make much sense.
+I have made a lot of changes since v1, so consider the current theme v2. Following the guidelines [here](https://semver.org/ "Semantic Versioning 2.0.0"), I will attempt to keep track of versions utilizing the Release functionality within Github.
 
 ## Core Concepts
 
