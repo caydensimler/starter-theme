@@ -369,3 +369,9 @@ div.sub-menu .menu-container ul > li {
 /* List Component */
 .content.list > ul { margin-left: 10px; list-style-position: inside; }
 .content.list > ul li.list-icon { background-size: 20px; padding: 5px 0px 5px 35px; }
+
+/* Post Tags */
+.content.post-tags ul { list-style-type: none; margin-left: 0px; }
+
+.content.post-tags li { display: inline-block; margin-right: 15px; }
+.content.post-tags li:last-of-type { margin-right: 0px; }

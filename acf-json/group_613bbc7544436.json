@@ -363,8 +363,6 @@
         "slug",
         "author",
         "format",
-        "categories",
-        "tags",
         "send-trackbacks"
     ],
     "active": true,
@@ -377,7 +375,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1634844607,
+    "modified": 1634855275,
     "acfe_categories": {
         "template": "Template"
     }

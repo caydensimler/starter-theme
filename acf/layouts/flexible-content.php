@@ -63,10 +63,13 @@ endwhile; ?>
 								$layout = get_row_layout();
 								if (substr($layout, 0, strlen('custom-')) == 'custom-') {
 									$layout = str_replace('custom-', '', $layout);
+									$customLayout = 1;
+								} else {
+									$customLayout = 0;
 								}
 							?>
 
-							<?php if (substr($layout, 0, strlen('custom-')) == 'custom-'): ?>
+							<?php if ($customLayout): ?>
 								<div class="content custom-content <?= $layout; ?>">
 									<?php get_template_part('acf/content/custom/' . $layout); ?>
 								</div>

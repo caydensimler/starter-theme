@@ -896,6 +896,132 @@
                             "acfe_flexible_thumbnail": false,
                             "acfe_flexible_modal_edit_size": false
                         },
+                        "layout_6171e5f81be8e": {
+                            "key": "layout_6171e5f81be8e",
+                            "name": "custom-post-tags",
+                            "label": "[Custom] Post Tags",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6171e5f81be8f",
+                                    "label": "Note",
+                                    "name": "",
+                                    "type": "message",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "75",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "Displays all tags from the page, post, or custom post type.",
+                                    "new_lines": "wpautop",
+                                    "esc_html": 0
+                                },
+                                {
+                                    "key": "field_6171e6461be90",
+                                    "label": "Links to Archive",
+                                    "name": "links_to_archive",
+                                    "type": "true_false",
+                                    "instructions": "Whether or not individual tags link to their respective archive page.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_category": [
+                                "Custom",
+                                "Post"
+                            ],
+                            "acfe_flexible_settings": [
+                                "group_613fcf2ca952e",
+                                "group_613fc3855ad6c",
+                                "group_613efa13331d6",
+                                "group_613fce1fc2c57",
+                                "group_6147fc6e7869a"
+                            ],
+                            "acfe_flexible_settings_size": "large",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_modal_edit_size": false
+                        },
+                        "layout_6171e67d1be91": {
+                            "key": "layout_6171e67d1be91",
+                            "name": "post-tags",
+                            "label": "Post Tags",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6171e67d1be92",
+                                    "label": "Note",
+                                    "name": "",
+                                    "type": "message",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "75",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "Displays all tags from the page, post, or custom post type.",
+                                    "new_lines": "wpautop",
+                                    "esc_html": 0
+                                },
+                                {
+                                    "key": "field_6171e67d1be93",
+                                    "label": "Links to Archive",
+                                    "name": "links_to_archive",
+                                    "type": "true_false",
+                                    "instructions": "Whether or not individual tags link to their respective archive page.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_category": [
+                                "Basic",
+                                "Post"
+                            ],
+                            "acfe_flexible_settings": [
+                                "group_613fcf2ca952e",
+                                "group_613fc3855ad6c",
+                                "group_613efa13331d6",
+                                "group_613fce1fc2c57",
+                                "group_6147fc6e7869a"
+                            ],
+                            "acfe_flexible_settings_size": "large",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_modal_edit_size": false
+                        },
                         "layout_61044a1d6c611": {
                             "key": "layout_61044a1d6c611",
                             "name": "shortcode",
@@ -989,7 +1115,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1634851153,
+    "modified": 1634854770,
     "acfe_categories": {
         "layout": "Layout"
     }

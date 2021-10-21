@@ -60,6 +60,7 @@ if (function_exists('get_field')) {
 	// Masonry.js
 	if ( get_field( 'masonry_js', 'option' ) == 1 ) {
 		add_action('wp_footer', 'colcade_cdn');
+		add_action('admin_head', 'colcade_cdn');
 		function colcade_cdn() { ?>
 			<script src="https://unpkg.com/colcade@0/colcade.js"></script>
 		<?php }

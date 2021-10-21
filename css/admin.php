@@ -124,8 +124,9 @@ function acf_minor_updates() {
     div.acf-field[data-name="layout_item"] tr:nth-child(9) .acf-row-handle.order { background: #9F2D2D; }
 
     div.acf-field[data-name="layout_item"] .acf-row-handle.order span {
-      padding: 1px 7px; background-color: white; border-radius: 100%;
-      font-weight: 600; font-size: 14px;  color: black;
+      padding: 0px 7px 2px; background-color: white;
+      font-weight: 600; font-size: 14px; color: gray;
+      border: 1px solid gray; border-radius: 100%;
     }
   </style>';
 }
