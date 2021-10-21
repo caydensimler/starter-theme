@@ -339,6 +339,13 @@
                 "operator": "==",
                 "value": "block-type:flexible-content"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "case-studies"
+            }
         ]
     ],
     "menu_order": 3,
@@ -370,7 +377,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1634844308,
+    "modified": 1634844607,
     "acfe_categories": {
         "template": "Template"
     }

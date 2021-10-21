@@ -348,15 +348,18 @@ div.sub-menu .menu-container ul > li {
 /* ------------------------------------------ */
 
 /* Line Separator */
-.component.line-separator-component hr { margin-bottom: 1rem; margin-top: 1rem; }
+.content.line-separator hr { margin-bottom: 1rem; margin-top: 1rem; }
 
 /* Text Component */
-.component.text-component:last-of-type > div > * { margin-bottom: 0px; }
+.content.text:last-of-type > div > * { margin-bottom: 0px; }
+
+/* Image Component */
+.content.image > div { max-width: 100%; }
 
 /* Link Component */
-.component.link-component button { padding: 0; }
-.component.link-component a.button { padding: 15px 30px; }
-.component.link-component a.link { background-color: none; }
+.content.link button { padding: 0; }
+.content.link a.button { padding: 15px 30px; }
+.content.link a.link { background-color: none; }
 
 /* Button Sizes */
 .button.button-small  { padding: .25rem 1rem !important; }
@@ -364,5 +367,5 @@ div.sub-menu .menu-container ul > li {
 .button.button-narrow { padding-left: .5rem !important; padding-right: .5rem !important; }
 
 /* List Component */
-.component.list-component > ul { margin-left: 10px; list-style-position: inside; }
-.component.list-component > ul li.list-icon { background-size: 20px; padding: 5px 0px 5px 35px; }
+.content.list > ul { margin-left: 10px; list-style-position: inside; }
+.content.list > ul li.list-icon { background-size: 20px; padding: 5px 0px 5px 35px; }

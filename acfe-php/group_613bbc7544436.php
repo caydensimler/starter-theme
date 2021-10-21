@@ -345,6 +345,13 @@ acf_add_local_field_group(array(
 				'value' => 'block-type:flexible-content',
 			),
 		),
+		array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'case-studies',
+			),
+		),
 	),
 	'menu_order' => 3,
 	'position' => 'acf_after_title',
@@ -378,7 +385,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'template' => 'Template',
 	),
-	'modified' => 1634844308,
+	'modified' => 1634844607,
 ));
 
 endif;

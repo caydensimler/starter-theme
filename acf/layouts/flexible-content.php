@@ -59,13 +59,24 @@ endwhile; ?>
 					<div class="item-<?= $itemNumber; ?>">
 						<?php if (have_rows('content_type')) { while (have_rows('content_type')) { the_row(); ?>
 
-							<?php if (get_row_layout() == 'wrapper'): ?>
+							<?php 
+								$layout = get_row_layout();
+								if (substr($layout, 0, strlen('custom-')) == 'custom-') {
+									$layout = str_replace('custom-', '', $layout);
+								}
+							?>
+
+							<?php if (substr($layout, 0, strlen('custom-')) == 'custom-'): ?>
+								<div class="content custom-content <?= $layout; ?>">
+									<?php get_template_part('acf/content/custom/' . $layout); ?>
+								</div>
+							<?php elseif ($layout == 'wrapper'): ?>
 								<?php get_template_part('acf/content/' . get_row_layout()); ?>
-							<?php elseif (get_row_layout() == 'wrapper_end'): ?>
+							<?php elseif ($layout == 'wrapper_end'): ?>
 								<?php echo '</div>'; ?>
 							<?php else: ?>
-								<div class="content <?= get_row_layout(); ?>">
-									<?php get_template_part('acf/content/' . get_row_layout()); ?>
+								<div class="content <?= $layout; ?>">
+									<?php get_template_part('acf/content/' . $layout); ?>
 								</div>
 							<?php endif; ?>
 
