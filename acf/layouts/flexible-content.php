@@ -42,7 +42,7 @@
 
 endwhile; ?>
 
-<?php if (have_rows('layout_items')): ?>
+<?php if (have_rows('layout_item')): ?>
 	<div <?= $layoutID; ?> <?= $wrapperClasses; ?>>
 
 		<?php $itemNumber = 1; ?>
@@ -53,19 +53,33 @@ endwhile; ?>
 			<?php endfor; ?>
 		<?php endif; ?>
 
-		<?php while(have_rows('layout_items')) : the_row(); ?>
+		<?php while(have_rows('layout_item')) : the_row(); ?>
 
 				<div <?= $contentClasses; ?>>
 					<div class="item-<?= $itemNumber; ?>">
 						<?php if (have_rows('content_type')) { while (have_rows('content_type')) { the_row(); ?>
 
-							<?php if (get_row_layout() == 'wrapper'): ?>
+							<?php 
+								$layout = get_row_layout();
+								if (substr($layout, 0, strlen('custom-')) == 'custom-') {
+									$layout = str_replace('custom-', '', $layout);
+									$customLayout = 1;
+								} else {
+									$customLayout = 0;
+								}
+							?>
+
+							<?php if ($customLayout): ?>
+								<div class="content custom-content <?= $layout; ?>">
+									<?php get_template_part('acf/content/custom/' . $layout); ?>
+								</div>
+							<?php elseif ($layout == 'wrapper'): ?>
 								<?php get_template_part('acf/content/' . get_row_layout()); ?>
-							<?php elseif (get_row_layout() == 'wrapper_end'): ?>
+							<?php elseif ($layout == 'wrapper_end'): ?>
 								<?php echo '</div>'; ?>
 							<?php else: ?>
-								<div class="content <?= get_row_layout(); ?>">
-									<?php get_template_part('acf/content/' . get_row_layout()); ?>
+								<div class="content <?= $layout; ?>">
+									<?php get_template_part('acf/content/' . $layout); ?>
 								</div>
 							<?php endif; ?>
 

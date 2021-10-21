@@ -15,9 +15,7 @@ function disable_content_block_input() {
 
 add_action('admin_head', 'acf_minor_updates');
 function acf_minor_updates() {
-  echo '<link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">';
+  echo '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">';
 
   echo '<style>
     body .layout[data-layout="layout-wrapper-start"],
@@ -112,5 +110,23 @@ function acf_minor_updates() {
     .acfe-flexible-placeholder.-preview .grid-container p { margin: 0px 0px 15px; }
 
     .acfe-flexible-placeholder.-preview .grid-container a { text-decoration: none; }
+
+    a.collapse-note { margin-left: 2px; margin-right: 2px; }
+
+    div.acf-field[data-name="layout_item"] tr:nth-child(1) .acf-row-handle.order { background: #F6E0E0; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(2) .acf-row-handle.order { background: #EDC0C0; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(3) .acf-row-handle.order { background: #E4A0A0; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(4) .acf-row-handle.order { background: #DB8080; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(5) .acf-row-handle.order { background: #D26060; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(6) .acf-row-handle.order { background: #CE5050; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(7) .acf-row-handle.order { background: #C94040; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(8) .acf-row-handle.order { background: #BF3636; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(9) .acf-row-handle.order { background: #9F2D2D; }
+
+    div.acf-field[data-name="layout_item"] .acf-row-handle.order span {
+      padding: 0px 7px 2px; background-color: white;
+      font-weight: 600; font-size: 14px; color: gray;
+      border: 1px solid gray; border-radius: 100%;
+    }
   </style>';
 }
