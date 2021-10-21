@@ -3,9 +3,26 @@
     "title": "Flexible Content",
     "fields": [
         {
+            "key": "field_6171cf0319a62",
+            "label": "",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Each individual layout item is sorted into the layout based on its position - notated by the number to the left of the content - and the columns set within the Layout Settings. You can drag and drop items as needed to move them up or down in the order. If you have issues changing the order of items, click on the collapse <a class=\"acf-icon -collapse small collapse-note\" href=\"#\"><\/a> icon in the top left of the layout item.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_609af2c7cde69",
-            "label": "Layout Items",
-            "name": "layout_items",
+            "label": "Layout Item",
+            "name": "layout_item",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -16,7 +33,7 @@
                 "id": ""
             },
             "acfe_repeater_stylised_button": 0,
-            "collapsed": "field_609af33bcde6a",
+            "collapsed": "field_6171d2b808dee",
             "min": 1,
             "max": 0,
             "layout": "block",
@@ -60,10 +77,91 @@
                         "acfe_flexible_modal_enabled": "1",
                         "acfe_flexible_modal_title": "Add Content Type",
                         "acfe_flexible_modal_size": "xlarge",
-                        "acfe_flexible_modal_col": "6",
+                        "acfe_flexible_modal_col": "2",
                         "acfe_flexible_modal_categories": "1"
                     },
                     "layouts": {
+                        "layout_613a6deeba94e": {
+                            "key": "layout_613a6deeba94e",
+                            "name": "wrapper",
+                            "label": "Wrapper (Start)",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6147adb763122",
+                                    "label": "",
+                                    "name": "",
+                                    "type": "message",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "Click the settings cog in the top right of this component to customize the wrapper options.",
+                                    "new_lines": "wpautop",
+                                    "esc_html": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_category": [
+                                "Specialty",
+                                "Wrapper"
+                            ],
+                            "acfe_flexible_settings": [
+                                "group_613fc3855ad6c",
+                                "group_613efa13331d6",
+                                "group_613fce1fc2c57",
+                                "group_6147fc6e7869a"
+                            ],
+                            "acfe_flexible_settings_size": "large",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_modal_edit_size": false
+                        },
+                        "layout_613a6e1bba950": {
+                            "key": "layout_613a6e1bba950",
+                            "name": "wrapper_end",
+                            "label": "Wrapper (End)",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_613a6e1bba951",
+                                    "label": "",
+                                    "name": "",
+                                    "type": "message",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "Closes the wrapper component. All options are configurable inside the starting component.",
+                                    "new_lines": "wpautop",
+                                    "esc_html": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_category": [
+                                "Specialty",
+                                "Wrapper"
+                            ],
+                            "acfe_flexible_settings": "",
+                            "acfe_flexible_settings_size": "large",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_modal_edit_size": false
+                        },
                         "layout_60a41ae81f7ed": {
                             "key": "layout_60a41ae81f7ed",
                             "name": "custom-text",
@@ -288,135 +386,6 @@
                             "acfe_flexible_thumbnail": false,
                             "acfe_flexible_modal_edit_size": false
                         },
-                        "layout_6148facf16347": {
-                            "key": "layout_6148facf16347",
-                            "name": "custom-list",
-                            "label": "[Custom] List",
-                            "display": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_6148fae116348",
-                                    "label": "List Items",
-                                    "name": "list_items",
-                                    "type": "repeater",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "acfe_repeater_stylised_button": 0,
-                                    "collapsed": "field_6148faef16349",
-                                    "min": 1,
-                                    "max": 0,
-                                    "layout": "block",
-                                    "button_label": "Add List Item",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_6148faef16349",
-                                            "label": "Item",
-                                            "name": "item",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": ""
-                                        }
-                                    ]
-                                }
-                            ],
-                            "min": "",
-                            "max": "",
-                            "acfe_flexible_category": [
-                                "Custom"
-                            ],
-                            "acfe_flexible_settings": [
-                                "group_6148f7cd423b2",
-                                "group_613fcf2ca952e",
-                                "group_613fc3855ad6c",
-                                "group_613efa13331d6",
-                                "group_613fce1fc2c57",
-                                "group_6147fc6e7869a"
-                            ],
-                            "acfe_flexible_settings_size": "large",
-                            "acfe_flexible_render_template": false,
-                            "acfe_flexible_render_style": false,
-                            "acfe_flexible_render_script": false,
-                            "acfe_flexible_thumbnail": false,
-                            "acfe_flexible_modal_edit_size": false
-                        },
-                        "layout_6171c162b3784": {
-                            "key": "layout_6171c162b3784",
-                            "name": "list",
-                            "label": "List",
-                            "display": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_6171c162b3785",
-                                    "label": "List Items",
-                                    "name": "list_items",
-                                    "type": "repeater",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "acfe_repeater_stylised_button": 0,
-                                    "collapsed": "field_6148faef16349",
-                                    "min": 1,
-                                    "max": 0,
-                                    "layout": "block",
-                                    "button_label": "Add List Item",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_6171c162b3786",
-                                            "label": "Item",
-                                            "name": "item",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": ""
-                                        }
-                                    ]
-                                }
-                            ],
-                            "min": "",
-                            "max": "",
-                            "acfe_flexible_category": [
-                                "Basic"
-                            ],
-                            "acfe_flexible_settings": "",
-                            "acfe_flexible_settings_size": "large",
-                            "acfe_flexible_render_template": false,
-                            "acfe_flexible_render_style": false,
-                            "acfe_flexible_render_script": false,
-                            "acfe_flexible_thumbnail": false,
-                            "acfe_flexible_modal_edit_size": false
-                        },
                         "layout_6147ff7cae6bc": {
                             "key": "layout_6147ff7cae6bc",
                             "name": "custom-wysiwyg",
@@ -606,6 +575,135 @@
                                     "default_value": "link",
                                     "layout": "horizontal",
                                     "return_format": "value"
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_category": [
+                                "Basic"
+                            ],
+                            "acfe_flexible_settings": "",
+                            "acfe_flexible_settings_size": "large",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_modal_edit_size": false
+                        },
+                        "layout_6148facf16347": {
+                            "key": "layout_6148facf16347",
+                            "name": "custom-list",
+                            "label": "[Custom] List",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6148fae116348",
+                                    "label": "List Items",
+                                    "name": "list_items",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_repeater_stylised_button": 0,
+                                    "collapsed": "field_6148faef16349",
+                                    "min": 1,
+                                    "max": 0,
+                                    "layout": "block",
+                                    "button_label": "Add List Item",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6148faef16349",
+                                            "label": "Item",
+                                            "name": "item",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        }
+                                    ]
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_category": [
+                                "Custom"
+                            ],
+                            "acfe_flexible_settings": [
+                                "group_6148f7cd423b2",
+                                "group_613fcf2ca952e",
+                                "group_613fc3855ad6c",
+                                "group_613efa13331d6",
+                                "group_613fce1fc2c57",
+                                "group_6147fc6e7869a"
+                            ],
+                            "acfe_flexible_settings_size": "large",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_modal_edit_size": false
+                        },
+                        "layout_6171c162b3784": {
+                            "key": "layout_6171c162b3784",
+                            "name": "list",
+                            "label": "List",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6171c162b3785",
+                                    "label": "List Items",
+                                    "name": "list_items",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "acfe_repeater_stylised_button": 0,
+                                    "collapsed": "field_6148faef16349",
+                                    "min": 1,
+                                    "max": 0,
+                                    "layout": "block",
+                                    "button_label": "Add List Item",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6171c162b3786",
+                                            "label": "Item",
+                                            "name": "item",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        }
+                                    ]
                                 }
                             ],
                             "min": "",
@@ -837,87 +935,6 @@
                             "acfe_flexible_render_script": false,
                             "acfe_flexible_thumbnail": false,
                             "acfe_flexible_modal_edit_size": false
-                        },
-                        "layout_613a6deeba94e": {
-                            "key": "layout_613a6deeba94e",
-                            "name": "wrapper",
-                            "label": "Wrapper (Start)",
-                            "display": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_6147adb763122",
-                                    "label": "",
-                                    "name": "",
-                                    "type": "message",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "message": "Click the settings cog in the top right of this component to customize the wrapper options.",
-                                    "new_lines": "wpautop",
-                                    "esc_html": 0
-                                }
-                            ],
-                            "min": "",
-                            "max": "",
-                            "acfe_flexible_category": [
-                                "Specialty",
-                                "Wrapper"
-                            ],
-                            "acfe_flexible_settings": [
-                                "group_613fc3855ad6c",
-                                "group_613efa13331d6",
-                                "group_613fce1fc2c57",
-                                "group_6147fc6e7869a"
-                            ],
-                            "acfe_flexible_settings_size": "large",
-                            "acfe_flexible_render_template": false,
-                            "acfe_flexible_render_style": false,
-                            "acfe_flexible_render_script": false,
-                            "acfe_flexible_thumbnail": false,
-                            "acfe_flexible_modal_edit_size": false
-                        },
-                        "layout_613a6e1bba950": {
-                            "key": "layout_613a6e1bba950",
-                            "name": "wrapper_end",
-                            "label": "Wrapper (End)",
-                            "display": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_613a6e1bba951",
-                                    "label": "",
-                                    "name": "",
-                                    "type": "message",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "message": "Closes the wrapper component. All options are configurable inside the starting component.",
-                                    "new_lines": "wpautop",
-                                    "esc_html": 0
-                                }
-                            ],
-                            "min": "",
-                            "max": "",
-                            "acfe_flexible_category": [
-                                "Specialty",
-                                "Wrapper"
-                            ],
-                            "acfe_flexible_settings": "",
-                            "acfe_flexible_settings_size": "large",
-                            "acfe_flexible_render_template": false,
-                            "acfe_flexible_render_style": false,
-                            "acfe_flexible_render_script": false,
-                            "acfe_flexible_thumbnail": false,
-                            "acfe_flexible_modal_edit_size": false
                         }
                     },
                     "button_label": "Add Content",
@@ -926,6 +943,23 @@
                     "acfe_flexible_hide_empty_message": false,
                     "acfe_flexible_empty_message": "",
                     "acfe_flexible_layouts_previews": false
+                },
+                {
+                    "key": "field_6171d2b808dee",
+                    "label": "",
+                    "name": "",
+                    "type": "message",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "new_lines": "wpautop",
+                    "esc_html": 0
                 }
             ]
         }
@@ -942,7 +976,7 @@
     "menu_order": 0,
     "position": "normal",
     "style": "default",
-    "label_placement": "left",
+    "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": false,
@@ -955,7 +989,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1634845977,
+    "modified": 1634851153,
     "acfe_categories": {
         "layout": "Layout"
     }

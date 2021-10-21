@@ -42,7 +42,7 @@
 
 endwhile; ?>
 
-<?php if (have_rows('layout_items')): ?>
+<?php if (have_rows('layout_item')): ?>
 	<div <?= $layoutID; ?> <?= $wrapperClasses; ?>>
 
 		<?php $itemNumber = 1; ?>
@@ -53,7 +53,7 @@ endwhile; ?>
 			<?php endfor; ?>
 		<?php endif; ?>
 
-		<?php while(have_rows('layout_items')) : the_row(); ?>
+		<?php while(have_rows('layout_item')) : the_row(); ?>
 
 				<div <?= $contentClasses; ?>>
 					<div class="item-<?= $itemNumber; ?>">
