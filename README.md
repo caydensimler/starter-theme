@@ -6,9 +6,11 @@ This is a starter theme that builds on top of the [GeneratePress Child Theme by 
 
 ---
 
-## In Progress
+## Coming Soon
 
 - Implementing an expand/collapse content button that generates a basic toggle button for dropdowns and accordions. 
+
+- Adding more post content types: next/previous, categories, and featured image.
 
 ## Changelogs & Version Control
 
