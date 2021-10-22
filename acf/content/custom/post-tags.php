@@ -1,11 +1,8 @@
 <?php if (have_settings()):
 	while(have_settings()): 
-		$settingsArray = generateSettings(the_setting()); 
-
+		$settingsArray = generateSettings(the_setting());
 	endwhile; 
-endif; ?>
-
-<?php 
+endif;
 
 // Tags link to archive page.
 $linkToArchive = '';
@@ -15,21 +12,25 @@ $tags = get_the_tags();
 
 ?>
 
-<ul <?= $settingsArray['wrapper-classes']; ?> <?= $settingsArray['data-attributes']; ?>>
-	<?php foreach ($tags as $tag): ?>
 
-		<?php if ($linkToArchive): ?>
-			<?php $tagLink = get_tag_link($tag); ?>
-			<a href="<?= $tagLink; ?>">
-		<?php endif; ?>
 
-				<li <?= $settingsArray['content-classes']; ?>>
-					<span><?= $tag->name; ?></span>
-				</li>
+<?php if ($tags): ?>
+	<ul <?= $settingsArray['wrapper-classes']; ?> <?= $settingsArray['data-attributes']; ?>>
+		<?php foreach ($tags as $tag): ?>
 
-		<?php if ($linkToArchive): ?>
-			</a>
-		<?php endif; ?>
+			<?php if ($linkToArchive): ?>
+				<?php $tagLink = get_tag_link($tag); ?>
+				<a href="<?= $tagLink; ?>" title="View all posts tagged '<?= $tag->name; ?>'.">
+			<?php endif; ?>
 
-	<?php endforeach; ?>
-</ul>
+					<li <?= $settingsArray['content-classes']; ?>>
+						<span><?= $tag->name; ?></span>
+					</li>
+
+			<?php if ($linkToArchive): ?>
+				</a>
+			<?php endif; ?>
+
+		<?php endforeach; ?>
+	</ul>
+<?php endif; ?>
