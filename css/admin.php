@@ -128,5 +128,7 @@ function acf_minor_updates() {
       font-weight: 600; font-size: 14px; color: gray;
       border: 1px solid gray; border-radius: 100%;
     }
+
+    div.acf-field[data-name="layout_item"] div.acf-field-wysiwyg { width: 100% !important; }
   </style>';
 }

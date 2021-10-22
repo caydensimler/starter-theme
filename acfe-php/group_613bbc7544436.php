@@ -366,9 +366,8 @@ acf_add_local_field_group(array(
 		4 => 'comments',
 		5 => 'revisions',
 		6 => 'slug',
-		7 => 'author',
-		8 => 'format',
-		9 => 'send-trackbacks',
+		7 => 'format',
+		8 => 'send-trackbacks',
 	),
 	'active' => true,
 	'description' => 'Flexible content page builder that incorporates ACF extended for maximum flexibility and layout/design control.',
@@ -383,7 +382,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'template' => 'Template',
 	),
-	'modified' => 1634855275,
+	'modified' => 1634928942,
 ));
 
 endif;

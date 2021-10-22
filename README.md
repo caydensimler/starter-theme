@@ -10,8 +10,6 @@ This is a starter theme that builds on top of the [GeneratePress Child Theme by 
 
 - Implementing an expand/collapse content button that generates a basic toggle button for dropdowns and accordions. 
 
-- Adding content types for post object data (title, author, tags, etc..). This would allow for the advanced builder template to exist on any post type.
-
 ## Changelogs & Version Control
 
 ### Changelogs
@@ -19,7 +17,7 @@ I use to have changelogs that I maintained in the early days of developing this;
 
 ### Version Control
 
-I have made a lot of changes since v1, so consider the current theme v2. Following the guidelines [here](https://semver.org/ "Semantic Versioning 2.0.0"), I will attempt to keep track of versions utilizing the Release functionality within Github.
+I have made a lot of changes since v1, so consider the current theme v2. Following the semantic guidelines for Version Control [here](https://semver.org/ "Semantic Versioning 2.0.0"), I will attempt to keep track of versions utilizing the Release functionality within Github.
 
 ## Core Concepts
 
@@ -31,7 +29,7 @@ I have made a lot of changes since v1, so consider the current theme v2. Followi
 
 ### Layered Content Generation
 
-Honestly, the best way I can explain this is to break it down based on the elements generated when a section is built using the Flexible Grid - soon to be renamed to Flexible Content - layout. From outside-in for each layout, the content is generated as follows:
+Honestly, the best way I can explain this is to break it down based on the elements generated when a section is built using the Flexible Content layout. From outside-in for each layout, the content is generated as follows:
 
 ![Content Generation Graphic](https://i.imgur.com/Oy1YzYa.png)
 
@@ -85,3 +83,26 @@ By integrating a kind of content-out development strategy, I've happened upon a 
 #### Reusability
 
 I've created a custom post type called Content Blocks that allows individual layouts to be built as a single component to then be pulled into several different locations on the site. Whether it be a call to action, Featured Products section, or something else entirely, Content Blocks allow you a single place to edit content output on multiple pages.
+
+---
+
+### Content Types
+
+The following are all the content types available to be used within the Flexible Content layout.
+
+#### Basic Content
+
+1. [Text](https://i.imgur.com/U5aE1EN.png)
+2. [Text Area](https://i.imgur.com/ALMMLL7.png)
+3. [WYSIWYG](https://i.imgur.com/xlN1zvf.png)
+4. [Link](https://i.imgur.com/mOjtkJX.png)
+5. [List](https://i.imgur.com/9NiIXSL.png)
+6. [Image](https://i.imgur.com/cGPecH5.png)
+7. [Line Separator](https://i.imgur.com/Md5Bljh.png)
+
+#### Post Content
+
+1. [Post Title](https://i.imgur.com/utIKTLS.png)
+2. [Post Date](https://i.imgur.com/aj05zDY.png)
+3. [Post Author](https://i.imgur.com/iqGl6MD.png)
+4. [Post Tags](https://i.imgur.com/hSJ52m1.png)
