@@ -909,7 +909,7 @@ acf_add_local_field_group(array(
 							'sub_fields' => array(
 								array(
 									'key' => 'field_6172fef890f7a',
-									'label' => 'Note',
+									'label' => '',
 									'name' => '',
 									'type' => 'message',
 									'instructions' => '',
@@ -920,7 +920,7 @@ acf_add_local_field_group(array(
 										'class' => '',
 										'id' => '',
 									),
-									'message' => 'Displays the post title.',
+									'message' => 'Displays the title of the post.',
 									'new_lines' => 'wpautop',
 									'esc_html' => 0,
 								),
@@ -980,7 +980,7 @@ acf_add_local_field_group(array(
 							'sub_fields' => array(
 								array(
 									'key' => 'field_6172ff1390f7d',
-									'label' => 'Note',
+									'label' => '',
 									'name' => '',
 									'type' => 'message',
 									'instructions' => '',
@@ -991,7 +991,7 @@ acf_add_local_field_group(array(
 										'class' => '',
 										'id' => '',
 									),
-									'message' => 'Displays the post title.',
+									'message' => 'Displays the title of the post.',
 									'new_lines' => 'wpautop',
 									'esc_html' => 0,
 								),
@@ -1621,7 +1621,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'layout' => 'Layout',
 	),
-	'modified' => 1634930053,
+	'modified' => 1634932994,
 ));
 
 endif;

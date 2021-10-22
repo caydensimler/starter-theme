@@ -904,7 +904,7 @@
                             "sub_fields": [
                                 {
                                     "key": "field_6172fef890f7a",
-                                    "label": "Note",
+                                    "label": "",
                                     "name": "",
                                     "type": "message",
                                     "instructions": "",
@@ -915,7 +915,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "message": "Displays the post title.",
+                                    "message": "Displays the title of the post.",
                                     "new_lines": "wpautop",
                                     "esc_html": 0
                                 },
@@ -975,7 +975,7 @@
                             "sub_fields": [
                                 {
                                     "key": "field_6172ff1390f7d",
-                                    "label": "Note",
+                                    "label": "",
                                     "name": "",
                                     "type": "message",
                                     "instructions": "",
@@ -986,7 +986,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "message": "Displays the post title.",
+                                    "message": "Displays the title of the post.",
                                     "new_lines": "wpautop",
                                     "esc_html": 0
                                 },
@@ -1613,7 +1613,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1634930053,
+    "modified": 1634932994,
     "acfe_categories": {
         "layout": "Layout"
     }
