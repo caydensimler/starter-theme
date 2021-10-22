@@ -3,11 +3,11 @@
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
-	'key' => 'group_5ce81cbae5ea9',
+	'key' => 'group_61731e9d87eea',
 	'title' => 'Container Options',
 	'fields' => array(
 		array(
-			'key' => 'field_6145071e7de85',
+			'key' => 'field_61731e9d8d6a5',
 			'label' => 'Background Options',
 			'name' => 'background_options',
 			'type' => 'clone',
@@ -28,7 +28,7 @@ acf_add_local_field_group(array(
 			'prefix_name' => 0,
 		),
 		array(
-			'key' => 'field_61450c93abfa1',
+			'key' => 'field_61731e9d9115d',
 			'label' => 'Advanced Properties',
 			'name' => 'advanced_properties',
 			'type' => 'clone',
@@ -49,7 +49,7 @@ acf_add_local_field_group(array(
 			'prefix_name' => 0,
 		),
 		array(
-			'key' => 'field_61652697aca20',
+			'key' => 'field_61731e9d94bc7',
 			'label' => 'Container ID',
 			'name' => 'container_id',
 			'type' => 'text',
@@ -68,7 +68,7 @@ acf_add_local_field_group(array(
 			'maxlength' => '',
 		),
 		array(
-			'key' => 'field_616916406223c',
+			'key' => 'field_61731e9d98668',
 			'label' => 'Container Wrapper Class(es)',
 			'name' => 'container_wrapper_classes',
 			'type' => 'text',
@@ -87,7 +87,7 @@ acf_add_local_field_group(array(
 			'maxlength' => '',
 		),
 		array(
-			'key' => 'field_616916516223d',
+			'key' => 'field_61731e9d9c12a',
 			'label' => 'Container Class(es)',
 			'name' => 'layout_container_classes',
 			'type' => 'text',
@@ -106,7 +106,7 @@ acf_add_local_field_group(array(
 			'maxlength' => '',
 		),
 		array(
-			'key' => 'field_6148129ece0dd',
+			'key' => 'field_61731e9d9fc47',
 			'label' => 'Container Width',
 			'name' => 'container_width',
 			'type' => 'clone',
@@ -167,7 +167,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'settings' => 'Settings',
 	),
-	'modified' => 1634336564,
+	'modified' => 1634934449,
 ));
 
 endif;

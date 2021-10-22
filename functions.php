@@ -27,8 +27,8 @@ function gpc_scripts() {
   wp_enqueue_script( 'gpc-theme-js', get_stylesheet_directory_uri() . '/js/theme.js', array( 'jquery' ), GPC_VERSION, true );
 }
 
-add_filter( 'auto_update_plugin', '__return_false' );
-add_filter( 'auto_update_theme', '__return_false' );
+// add_filter( 'auto_update_plugin', '__return_false' );
+// add_filter( 'auto_update_theme', '__return_false' );
 
 /**
  * Add body classes.
