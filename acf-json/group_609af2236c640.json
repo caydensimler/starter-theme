@@ -77,7 +77,7 @@
                         "acfe_flexible_modal_enabled": "1",
                         "acfe_flexible_modal_title": "Add Content Type",
                         "acfe_flexible_modal_size": "xlarge",
-                        "acfe_flexible_modal_col": "2",
+                        "acfe_flexible_modal_col": "4",
                         "acfe_flexible_modal_categories": "1"
                     },
                     "layouts": {
@@ -896,6 +896,510 @@
                             "acfe_flexible_thumbnail": false,
                             "acfe_flexible_modal_edit_size": false
                         },
+                        "layout_6172fef890f79": {
+                            "key": "layout_6172fef890f79",
+                            "name": "custom-post-title",
+                            "label": "[Custom] Post Title",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6172fef890f7a",
+                                    "label": "Note",
+                                    "name": "",
+                                    "type": "message",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "75",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "Displays the post title.",
+                                    "new_lines": "wpautop",
+                                    "esc_html": 0
+                                },
+                                {
+                                    "key": "field_6172fef890f7b",
+                                    "label": "",
+                                    "name": "type",
+                                    "type": "button_group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "h1": "H1",
+                                        "h2": "H2",
+                                        "h3": "H3",
+                                        "h4": "H4",
+                                        "h5": "H5",
+                                        "h6": "H6",
+                                        "p": "P"
+                                    },
+                                    "allow_null": 0,
+                                    "default_value": "",
+                                    "layout": "",
+                                    "return_format": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_category": [
+                                "Custom",
+                                "Post"
+                            ],
+                            "acfe_flexible_settings": [
+                                "group_613fcf2ca952e",
+                                "group_613fc3855ad6c",
+                                "group_613efa13331d6",
+                                "group_613fce1fc2c57",
+                                "group_6147fc6e7869a"
+                            ],
+                            "acfe_flexible_settings_size": "large",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_modal_edit_size": false
+                        },
+                        "layout_6172ff1390f7c": {
+                            "key": "layout_6172ff1390f7c",
+                            "name": "post-title",
+                            "label": "Post Title",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6172ff1390f7d",
+                                    "label": "Note",
+                                    "name": "",
+                                    "type": "message",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "75",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "Displays the post title.",
+                                    "new_lines": "wpautop",
+                                    "esc_html": 0
+                                },
+                                {
+                                    "key": "field_6172ff1390f7e",
+                                    "label": "",
+                                    "name": "type",
+                                    "type": "button_group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "h1": "H1",
+                                        "h2": "H2",
+                                        "h3": "H3",
+                                        "h4": "H4",
+                                        "h5": "H5",
+                                        "h6": "H6",
+                                        "p": "P"
+                                    },
+                                    "allow_null": 0,
+                                    "default_value": "",
+                                    "layout": "horizontal",
+                                    "return_format": "value"
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_category": [
+                                "Post",
+                                "Basic"
+                            ],
+                            "acfe_flexible_settings": "",
+                            "acfe_flexible_settings_size": "large",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_modal_edit_size": false
+                        },
+                        "layout_617300dea5709": {
+                            "key": "layout_617300dea5709",
+                            "name": "custom-post-date",
+                            "label": "[Custom] Post Date",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_61730d107535c",
+                                    "label": "Prefix",
+                                    "name": "prefix",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "15",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_617300dea570a",
+                                    "label": "Format",
+                                    "name": "format",
+                                    "type": "radio",
+                                    "instructions": "Note that in order to create a custom format, you'll need to reference the PHP DateTime::format Manual.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "70",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "d\/m\/Y": "[d\/m\/Y] 08\/17\/2021",
+                                        "F jS, Y": "[F jS, Y] August 17th, 2021"
+                                    },
+                                    "allow_null": 0,
+                                    "other_choice": 1,
+                                    "save_other_choice": 1,
+                                    "default_value": "F jS, Y",
+                                    "layout": "horizontal",
+                                    "return_format": "value"
+                                },
+                                {
+                                    "key": "field_61730d1f7535d",
+                                    "label": "Suffix",
+                                    "name": "suffix",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "15",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_category": [
+                                "Custom",
+                                "Post"
+                            ],
+                            "acfe_flexible_settings": [
+                                "group_613fcf2ca952e",
+                                "group_613fc3855ad6c",
+                                "group_613efa13331d6",
+                                "group_613fce1fc2c57",
+                                "group_6147fc6e7869a"
+                            ],
+                            "acfe_flexible_settings_size": "large",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_modal_edit_size": false
+                        },
+                        "layout_61730281a570c": {
+                            "key": "layout_61730281a570c",
+                            "name": "post-date",
+                            "label": "Post Date",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_61730d257535e",
+                                    "label": "Prefix",
+                                    "name": "prefix",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "15",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_61730281a570d",
+                                    "label": "Format",
+                                    "name": "format",
+                                    "type": "radio",
+                                    "instructions": "Note that in order to create a custom format, you'll need to reference the PHP DateTime::format Manual.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "70",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "d\/m\/Y": "[d\/m\/Y] 08\/17\/2021",
+                                        "F jS, Y": "[F jS, Y] August 17th, 2021"
+                                    },
+                                    "allow_null": 0,
+                                    "other_choice": 1,
+                                    "save_other_choice": 1,
+                                    "default_value": "F jS, Y",
+                                    "layout": "horizontal",
+                                    "return_format": "value"
+                                },
+                                {
+                                    "key": "field_61730d317535f",
+                                    "label": "Suffix",
+                                    "name": "suffix",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "15",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_category": [
+                                "Post",
+                                "Basic"
+                            ],
+                            "acfe_flexible_settings": "",
+                            "acfe_flexible_settings_size": "large",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_modal_edit_size": false
+                        },
+                        "layout_6173078452a93": {
+                            "key": "layout_6173078452a93",
+                            "name": "custom-post-author",
+                            "label": "[Custom] Post Author",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_61730d3b75360",
+                                    "label": "Prefix",
+                                    "name": "prefix",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "15",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_6173078452a94",
+                                    "label": "Note",
+                                    "name": "",
+                                    "type": "message",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "45",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "Displays the author of the post.",
+                                    "new_lines": "wpautop",
+                                    "esc_html": 0
+                                },
+                                {
+                                    "key": "field_61730d4675361",
+                                    "label": "Suffix",
+                                    "name": "suffix",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "15",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_6173078452a95",
+                                    "label": "Links to Archive",
+                                    "name": "links_to_archive",
+                                    "type": "true_false",
+                                    "instructions": "Whether or not the author name links to their respective archive.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_category": [
+                                "Custom",
+                                "Post"
+                            ],
+                            "acfe_flexible_settings": [
+                                "group_613fcf2ca952e",
+                                "group_613fc3855ad6c",
+                                "group_613efa13331d6",
+                                "group_613fce1fc2c57",
+                                "group_6147fc6e7869a"
+                            ],
+                            "acfe_flexible_settings_size": "large",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_modal_edit_size": false
+                        },
+                        "layout_617307ba52a96": {
+                            "key": "layout_617307ba52a96",
+                            "name": "post-author",
+                            "label": "Post Author",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_61730d4e75362",
+                                    "label": "Prefix",
+                                    "name": "prefix",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "15",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_617307ba52a97",
+                                    "label": "Note",
+                                    "name": "",
+                                    "type": "message",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "45",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "Displays the author of the post.",
+                                    "new_lines": "wpautop",
+                                    "esc_html": 0
+                                },
+                                {
+                                    "key": "field_61730d5975363",
+                                    "label": "Suffix",
+                                    "name": "suffix",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "15",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_617307ba52a98",
+                                    "label": "Links to Archive",
+                                    "name": "links_to_archive",
+                                    "type": "true_false",
+                                    "instructions": "Whether or not the author name links to their respective archive.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_category": [
+                                "Post",
+                                "Basic"
+                            ],
+                            "acfe_flexible_settings": "",
+                            "acfe_flexible_settings_size": "large",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_modal_edit_size": false
+                        },
                         "layout_6171e5f81be8e": {
                             "key": "layout_6171e5f81be8e",
                             "name": "custom-post-tags",
@@ -1008,13 +1512,7 @@
                                 "Basic",
                                 "Post"
                             ],
-                            "acfe_flexible_settings": [
-                                "group_613fcf2ca952e",
-                                "group_613fc3855ad6c",
-                                "group_613efa13331d6",
-                                "group_613fce1fc2c57",
-                                "group_6147fc6e7869a"
-                            ],
+                            "acfe_flexible_settings": "",
                             "acfe_flexible_settings_size": "large",
                             "acfe_flexible_render_template": false,
                             "acfe_flexible_render_style": false,
@@ -1115,7 +1613,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1634854770,
+    "modified": 1634930053,
     "acfe_categories": {
         "layout": "Layout"
     }

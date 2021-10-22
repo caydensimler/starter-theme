@@ -361,7 +361,6 @@
         "comments",
         "revisions",
         "slug",
-        "author",
         "format",
         "send-trackbacks"
     ],
@@ -375,7 +374,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1634855275,
+    "modified": 1634928942,
     "acfe_categories": {
         "template": "Template"
     }
