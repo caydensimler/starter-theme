@@ -19,7 +19,7 @@ $suffix = get_sub_field('suffix');
 		<?php $authorLink = get_author_posts_url($author); ?>
 		<a href="<?= $authorLink; ?>" title="View <?php echo esc_attr(get_the_author()) . '\'s Author Archives'; ?>">
 	<?php endif; ?>
-			<p <?= $settingsArray['content-classes']; ?>><?= $prefix; ?> <?= get_the_author(); ?> <?= $suffix; ?></p>
+			<p <?= $settingsArray['content-classes']; ?>><span class="author-prefix"><?= $prefix; ?></span> <span class="author-name"><?= get_the_author(); ?></span> <span class="author-suffix"><?= $suffix; ?></span></p>
 	<?php if ($linkToArchive): ?>
 		</a>
 	<?php endif; ?>

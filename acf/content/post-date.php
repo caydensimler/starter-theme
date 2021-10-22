@@ -7,5 +7,5 @@ $suffix = get_sub_field('suffix');
 ?>
 
 <div>
-	<p><?= $prefix; ?> <?= get_the_date($format); ?> <?= $suffix; ?></p>
+	<p><span class="date-prefix"><?= $prefix; ?></span> <?= get_the_date($format); ?> <span class="date-suffix"><?= $suffix; ?></span></p>
 </div>
