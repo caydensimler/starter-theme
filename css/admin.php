@@ -110,6 +110,7 @@ function acf_minor_updates() {
     .acfe-flexible-placeholder.-preview .grid-container p { margin: 0px 0px 15px; }
 
     .acfe-flexible-placeholder.-preview .grid-container a { text-decoration: none; }
+    .acfe-flexible-placeholder.-preview .grid-container img { max-width: 100%; }
 
     a.collapse-note { margin-left: 2px; margin-right: 2px; }
 
