@@ -76,7 +76,7 @@ endwhile; ?>
 							<?php elseif ($layout == 'wrapper'): ?>
 								<?php get_template_part('acf/content/' . get_row_layout()); ?>
 							<?php elseif ($layout == 'wrapper_end'): ?>
-								<?php echo '</div>'; ?>
+								<?php echo '</div></div>'; ?>
 							<?php else: ?>
 								<div class="content <?= $layout; ?>">
 									<?php get_template_part('acf/content/' . $layout); ?>
