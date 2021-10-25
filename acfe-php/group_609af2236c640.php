@@ -1586,7 +1586,7 @@ acf_add_local_field_group(array(
 						'class' => '',
 						'id' => '',
 					),
-					'message' => '',
+					'message' => 'If you hover over the number to the left, an icon should appear that allows you to expand this layout item in order to edit content.',
 					'new_lines' => 'wpautop',
 					'esc_html' => 0,
 				),
@@ -1621,7 +1621,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'layout' => 'Layout',
 	),
-	'modified' => 1634932994,
+	'modified' => 1635201285,
 ));
 
 endif;

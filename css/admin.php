@@ -131,5 +131,15 @@ function acf_minor_updates() {
     }
 
     div.acf-field[data-name="layout_item"] div.acf-field-wysiwyg { width: 100% !important; }
+
+    div.acf-field[data-name="layout_item"] table .acf-field[data-type="message"] { display: none; }
+    div.acf-field[data-name="layout_item"] table .acf-row.-collapsed .acf-field[data-type="message"] { display: block; }
+
+    .acfe-flexible-placeholder h1 { font-size: clamp(35px, 7vw, 50px) !important; }
+    .acfe-flexible-placeholder h2 { font-size: clamp(30px, 6vw, 44px) !important; }
+    .acfe-flexible-placeholder h3 { font-size: clamp(27px, 5vw, 38px) !important; }
+    .acfe-flexible-placeholder h4 { font-size: clamp(24px, 5vw, 30px) !important; }
+    .acfe-flexible-placeholder h5 { font-size: clamp(20px, 4vw, 24px) !important; }
+    .acfe-flexible-placeholder h6 { font-size: clamp(17px, 3vw, 18px) !important; }
   </style>';
 }

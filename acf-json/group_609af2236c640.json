@@ -1581,7 +1581,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "message": "",
+                    "message": "If you hover over the number to the left, an icon should appear that allows you to expand this layout item in order to edit content.",
                     "new_lines": "wpautop",
                     "esc_html": 0
                 }
@@ -1613,7 +1613,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1634932994,
+    "modified": 1635201285,
     "acfe_categories": {
         "layout": "Layout"
     }
