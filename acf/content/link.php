@@ -4,12 +4,17 @@
 	endwhile; 
 else:
 	$settingsArray = generateBasicContent();
+endif; 
+
+$link = get_sub_field( 'link' ); 
+$style = get_sub_field('style'); 
+
+if ($settingsArray['content-classes']):
+	$linkContentClass = substr($settingsArray['content-classes'], 0, -1) . ' ' . $style . '"'; 
+	$wrapperClass = substr($settingsArray['wrapper-classes'], 0, -1) . ' wrapper"'; 
+else:
+	$linkContentClass = 'class="' . $style . '"';
 endif; ?>
-
-<?php $link = get_sub_field( 'link' ); ?>
-<?php $style = get_sub_field('style'); ?>
-
-<?php $linkContentClass = substr($settingsArray['content-classes'], 0, -1) . ' ' . $style . '"'; ?>
 
 <?php if ( $link ) : ?>
 	<div <?= $settingsArray['wrapper-classes']; ?> <?= $settingsArray['data-attributes']; ?>>

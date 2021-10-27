@@ -8,9 +8,15 @@ This is a starter theme that builds on top of the [GeneratePress Child Theme by 
 
 ## Coming Soon
 
+New or updated features that are either currently being worked on or are in the queue.
+
 - Implementing an expand/collapse content button that generates a basic toggle button for dropdowns and accordions. 
 
 - Adding more post content types: next/previous, categories, and featured image.
+
+- Add another background option for video backgrounds. This should allow me to remove the Page Banner field group completely in favor of utilizing the builder system.
+
+- Rebuilding Sub-Menu (both ACF and CSS portions).
 
 ## Changelogs & Version Control
 
