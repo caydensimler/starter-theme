@@ -1,4 +1,10 @@
-<?php 
+<?php if (have_settings()):
+	while(have_settings()): 
+		$settingsArray = generateSettings(the_setting()); 
+	endwhile; 
+else:
+	$settingsArray = generateBasicContent();
+endif;
 
 // Tags link to archive page.
 $linkToArchive = '';
@@ -8,8 +14,10 @@ $tags = get_the_tags();
 
 ?>
 
+
+
 <?php if ($tags): ?>
-	<ul>
+	<ul <?= $settingsArray['wrapper-classes']; ?> <?= $settingsArray['data-attributes']; ?>>
 		<?php foreach ($tags as $tag): ?>
 
 			<?php if ($linkToArchive): ?>
@@ -17,7 +25,7 @@ $tags = get_the_tags();
 				<a href="<?= $tagLink; ?>" title="View all posts tagged '<?= $tag->name; ?>'.">
 			<?php endif; ?>
 
-					<li>
+					<li <?= $settingsArray['content-classes']; ?>>
 						<span><?= $tag->name; ?></span>
 					</li>
 

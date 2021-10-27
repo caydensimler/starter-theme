@@ -166,6 +166,11 @@ acf_add_local_field_group(array(
 				'operator' => '==',
 				'value' => 'advanced-builder.php',
 			),
+			array(
+				'param' => 'page_type',
+				'operator' => '!=',
+				'value' => 'front_page',
+			),
 		),
 		array(
 			array(
@@ -194,7 +199,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'template' => 'Template',
 	),
-	'modified' => 1632112336,
+	'modified' => 1635311736,
 ));
 
 endif;

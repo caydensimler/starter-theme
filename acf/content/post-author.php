@@ -1,4 +1,10 @@
-<?php 
+<?php if (have_settings()):
+	while(have_settings()): 
+		$settingsArray = generateSettings(the_setting()); 
+	endwhile; 
+else:
+	$settingsArray = generateBasicContent();
+endif;
 
 // Tags link to archive page.
 $linkToArchive = '';
@@ -10,12 +16,12 @@ $suffix = get_sub_field('suffix');
 
 ?>
 
-<div>
+<div <?= $settingsArray['wrapper-classes']; ?> <?= $settingsArray['data-attributes']; ?>>
 	<?php if ($linkToArchive): ?>
 		<?php $authorLink = get_author_posts_url($author); ?>
 		<a href="<?= $authorLink; ?>" title="View <?php echo esc_attr(get_the_author()) . '\'s Author Archives'; ?>">
 	<?php endif; ?>
-			<p><span class="author-prefix"><?= $prefix; ?></span> <span class="author-name"><?= get_the_author(); ?></span> <span class="author-suffix"><?= $suffix; ?></span></p>
+			<p <?= $settingsArray['content-classes']; ?>><span class="author-prefix"><?= $prefix; ?></span> <span class="author-name"><?= get_the_author(); ?></span> <span class="author-suffix"><?= $suffix; ?></span></p>
 	<?php if ($linkToArchive): ?>
 		</a>
 	<?php endif; ?>

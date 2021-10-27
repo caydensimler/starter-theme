@@ -18,17 +18,22 @@ function acf_minor_updates() {
   echo '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">';
 
   echo '<style>
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout { background: #F7F7F7; }
+
     body .layout[data-layout="layout-wrapper-start"],
     body .layout[data-layout="layout-wrapper-start"] .acfe-flexible-opened-actions,
-    body .layout[data-layout="wrapper"],
-    body .layout[data-layout="wrapper"] .acfe-flexible-opened-actions,
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper"],
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper"] .acfe-flexible-opened-actions,
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper_end"],
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper_end"] .acfe-flexible-opened-actions,
     body .layout[data-layout="layout-wrapper-end"],
     body .layout[data-layout="layout-wrapper-end"] .acfe-flexible-opened-actions {
       background: #EFF6FB;
     }
 
     body .layout[data-layout="layout-wrapper-start"] .acf-tab-wrap,
-    body .layout[data-layout="wrapper"]
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper"],
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper_end"],
     body .layout[data-layout="layout-wrapper-end"] .acf-tab-wrap,
     body .layout[data-layout="content-block"] .acf-tab-wrap {
       background: inherit;
@@ -36,8 +41,10 @@ function acf_minor_updates() {
 
     body .layout[data-layout="layout-wrapper-start"] .acf-fc-layout-order,
     body .layout[data-layout="layout-wrapper-start"] .acf-icon,
-    body .layout[data-layout="wrapper"] .acf-fc-layout-order,
-    body .layout[data-layout="wrapper"] .acf-icon,
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper"] .acf-fc-layout-order,
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper"] .acf-icon,
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper_end"] .acf-fc-layout-order,
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper_end"] .acf-icon,
     body .layout[data-layout="layout-wrapper-end"] .acf-fc-layout-order,
     body .layout[data-layout="layout-wrapper-end"] .acf-icon {
       background: #CEE4F3;
@@ -69,23 +76,28 @@ function acf_minor_updates() {
 
     body .layout[data-layout="wrapper_start"],
     body .layout[data-layout="wrapper_start"] .acfe-flexible-opened-actions,
-    body .layout[data-layout="wrapper"],
-    body .layout[data-layout="wrapper"] .acfe-flexible-opened-actions,
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper"],
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper"] .acfe-flexible-opened-actions,
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper_end"],
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper_end"] .acfe-flexible-opened-actions,
     body .layout[data-layout="wrapper_end"],
     body .layout[data-layout="wrapper_end"] .acfe-flexible-opened-actions {
       background: #EFF6FB;
     }
 
     body .layout[data-layout="wrapper_start"] .acf-tab-wrap,
-    body .layout[data-layout="wrapper"] .acf-tab-wrap,
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper"] .acf-tab-wrap,
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper_end"] .acf-tab-wrap,
     body .layout[data-layout="wrapper_end"] .acf-tab-wrap {
       background: inherit;
     }
 
     body .layout[data-layout="wrapper_start"] .acf-fc-layout-order,
     body .layout[data-layout="wrapper_start"] .acf-icon,
-    body .layout[data-layout="wrapper"] .acf-fc-layout-order,
-    body .layout[data-layout="wrapper"] .acf-icon,
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper"] .acf-fc-layout-order,
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper"] .acf-icon,
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper_end"] .acf-fc-layout-order,
+    div.acf-field[data-name="layout_item"] .acf-flexible-content .layout[data-layout="wrapper_end"] .acf-icon,
     body .layout[data-layout="wrapper_end"] .acf-fc-layout-order,
     body .layout[data-layout="wrapper_end"] .acf-icon {
       background: #CEE4F3;
@@ -141,5 +153,11 @@ function acf_minor_updates() {
     .acfe-flexible-placeholder h4 { font-size: clamp(24px, 5vw, 30px) !important; }
     .acfe-flexible-placeholder h5 { font-size: clamp(20px, 4vw, 24px) !important; }
     .acfe-flexible-placeholder h6 { font-size: clamp(17px, 3vw, 18px) !important; }
+
+    .acf-repeater .acf-row { box-shadow: 2px 2px 4px rgb(0 0 0 / 11%); }
+
+    div.layout[data-layout="content-block"] .acfe-fc-placeholder,
+    div.layout[data-layout="layout-wrapper-start"] .acfe-fc-placeholder,
+    div.layout[data-layout="layout-wrapper-end"] .acfe-fc-placeholder { display: none; }
   </style>';
 }

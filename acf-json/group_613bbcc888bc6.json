@@ -161,6 +161,11 @@
                 "param": "page_template",
                 "operator": "==",
                 "value": "advanced-builder.php"
+            },
+            {
+                "param": "page_type",
+                "operator": "!=",
+                "value": "front_page"
             }
         ],
         [
@@ -187,7 +192,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1632112336,
+    "modified": 1635311736,
     "acfe_categories": {
         "template": "Template"
     }

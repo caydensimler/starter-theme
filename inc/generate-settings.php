@@ -1,4 +1,35 @@
 <?php
+
+function generateBasicContent() {
+	// Generate classes, styles, and data attributes for the content and its wrapper.
+	$settingsArray = [];
+	$contentClasses = 'class="'; $contentStyles = 'style="';
+	$wrapperClasses = 'class="'; $wrapperStyles = 'style="';
+	$dataAttributes = '';
+
+	$wrapperClasses .= 'content-wrapper';
+
+
+	// Generate content and content wrapper settings
+	$settingsArray['content-classes'] = rtrim($contentClasses) . '"';
+	if (strlen($settingsArray['content-classes']) <= 8 ) { $settingsArray['content-classes'] = '';}
+
+	$settingsArray['content-styles'] = rtrim($contentStyles) . '"';
+	if (strlen($settingsArray['content-styles']) <= 8 ) { $settingsArray['content-styles'] = ''; }
+
+	$settingsArray['wrapper-classes'] = rtrim($wrapperClasses) . '"';
+	if (strlen($settingsArray['wrapper-classes']) <= 8 ) { $settingsArray['wrapper-classes'] = ''; }
+
+	$settingsArray['wrapper-styles'] = rtrim($wrapperStyles) . '"';
+	if (strlen($settingsArray['wrapper-styles']) <= 8 ) { $settingsArray['wrapper-styles'] = ''; }
+
+	$settingsArray['data-attributes'] = rtrim($dataAttributes);
+
+
+	return $settingsArray;
+}
+
+
 function generateSettings($settings) {
 	// Generate classes, styles, and data attributes for the content and its wrapper.
 	$settingsArray = [];
@@ -12,6 +43,14 @@ function generateSettings($settings) {
 		$textColor = get_string_between($colorSwatch, '[', ']');
 
 		$contentClasses .= $textColor . ' ';
+	}
+
+	// Background Colors
+	if (get_sub_field('background_color') && get_sub_field('background') !== 'unset') {
+		$colorSwatch = strip_tags(get_sub_field('background_color'));
+		$backgroundColor = get_string_between($colorSwatch, '[', ']');
+
+		$contentClasses .= $backgroundColor . ' ';
 	}
 
 	// Border Colors
