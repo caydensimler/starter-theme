@@ -17,13 +17,13 @@
 			$contentClasses .= get_sub_field('vertical-alignment') . ' ';
 		}
 
-		$wrapperClasses .= 'grid-display ' . $layoutStructure . ' ';
+		$wrapperClasses .= 'layout grid-display ' . $layoutStructure . ' ';
 	} elseif ($gridType == 'masonry') {
 		if (have_rows('masonry_columns')) { 
 			while (have_rows('masonry_columns')) { the_row();
 				$desktopMasonry = get_sub_field( 'desktop' );
 				$containerCount = $desktopMasonry['label'];
-				$layoutStructure = $desktopMasonry['value'] . ' ' . get_sub_field('tablet') . ' ' . get_sub_field('mobile') . ' grid-display masonry-grid items-start ';
+				$layoutStructure = $desktopMasonry['value'] . ' ' . get_sub_field('tablet') . ' ' . get_sub_field('mobile') . 'layout grid-display masonry-grid items-start ';
 			}
 		}
 
@@ -71,7 +71,7 @@ endwhile; ?>
 							<?php if ($contentType == 'wrapper'): ?>
 								<?php get_template_part('acf/content/' . $contentType); ?>
 							<?php elseif ($contentType == 'wrapper_end'): ?>
-								<?php echo '</div></div></div>'; ?>
+								<?php echo '</div></div>'; ?>
 							<?php else: ?>
 								<div class="<?= $contentType; ?>">
 									<?php get_template_part('acf/content/' . $contentType); ?>

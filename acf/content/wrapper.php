@@ -2,8 +2,13 @@
 	while(have_settings()): 
 		$settingsArray = generateSettings(the_setting()); 
 	endwhile; 
+endif; 
+
+if ($settingsArray['wrapper-classes']):
+	$wrapperClass = substr($settingsArray['wrapper-classes'], 0, -1) . ' wrapper"'; 
+else:
+	$wrapperClass = 'class="wrapper"';
 endif; ?>
 
-<div class="wrapper">
-	<div <?= $settingsArray['wrapper-classes']; ?> <?= $settingsArray['data-attributes']; ?>>
-		<div <?= $settingsArray['content-classes']; ?>>
+<div <?= $wrapperClass; ?> <?= $settingsArray['data-attributes']; ?>>
+	<div <?= $settingsArray['content-classes']; ?>>
