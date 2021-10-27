@@ -124,17 +124,19 @@ function acf_minor_updates() {
     .acfe-flexible-placeholder.-preview .grid-container a { text-decoration: none; }
     .acfe-flexible-placeholder.-preview .grid-container img { max-width: 100%; }
 
+    .acfe-flexible-placeholder.-preview .grid-container .layout { margin: 0; background: none; border: none; }
+
     a.collapse-note { margin-left: 2px; margin-right: 2px; }
 
-    div.acf-field[data-name="layout_item"] tr:nth-child(1) .acf-row-handle.order { background: #F6E0E0; }
-    div.acf-field[data-name="layout_item"] tr:nth-child(2) .acf-row-handle.order { background: #EDC0C0; }
-    div.acf-field[data-name="layout_item"] tr:nth-child(3) .acf-row-handle.order { background: #E4A0A0; }
-    div.acf-field[data-name="layout_item"] tr:nth-child(4) .acf-row-handle.order { background: #DB8080; }
-    div.acf-field[data-name="layout_item"] tr:nth-child(5) .acf-row-handle.order { background: #D26060; }
-    div.acf-field[data-name="layout_item"] tr:nth-child(6) .acf-row-handle.order { background: #CE5050; }
-    div.acf-field[data-name="layout_item"] tr:nth-child(7) .acf-row-handle.order { background: #C94040; }
-    div.acf-field[data-name="layout_item"] tr:nth-child(8) .acf-row-handle.order { background: #BF3636; }
-    div.acf-field[data-name="layout_item"] tr:nth-child(9) .acf-row-handle.order { background: #9F2D2D; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(1) .acf-row-handle { background: #F6E0E0; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(2) .acf-row-handle { background: #EDC0C0; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(3) .acf-row-handle { background: #E4A0A0; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(4) .acf-row-handle { background: #DB8080; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(5) .acf-row-handle { background: #D26060; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(6) .acf-row-handle { background: #CE5050; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(7) .acf-row-handle { background: #C94040; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(8) .acf-row-handle { background: #BF3636; }
+    div.acf-field[data-name="layout_item"] tr:nth-child(9) .acf-row-handle { background: #9F2D2D; }
 
     div.acf-field[data-name="layout_item"] .acf-row-handle.order span {
       padding: 0px 7px 2px; background-color: white;
