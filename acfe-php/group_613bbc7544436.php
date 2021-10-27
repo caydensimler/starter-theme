@@ -347,7 +347,22 @@ acf_add_local_field_group(array(
 			array(
 				'param' => 'post_type',
 				'operator' => '==',
-				'value' => 'case-studies',
+				'value' => 'all',
+			),
+			array(
+				'param' => 'post_type',
+				'operator' => '!=',
+				'value' => 'content-block',
+			),
+			array(
+				'param' => 'post_type',
+				'operator' => '!=',
+				'value' => 'gp_elements',
+			),
+			array(
+				'param' => 'post_type',
+				'operator' => '!=',
+				'value' => 'page',
 			),
 		),
 	),
@@ -357,15 +372,14 @@ acf_add_local_field_group(array(
 	'label_placement' => 'top',
 	'instruction_placement' => 'tooltip',
 	'hide_on_screen' => array(
-		0 => 'block_editor',
-		1 => 'the_content',
-		2 => 'excerpt',
-		3 => 'discussion',
-		4 => 'comments',
-		5 => 'revisions',
-		6 => 'slug',
-		7 => 'format',
-		8 => 'send-trackbacks',
+		0 => 'the_content',
+		1 => 'excerpt',
+		2 => 'discussion',
+		3 => 'comments',
+		4 => 'revisions',
+		5 => 'slug',
+		6 => 'format',
+		7 => 'send-trackbacks',
 	),
 	'active' => true,
 	'description' => 'Flexible content page builder that incorporates ACF extended for maximum flexibility and layout/design control.',
@@ -380,7 +394,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'template' => 'Template',
 	),
-	'modified' => 1635312492,
+	'modified' => 1635373572,
 ));
 
 endif;
