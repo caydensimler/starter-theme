@@ -310,6 +310,27 @@ acf_add_local_field_group(array(
 			'return_format' => 'value',
 		),
 		array(
+			'key' => 'field_6179bcac7d55f',
+			'label' => 'Horizontal Alignment',
+			'name' => 'horizontal_alignment',
+			'type' => 'clone',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'clone' => array(
+				0 => 'field_613fc3fee2c4c',
+			),
+			'display' => 'seamless',
+			'layout' => 'block',
+			'prefix_label' => 0,
+			'prefix_name' => 0,
+		),
+		array(
 			'key' => 'field_6148eb66768bc',
 			'label' => 'Layout ID',
 			'name' => 'layout_id',
@@ -395,7 +416,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'settings' => 'Settings',
 	),
-	'modified' => 1635201236,
+	'modified' => 1635368262,
 ));
 
 endif;

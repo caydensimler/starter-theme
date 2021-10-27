@@ -122,9 +122,8 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_permissions": "",
             "message": "",
-            "default_value": 0,
+            "default_value": 1,
             "ui": 1,
             "ui_on_text": "Yes",
             "ui_off_text": "No"
@@ -162,9 +161,8 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_permissions": "",
             "message": "",
-            "default_value": 0,
+            "default_value": 1,
             "ui": 1,
             "ui_on_text": "",
             "ui_off_text": ""
@@ -191,7 +189,7 @@
         },
         {
             "key": "field_5cf00fdbcc88e",
-            "label": "<a href=\"https:\/\/masonry.desandro.com\/\" target=\"_blank\" rel=\"noopener noreferrer\">Masonry JS<\/a>",
+            "label": "<a href=\"https:\/\/github.com\/desandro\/colcade\" target=\"_blank\" rel=\"noopener noreferrer\">Colcade (Masonry)<\/a>",
             "name": "masonry_js",
             "type": "true_false",
             "instructions": "",
@@ -202,9 +200,8 @@
                 "class": "",
                 "id": ""
             },
-            "acfe_permissions": "",
             "message": "",
-            "default_value": 0,
+            "default_value": 1,
             "ui": 1,
             "ui_on_text": "",
             "ui_off_text": ""
@@ -564,7 +561,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1631912127,
+    "modified": 1635374271,
     "acfe_categories": {
         "options": "Options"
     }

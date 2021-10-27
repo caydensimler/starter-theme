@@ -11,7 +11,6 @@ $style = get_sub_field('style');
 
 if ($settingsArray['content-classes']):
 	$linkContentClass = substr($settingsArray['content-classes'], 0, -1) . ' ' . $style . '"'; 
-	$wrapperClass = substr($settingsArray['wrapper-classes'], 0, -1) . ' wrapper"'; 
 else:
 	$linkContentClass = 'class="' . $style . '"';
 endif; ?>

@@ -126,9 +126,8 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => '',
 			),
-			'acfe_permissions' => '',
 			'message' => '',
-			'default_value' => 0,
+			'default_value' => 1,
 			'ui' => 1,
 			'ui_on_text' => 'Yes',
 			'ui_off_text' => 'No',
@@ -166,9 +165,8 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => '',
 			),
-			'acfe_permissions' => '',
 			'message' => '',
-			'default_value' => 0,
+			'default_value' => 1,
 			'ui' => 1,
 			'ui_on_text' => '',
 			'ui_off_text' => '',
@@ -195,7 +193,7 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5cf00fdbcc88e',
-			'label' => '<a href="https://masonry.desandro.com/" target="_blank" rel="noopener noreferrer">Masonry JS</a>',
+			'label' => '<a href="https://github.com/desandro/colcade" target="_blank" rel="noopener noreferrer">Colcade (Masonry)</a>',
 			'name' => 'masonry_js',
 			'type' => 'true_false',
 			'instructions' => '',
@@ -206,9 +204,8 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => '',
 			),
-			'acfe_permissions' => '',
 			'message' => '',
-			'default_value' => 0,
+			'default_value' => 1,
 			'ui' => 1,
 			'ui_on_text' => '',
 			'ui_off_text' => '',
@@ -571,7 +568,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'options' => 'Options',
 	),
-	'modified' => 1631912127,
+	'modified' => 1635374271,
 ));
 
 endif;

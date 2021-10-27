@@ -146,8 +146,8 @@ function acf_minor_updates() {
 
     div.acf-field[data-name="layout_item"] div.acf-field-wysiwyg { width: 100% !important; }
 
-    div.acf-field[data-name="layout_item"] table .acf-field[data-type="message"] { display: none; }
-    div.acf-field[data-name="layout_item"] table .acf-row.-collapsed .acf-field[data-type="message"] { display: block; }
+    div.acf-field[data-name="layout_item"] table .acf-field.hover-note { display: none; }
+    div.acf-field[data-name="layout_item"] table .acf-row.-collapsed .acf-field.hover-note { display: block; }
 
     .acfe-flexible-placeholder h1 { font-size: clamp(35px, 7vw, 50px) !important; }
     .acfe-flexible-placeholder h2 { font-size: clamp(30px, 6vw, 44px) !important; }

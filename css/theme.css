@@ -331,29 +331,53 @@ div.sub-menu .menu-container ul > li {
 
 
 /* ------------------------------------------ */
-/* Content Styles --------------------------- */
+/* Grid ------------------------------------- */
+/* ------------------------------------------ */
+.grid-display { gap: 50px; min-width: 0; min-height: 0; }
+.grid-display .layout-item { min-width: 0; }
+.layout-item .masonry-item { margin-bottom: 50px; }
+.layout-item .masonry-item:last-child { margin-bottom: 0px; }
+
+@media screen and (max-width: 1024px) { 
+  .grid-display { gap: 25px; } 
+  .layout-item .masonry-item { margin-bottom: 25px; }
+}
+
+
+
+
+/* ------------------------------------------ */
+/* Containers ------------------------------- */
+/* ------------------------------------------ */
+body.single #content:nth-child(1) > div > div { padding-top: 50px; }
+
+
+
+
+/* ------------------------------------------ */
+/* Content Type ----------------------------- */
 /* ------------------------------------------ */
 
 /* Line Separator */
-.content.line-separator hr { margin-bottom: 1rem; margin-top: 1rem; }
+.line-separator hr { margin-bottom: 1rem; margin-top: 1rem; }
 
 /* Text Component */
-.content.text:last-of-type > div > * { margin-bottom: 0px; }
+.text:last-of-type > div > * { margin-bottom: 0px; }
 
 /* Image Component */
-.content.image > div { max-width: 100%; }
+.image > div { max-width: 100%; }
 
 /* Link Component */
-.content.link button { padding: 0; }
-.content.link a.button { padding: 15px 30px; }
-.content.link a.link { background-color: none; }
+.link button { padding: 0; }
+.link a.button { padding: 15px 30px; }
+.link a.link { background-color: none; }
 
 /* List Component */
-.content.list > ul { margin-left: 10px; list-style-position: inside; }
-.content.list > ul li.list-icon { background-size: 20px; padding: 5px 0px 5px 35px; }
+.list > ul { margin-left: 10px; list-style-position: inside; }
+.list > ul li.list-icon { background-size: 20px; padding: 5px 0px 5px 35px; }
 
 /* Post Tags */
-.content.post-tags ul { list-style-type: none; margin-left: 0px; }
+.post-tags ul { list-style-type: none; margin-left: 0px; }
 
-.content.post-tags ul > * { display: inline-block; margin-right: 15px; }
-.content.post-tags ul > *:last-of-type { margin-right: 0px; }
+.post-tags ul > * { display: inline-block; margin-right: 15px; }
+.post-tags ul > *:last-of-type { margin-right: 0px; }
