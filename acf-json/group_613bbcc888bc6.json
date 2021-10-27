@@ -166,13 +166,18 @@
                 "param": "page_type",
                 "operator": "!=",
                 "value": "front_page"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "all"
             }
         ],
         [
             {
-                "param": "post_type",
+                "param": "post_taxonomy",
                 "operator": "==",
-                "value": "post"
+                "value": "block-type:sub-menu"
             }
         ]
     ],
@@ -192,7 +197,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1635311736,
+    "modified": 1635365356,
     "acfe_categories": {
         "template": "Template"
     }

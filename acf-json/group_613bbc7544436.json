@@ -342,7 +342,22 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "case-studies"
+                "value": "all"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "content-block"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "gp_elements"
+            },
+            {
+                "param": "post_type",
+                "operator": "!=",
+                "value": "page"
             }
         ]
     ],
@@ -352,7 +367,6 @@
     "label_placement": "top",
     "instruction_placement": "tooltip",
     "hide_on_screen": [
-        "block_editor",
         "the_content",
         "excerpt",
         "discussion",
@@ -372,7 +386,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1635312492,
+    "modified": 1635373572,
     "acfe_categories": {
         "template": "Template"
     }

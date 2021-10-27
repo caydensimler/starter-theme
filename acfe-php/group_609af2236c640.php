@@ -1620,7 +1620,7 @@ acf_add_local_field_group(array(
 					'conditional_logic' => 0,
 					'wrapper' => array(
 						'width' => '',
-						'class' => '',
+						'class' => 'hover-note',
 						'id' => '',
 					),
 					'message' => 'If you hover over the number to the left, an icon should appear that allows you to expand this layout item in order to edit content.',
@@ -1658,7 +1658,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'layout' => 'Layout',
 	),
-	'modified' => 1635308903,
+	'modified' => 1635371787,
 ));
 
 endif;

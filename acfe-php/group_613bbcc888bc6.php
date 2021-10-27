@@ -171,12 +171,17 @@ acf_add_local_field_group(array(
 				'operator' => '!=',
 				'value' => 'front_page',
 			),
+			array(
+				'param' => 'post_type',
+				'operator' => '!=',
+				'value' => 'all',
+			),
 		),
 		array(
 			array(
-				'param' => 'post_type',
+				'param' => 'post_taxonomy',
 				'operator' => '==',
-				'value' => 'post',
+				'value' => 'block-type:sub-menu',
 			),
 		),
 	),
@@ -199,7 +204,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'template' => 'Template',
 	),
-	'modified' => 1635311736,
+	'modified' => 1635365356,
 ));
 
 endif;
