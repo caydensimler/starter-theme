@@ -1,3 +1,5 @@
+@import "base.css";
+
 body {
   font-variant-ligatures: none;
   text-rendering: optimizeLegibility;
@@ -144,21 +146,6 @@ body h6 { font-size: clamp(17px, 3vw, 18px); }
 .bd-pink          { border-color: #D54896; }
 .bd-pink-medium   { border-color: #B72A77; }
 .bd-pink-dark     { border-color: #741A4C; }
-
-
-
-
-/* ------------------------------------------ */
-/* Grid Styles ------------------------------ */
-/* ------------------------------------------ */
-.grid-display { gap: 50px; }
-.grid-item .masonry-item { margin-bottom: 50px; }
-.grid-item .masonry-item:last-child { margin-bottom: 0px; }
-
-@media screen and (max-width: 1024px) { 
-  .grid-display { gap: 25px; } 
-  .grid-item .masonry-item { margin-bottom: 25px; }
-}
 
 
 

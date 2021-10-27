@@ -100,7 +100,7 @@ acf_add_local_field_group(array(
 						'columns-4-1' => '4:1',
 					),
 					'allow_null' => 0,
-					'default_value' => 'columns-',
+					'default_value' => 'columns-1',
 					'layout' => 'horizontal',
 					'return_format' => 'value',
 				),
@@ -395,7 +395,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'settings' => 'Settings',
 	),
-	'modified' => 1634447629,
+	'modified' => 1635201236,
 ));
 
 endif;

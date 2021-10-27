@@ -102,8 +102,8 @@ acf_add_local_field_group(array(
 					),
 					'min' => '',
 					'max' => '',
-					'acfe_flexible_render_template' => 'acf/layouts/content-block.php',
-					'acfe_flexible_render_style' => 'css/base.css',
+					'acfe_flexible_render_template' => 'acf/clones/page-content.php',
+					'acfe_flexible_render_style' => 'css/theme.css',
 					'acfe_flexible_render_script' => '',
 					'acfe_flexible_settings' => '',
 					'acfe_flexible_settings_size' => 'xlarge',
@@ -157,7 +157,7 @@ acf_add_local_field_group(array(
 					),
 					'min' => '',
 					'max' => '',
-					'acfe_flexible_render_template' => 'acf/layouts/sub-menu.php',
+					'acfe_flexible_render_template' => 'acf/clones/page-content.php',
 					'acfe_flexible_render_style' => 'css/theme.css',
 					'acfe_flexible_render_script' => '',
 					'acfe_flexible_settings' => '',
@@ -197,7 +197,7 @@ acf_add_local_field_group(array(
 					'min' => '',
 					'max' => '',
 					'acfe_flexible_render_template' => 'acf/clones/page-content.php',
-					'acfe_flexible_render_style' => 'css/base.css',
+					'acfe_flexible_render_style' => 'css/theme.css',
 					'acfe_flexible_render_script' => 'js/theme.js',
 					'acfe_flexible_settings' => array(
 						0 => 'group_612ff8ca6d684',
@@ -236,8 +236,8 @@ acf_add_local_field_group(array(
 					),
 					'min' => '',
 					'max' => '',
-					'acfe_flexible_render_template' => '',
-					'acfe_flexible_render_style' => '',
+					'acfe_flexible_render_template' => 'acf/clones/page-content.php',
+					'acfe_flexible_render_style' => 'css/theme.css',
 					'acfe_flexible_render_script' => '',
 					'acfe_flexible_settings' => array(
 						0 => 'group_61731e9d87eea',
@@ -276,7 +276,9 @@ acf_add_local_field_group(array(
 					'acfe_flexible_render_template' => '',
 					'acfe_flexible_render_style' => '',
 					'acfe_flexible_render_script' => '',
-					'acfe_flexible_settings' => '',
+					'acfe_flexible_settings' => array(
+						0 => 'group_61731e9d87eea',
+					),
 					'acfe_flexible_settings_size' => 'xlarge',
 					'acfe_flexible_thumbnail' => '',
 					'acfe_flexible_modal_edit_size' => false,
@@ -378,7 +380,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'template' => 'Template',
 	),
-	'modified' => 1634934491,
+	'modified' => 1635312492,
 ));
 
 endif;

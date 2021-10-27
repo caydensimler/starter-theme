@@ -12,7 +12,7 @@
 			}
 		}
 
-		$contentClasses .= 'grid-item ';
+		$contentClasses .= 'layout-item ';
 		if (get_sub_field('vertical-alignment') !== 'unset') {
 			$contentClasses .= get_sub_field('vertical-alignment') . ' ';
 		}
@@ -49,7 +49,7 @@ endwhile; ?>
 
 		<?php if ($gridType === 'masonry'): ?>
 			<?php for ($i = 1; $i <= $containerCount; $i++): ?>
-				<div class="grid-item col-<?= $i; ?>"></div>
+				<div class="layout-item col-<?= $i; ?>"></div>
 			<?php endfor; ?>
 		<?php endif; ?>
 
@@ -60,26 +60,21 @@ endwhile; ?>
 						<?php if (have_rows('content_type')) { while (have_rows('content_type')) { the_row(); ?>
 
 							<?php 
-								$layout = get_row_layout();
-								if (substr($layout, 0, strlen('custom-')) == 'custom-') {
-									$layout = str_replace('custom-', '', $layout);
-									$customLayout = 1;
-								} else {
-									$customLayout = 0;
+								$contentType = get_row_layout();
+
+								// Check if it's custom content and, if so, remove the custom- prefix from the content type.
+								if (substr($contentType, 0, strlen('custom-')) == 'custom-') {
+									$contentType = str_replace('custom-', '', $contentType);
 								}
 							?>
 
-							<?php if ($customLayout): ?>
-								<div class="content custom-content <?= $layout; ?>">
-									<?php get_template_part('acf/content/custom/' . $layout); ?>
-								</div>
-							<?php elseif ($layout == 'wrapper'): ?>
-								<?php get_template_part('acf/content/' . get_row_layout()); ?>
-							<?php elseif ($layout == 'wrapper_end'): ?>
-								<?php echo '</div></div>'; ?>
+							<?php if ($contentType == 'wrapper'): ?>
+								<?php get_template_part('acf/content/' . $contentType); ?>
+							<?php elseif ($contentType == 'wrapper_end'): ?>
+								<?php echo '</div></div></div>'; ?>
 							<?php else: ?>
-								<div class="content <?= $layout; ?>">
-									<?php get_template_part('acf/content/' . $layout); ?>
+								<div class="<?= $contentType; ?>">
+									<?php get_template_part('acf/content/' . $contentType); ?>
 								</div>
 							<?php endif; ?>
 

@@ -1119,3 +1119,19 @@ div.site-footer .inside-footer-widgets footer {
 li.list-icon { background-position: left center; background-repeat: no-repeat; background-size: contain; }
 ul.list-circle { list-style-type: circle; }
 ul.list-square { list-style-type: square; }
+
+
+
+
+/* ------------------------------------------ */
+/* Grid Styles ------------------------------ */
+/* ------------------------------------------ */
+.grid-display { gap: 50px; min-width: 0; min-height: 0; }
+.grid-display .layout-item { min-width: 0; }
+.layout-item .masonry-item { margin-bottom: 50px; }
+.layout-item .masonry-item:last-child { margin-bottom: 0px; }
+
+@media screen and (max-width: 1024px) { 
+  .grid-display { gap: 25px; } 
+  .layout-item .masonry-item { margin-bottom: 25px; }
+}
