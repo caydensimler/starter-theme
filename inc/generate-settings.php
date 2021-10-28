@@ -1,16 +1,16 @@
 <?php
 
 function generateBasicContent() {
-	// Generate classes, styles, and data attributes for the content and its wrapper.
+	// Generate classes, styles, and data attributes for the content and its container.
 	$settingsArray = [];
 	$contentClasses = 'class="'; $contentStyles = 'style="';
 	$wrapperClasses = 'class="'; $wrapperStyles = 'style="';
 	$dataAttributes = '';
 
-	$wrapperClasses .= 'content-wrapper';
+	$wrapperClasses .= 'content-container';
 
 
-	// Generate content and content wrapper settings
+	// Generate content container and content settings
 	$settingsArray['content-classes'] = rtrim($contentClasses) . '"';
 	if (strlen($settingsArray['content-classes']) <= 8 ) { $settingsArray['content-classes'] = '';}
 
