@@ -16,8 +16,8 @@ else:
 endif; ?>
 
 <?php if ( $link ) : ?>
-	<div <?= $settingsArray['wrapper-classes']; ?> <?= $settingsArray['data-attributes']; ?>>
-		<a <?= $contentClass; ?> href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>">
+	<div <?php echo $settingsArray['wrapper-classes']; ?> <?php echo $settingsArray['data-attributes']; ?>>
+		<a <?php echo $contentClass; ?> href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>">
 			<span><?php echo $link['title']; ?></span>
 		</a>
 	</div>

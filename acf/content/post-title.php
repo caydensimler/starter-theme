@@ -8,8 +8,8 @@ endif; ?>
 
 <?php $textType = get_sub_field('type'); ?>
 
-<div <?= $settingsArray['wrapper-classes']; ?> <?= $settingsArray['data-attributes']; ?>>
-	<<?= $textType; ?> <?= $settingsArray['content-classes']; ?>>
+<div <?php echo $settingsArray['wrapper-classes']; ?> <?php echo $settingsArray['data-attributes']; ?>>
+	<<?php echo $textType; ?> <?php echo $settingsArray['content-classes']; ?>>
 		<?php the_title(); ?>
-	</<?= $textType; ?>>
+	</<?php echo $textType; ?>>
 </div>

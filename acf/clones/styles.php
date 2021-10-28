@@ -16,5 +16,5 @@ if ($settingsArray['content-classes']) {
 
 ?>
 
-<div <?= $gridWrapperClasses; ?> <?= $settingsArray['wrapper-styles']; ?> <?= $settingsArray['data-attributes']; ?>>
-	<div <?= $gridContainerClasses; ?> <?= $settingsArray['content-styles']; ?>>
+<div <?php echo $gridWrapperClasses; ?> <?php echo $settingsArray['wrapper-styles']; ?> <?php echo $settingsArray['data-attributes']; ?>>
+	<div <?php echo $gridContainerClasses; ?> <?php echo $settingsArray['content-styles']; ?>>

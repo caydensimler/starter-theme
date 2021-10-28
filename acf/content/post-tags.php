@@ -17,16 +17,16 @@ $tags = get_the_tags();
 
 
 <?php if ($tags): ?>
-	<ul <?= $settingsArray['wrapper-classes']; ?> <?= $settingsArray['data-attributes']; ?>>
+	<ul <?php echo $settingsArray['wrapper-classes']; ?> <?php echo $settingsArray['data-attributes']; ?>>
 		<?php foreach ($tags as $tag): ?>
 
 			<?php if ($linkToArchive): ?>
 				<?php $tagLink = get_tag_link($tag); ?>
-				<a href="<?= $tagLink; ?>" title="View all posts tagged '<?= $tag->name; ?>'.">
+				<a href="<?php echo $tagLink; ?>" title="View all posts tagged '<?php echo $tag->name; ?>'.">
 			<?php endif; ?>
 
-					<li <?= $settingsArray['content-classes']; ?>>
-						<span><?= $tag->name; ?></span>
+					<li <?php echo $settingsArray['content-classes']; ?>>
+						<span><?php echo $tag->name; ?></span>
 					</li>
 
 			<?php if ($linkToArchive): ?>

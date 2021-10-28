@@ -9,12 +9,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'GPC_VERSION', '1.0');
-
-/**
- * Hide admin bar.
- */
-show_admin_bar( false );
+define( 'GPC_VERSION', '2.0');
 
 /**
  * Enqueue scripts and styles.
@@ -67,7 +62,6 @@ require get_stylesheet_directory() . '/inc/libraries.php';
 require get_stylesheet_directory() . '/inc/menus.php';
 require get_stylesheet_directory() . '/inc/shortcodes.php';
 require get_stylesheet_directory() . '/inc/styles.php';
-require get_stylesheet_directory() . '/inc/sub-menu-widget.php';
 require get_stylesheet_directory() . '/inc/optimizations.php';
 require get_stylesheet_directory() . '/inc/users.php';
 require get_stylesheet_directory() . '/inc/wp-show-posts.php';
@@ -87,27 +81,29 @@ require get_stylesheet_directory() . '/css/admin.php';
 
 
 // Add the Global Styles/Scripts to the Header and Footer via the wp_head and wp_footer hooks.
-function add_to_header() {
-  if (have_rows( 'global_stylesscripts_header', 'option' )) {
-    while (have_rows( 'global_stylesscripts_header', 'option' )) {
-      the_row();
-      echo '<!--' . get_sub_field( 'stylescript_name' ) . '-->';
-      the_sub_field( 'stylescript' );
+if (function_exists('have_rows')) {
+  function add_to_header() {
+    if (have_rows( 'global_stylesscripts_header', 'option' )) {
+      while (have_rows( 'global_stylesscripts_header', 'option' )) {
+        the_row();
+        echo '<!--' . get_sub_field( 'stylescript_name' ) . '-->';
+        the_sub_field( 'stylescript' );
+      }
     }
   }
-}
-add_action('wp_head', 'add_to_header');
+  add_action('wp_head', 'add_to_header');
 
-function add_to_footer() {
-  if (have_rows( 'global_stylesscripts_footer', 'option' )) {
-    while (have_rows( 'global_stylesscripts_footer', 'option' )) {
-      the_row();
-      echo '<!--' . get_sub_field( 'stylescript_name' ) . '-->';
-      the_sub_field( 'stylescript' );
+  function add_to_footer() {
+    if (have_rows( 'global_stylesscripts_footer', 'option' )) {
+      while (have_rows( 'global_stylesscripts_footer', 'option' )) {
+        the_row();
+        echo '<!--' . get_sub_field( 'stylescript_name' ) . '-->';
+        the_sub_field( 'stylescript' );
+      }
     }
   }
+  add_action('wp_footer', 'add_to_footer');
 }
-add_action('wp_footer', 'add_to_footer');
 
 if (function_exists('get_field')) {
   if (get_field( 'ga_tracking_id', 'option' )) {
@@ -126,19 +122,6 @@ if (function_exists('get_field')) {
     add_action('wp_head', 'add_google_analytics');
   }
 }
-
-
-// I've noticed that when using the child theme here (https://github.com/addisonhall/generatepress-child), the admin bar dissapears on the front end. This code fixes it.
-function admin_bar(){
-  if(is_user_logged_in()){
-    add_filter( 'show_admin_bar', '__return_true' , 1000 );
-  }
-}
-add_action('init', 'admin_bar' );
-
-
-// Adds a filter to give an option to hide the label for a gravity forms field.
-add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
 
 
 // Converts a string to a slug.

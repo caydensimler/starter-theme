@@ -10,5 +10,5 @@ else:
 	$wrapperClass = 'class="wrapper"';
 endif; ?>
 
-<div <?= $wrapperClass; ?> <?= $settingsArray['data-attributes']; ?>>
-	<div <?= $settingsArray['content-classes']; ?>>
+<div <?php echo $wrapperClass; ?> <?php echo $settingsArray['data-attributes']; ?>>
+	<div <?php echo $settingsArray['content-classes']; ?>>

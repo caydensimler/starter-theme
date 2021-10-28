@@ -6,6 +6,6 @@ else:
 	$settingsArray = generateBasicContent();
 endif; ?>
 
-<div <?= $settingsArray['wrapper-classes']; ?> <?= $settingsArray['data-attributes']; ?>>
-	<hr <?= $settingsArray['content-classes']; ?> <?= $settingsArray['content-styles']; ?>>
+<div <?php echo $settingsArray['wrapper-classes']; ?> <?php echo $settingsArray['data-attributes']; ?>>
+	<hr <?php echo $settingsArray['content-classes']; ?> <?php echo $settingsArray['content-styles']; ?>>
 </div>
