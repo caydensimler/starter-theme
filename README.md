@@ -51,29 +51,28 @@ Honestly, the best way I can explain this is to break it down based on the eleme
 - The first level of the layout that you can start editing via custom fields. 
 - The Layout Wrapper is one of the few places that inserts style directly into the HTML, however it is only used to set a background image for the layout. All other options presented - such as the background color or background image settings - output CSS classes.
 
-#### 3. Grid Container `<div class="grid-container">`
+#### 3. Layout Container `<div class="layout-container">`
 
-- The grid container is primarily used to dictate the max-width of the content on the page, as well as its left and right padding when the viewport is less than the max-width. 
-- I'd honestly prefer to change this class name to `.layout-container`, but `.grid-container` is what's being used by GeneratePress and I don't have the motivation to change that yet.
+- The layout container is primarily used to dictate the max-width of the content on the page, as well as its left and right padding when the viewport is less than the max-width. 
 
-#### 4. Grid Display `<div class="grid-display">`
+#### 4. Layout `<div class="layout">`
 
-- The Grid Display portion is a primary key to defining how content is laid out. 
-- Standard Grid Display layouts use CSS Grid for laying out each individual grid item into its own cell.
-- Masonry Grid Display layouts use CSS grid for aligning columns, but relies on the Colcade JS library to move individual items into each column. 
+- The Layout portion is a primary key to defining how content is laid out. 
+- Standard layouts use CSS Grid for laying out each individual grid item into its own cell.
+- Masonry layouts use CSS grid for aligning columns, but relies on the Colcade JS library to move individual items into each column. 
 
-#### 5. Grid Item `<div class="grid-item">`
+#### 5. Layout Item `<div class="layout-item">`
 
-- Each Grid Item is split up into its own cell and the cells are positioned based on the Grid Display. 
-- Masonry Items - which are the direct decsandants of Grid Items inside a Masonry Grid Display - are assigned their column based on their height. 
+- Each Layout Item is split up into its own cell and the cells are positioned based on the Layout. 
+- Masonry Items - which are the direct descendants of Layout Items inside Masonry layouts - are assigned their column based on their height. 
 
-#### 6. Content Wrapper `<div class="content text">`
+#### 6. Content Wrapper `<div class="text">` `<div class="image">` `<div class="link">`
 
 - This layer is typically only utilized in the same way that the Layout Start is utilized; to allow CSS targeting for individual content types.
 
-#### 7. Content Container `<div>` `<ul>`
+#### 7. Content Container `<div class="content-container">`
 
-- Typically this is where spacing (padding/margin), alignment, and animations are added to the content, but sometimes used to open HTML elements.
+- Typically this is where spacing (padding/margin), alignment, and animations are added to the content.
 
 #### 8. Content `<h1>` `<p>` `<img>` `<a>` `<hr>` `<li>`
 
