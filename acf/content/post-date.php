@@ -12,8 +12,8 @@ $suffix = get_sub_field('suffix');
 
 ?>
 
-<div <?= $settingsArray['wrapper-classes']; ?> <?= $settingsArray['data-attributes']; ?>>
-	<p <?= $settingsArray['content-classes']; ?>>
-		<span class="date-prefix"><?= $prefix; ?></span> <span class="date"><?= get_the_date($format); ?></span> <span class="date-suffix"><?= $suffix; ?></span>
+<div <?php echo $settingsArray['wrapper-classes']; ?> <?php echo $settingsArray['data-attributes']; ?>>
+	<p <?php echo $settingsArray['content-classes']; ?>>
+		<span class="date-prefix"><?php echo $prefix; ?></span> <span class="date"><?php echo get_the_date($format); ?></span> <span class="date-suffix"><?php echo $suffix; ?></span>
 	</p>
 </div>

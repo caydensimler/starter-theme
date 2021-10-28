@@ -9,11 +9,11 @@ else:
 endif; ?>
 
 <?php if (have_rows('list_items')) : ?>
-	<<?= $listType; ?> <?= $settingsArray['wrapper-classes']; ?> <?= $settingsArray['wrapper-styles']; ?> <?= $settingsArray['data-attributes']; ?>>
+	<<?php echo $listType; ?> <?php echo $settingsArray['wrapper-classes']; ?> <?php echo $settingsArray['wrapper-styles']; ?> <?php echo $settingsArray['data-attributes']; ?>>
 		<?php while (have_rows('list_items')) : the_row(); ?>
-			<li <?= $settingsArray['content-classes']; ?> <?= $settingsArray['content-styles']; ?>>
+			<li <?php echo $settingsArray['content-classes']; ?> <?php echo $settingsArray['content-styles']; ?>>
 				<?php the_sub_field('item'); ?>
 			</li>
 		<?php endwhile; ?>
-	</<?= $listType; ?>>
+	</<?php echo $listType; ?>>
 <?php endif; ?>

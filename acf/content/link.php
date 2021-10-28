@@ -10,14 +10,14 @@ $link = get_sub_field( 'link' );
 $style = get_sub_field('style'); 
 
 if ($settingsArray['content-classes']):
-	$linkContentClass = substr($settingsArray['content-classes'], 0, -1) . ' ' . $style . '"'; 
+	$contentClass = substr($settingsArray['content-classes'], 0, -1) . ' ' . $style . '"'; 
 else:
-	$linkContentClass = 'class="' . $style . '"';
+	$contentClass = 'class="' . $style . '"';
 endif; ?>
 
 <?php if ( $link ) : ?>
-	<div <?= $settingsArray['wrapper-classes']; ?> <?= $settingsArray['data-attributes']; ?>>
-		<a <?= $linkContentClass; ?> href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>">
+	<div <?php echo $settingsArray['wrapper-classes']; ?> <?php echo $settingsArray['data-attributes']; ?>>
+		<a <?php echo $contentClass; ?> href="<?php echo esc_url( $link['url'] ); ?>" target="<?php echo esc_attr( $link['target'] ); ?>">
 			<span><?php echo $link['title']; ?></span>
 		</a>
 	</div>

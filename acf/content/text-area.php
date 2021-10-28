@@ -6,8 +6,8 @@ else:
 	$settingsArray = generateBasicContent();
 endif; ?>
 
-<div <?= $settingsArray['wrapper-classes']; ?> <?= $settingsArray['data-attributes']; ?>>
-	<p <?= $settingsArray['content-classes']; ?>>
+<div <?php echo $settingsArray['wrapper-classes']; ?> <?php echo $settingsArray['data-attributes']; ?>>
+	<p <?php echo $settingsArray['content-classes']; ?>>
 		<?php the_sub_field('text'); ?>
 	</p>
 </div>

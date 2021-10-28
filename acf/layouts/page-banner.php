@@ -13,13 +13,13 @@
 
 			<div class="page-banner image-banner">
 				<?php if ($bannerLink && $bannerLinkStatus): ?>
-					<a href="<?= $bannerLink; ?>">
+					<a href="<?php echo $bannerLink; ?>">
 				<?php endif; ?>
 					<?php if ($bannerImage): ?>
 						<?php if ($bannerImageMobile): ?>
 							<div class="mobile-display-none">
 						<?php endif; ?>
-								<img src="<?= $bannerImage['url']; ?>" alt="<?= $bannerImage['alt']; ?>">
+								<img src="<?php echo $bannerImage['url']; ?>" alt="<?php echo $bannerImage['alt']; ?>">
 						<?php if ($bannerImageMobile): ?>
 							</div>
 						<?php endif; ?>
@@ -27,7 +27,7 @@
 
 					<?php if ($bannerImageMobile): ?>
 						<div class="tablet-display-none desktop-display-none">
-							<img src="<?= $bannerImageMobile['url']; ?>" alt="<?= $bannerImageMobile['alt']; ?>">
+							<img src="<?php echo $bannerImageMobile['url']; ?>" alt="<?php echo $bannerImageMobile['alt']; ?>">
 						</div>
 					<?php endif; ?>
 				<?php if ($bannerLink && $bannerLinkStatus): ?>
@@ -48,15 +48,15 @@
 
 			<style type="text/css">
 				.page-banner.text-banner {
-					background-image: url(<?= $bannerImage['url']; ?>);
-					background-position: <?= $bannerImagePosition; ?>;
-					padding: clamp(50px, 9vw, <?= $bannerImagePadding; ?>px) 0px;
+					background-image: url(<?php echo $bannerImage['url']; ?>);
+					background-position: <?php echo $bannerImagePosition; ?>;
+					padding: clamp(50px, 9vw, <?php echo $bannerImagePadding; ?>px) 0px;
 				}
 
 				<?php if ($bannerImageMobile): ?>
 					@media screen and (max-width: 768px) {
 						.page-banner.text-banner {
-							background-image: url(<?= $bannerImageMobile['url']; ?>);
+							background-image: url(<?php echo $bannerImageMobile['url']; ?>);
 						}
 					}
 				<?php endif; ?>
@@ -64,7 +64,7 @@
 
 			<div class="page-banner text-banner">
 				<div class="grid-container">
-					<h1><?= $bannerText; ?></h1>
+					<h1><?php echo $bannerText; ?></h1>
 				</div>
 			</div>
 
@@ -79,12 +79,12 @@
 
 			<style>
 				.page-banner .text-banner {
-					background-color: <?= $bannerBackgroundColor; ?>;
-					padding: clamp(50px, 9vw, <?= $bannerImagePadding; ?>px) 0px;
+					background-color: <?php echo $bannerBackgroundColor; ?>;
+					padding: clamp(50px, 9vw, <?php echo $bannerImagePadding; ?>px) 0px;
 				}
 
 				.page-banner .text-banner h1 {
-					color: <?= $bannerTextColor; ?>;
+					color: <?php echo $bannerTextColor; ?>;
 				}
 			</style>
 
@@ -92,7 +92,7 @@
 			<div class="page-banner">
 				<div class="text-banner">
 					<div class="grid-container">
-						<h1><?= $bannerText; ?></h1>
+						<h1><?php echo $bannerText; ?></h1>
 					</div>
 				</div>
 			</div>
@@ -106,12 +106,12 @@
 				$bannerText = get_sub_field('page-banner_banner-text');
 			?>
 			<div class="page-banner video-banner">
-				<video loop muted autoplay playsinline poster="<?= $bannerPoster['url']; ?>" class="background-video">
-				    <source src="<?= $bannerVideo; ?>" type="video/mp4">
+				<video loop muted autoplay playsinline poster="<?php echo $bannerPoster['url']; ?>" class="background-video">
+				    <source src="<?php echo $bannerVideo; ?>" type="video/mp4">
 				</video>
 
 				<div class="grid-container">
-				    <h1><?= $bannerText; ?></h1>
+				    <h1><?php echo $bannerText; ?></h1>
 				</div>
 			</div>
 

@@ -2,6 +2,7 @@
 // Template Name: Advanced Builder
 get_header();
 
+if (function_exists('get_field')) {
 	// Content Wrapper
 
 	if (get_post_meta(get_the_ID(), 'content_wrapper_classes', true)) {
@@ -37,5 +38,6 @@ get_header();
 		get_template_part('acf/clones/page-content');
 
 	if (get_field('content_wrapper_classes')) { echo '</div>'; }
+}
 
 get_footer();
