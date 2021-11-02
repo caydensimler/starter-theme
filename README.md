@@ -85,11 +85,11 @@ Honestly, the best way I can explain this is to break it down based on the eleme
 
 #### Scalability
 
-By integrating a kind of content-out development strategy, I've happened upon a MVC framework-type theme. The ACF data inputted on the backend, the user is presented with options between a Standard and Masonry grid. The Standard grid layout utilizes CSS Grid to organize each individual grid item below.  acts as the Model, the theme templating files that generate content (stuff like acf/content/text.php and inc/generate-settings.php) reperesent the View, and WordPress acts as the Controller between the two.
+By integrating a kind of content-out development strategy, I've happened upon a MVC framework-type theme. The ACF data inputted on the backend acts as the Model, the theme templating files that generate content (stuff like acf/content/text.php and inc/generate-settings.php) reperesent the View, and WordPress acts as the Controller between the two.
 
 #### Reusability
 
-I've created a custom post type called Content Blocks that allows individual layouts to be built as a single component to then be pulled into several different locations on the site. Whether it be a call to action, Featured Products section, or something else entirely, Content Blocks allow you a single place to edit content output on multiple pages.
+I've created a custom post type called Content Blocks that allows individual layouts to be built as a single component to then be pulled into several different locations on the site. Whether it be a call to action, Featured Products section, or something else entirely, Content Blocks allow you a single place to edit and preview content that is output on multiple pages.
 
 ---
 
