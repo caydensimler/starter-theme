@@ -102,8 +102,8 @@ acf_add_local_field_group(array(
 					),
 					'min' => '',
 					'max' => '',
-					'acfe_flexible_render_template' => 'acf/clones/page-content.php',
-					'acfe_flexible_render_style' => 'css/theme.css',
+					'acfe_flexible_render_template' => '',
+					'acfe_flexible_render_style' => '',
 					'acfe_flexible_render_script' => '',
 					'acfe_flexible_settings' => '',
 					'acfe_flexible_settings_size' => 'xlarge',
@@ -157,8 +157,8 @@ acf_add_local_field_group(array(
 					),
 					'min' => '',
 					'max' => '',
-					'acfe_flexible_render_template' => 'acf/clones/page-content.php',
-					'acfe_flexible_render_style' => 'css/theme.css',
+					'acfe_flexible_render_template' => '',
+					'acfe_flexible_render_style' => '',
 					'acfe_flexible_render_script' => '',
 					'acfe_flexible_settings' => '',
 					'acfe_flexible_settings_size' => 'xlarge',
@@ -236,8 +236,8 @@ acf_add_local_field_group(array(
 					),
 					'min' => '',
 					'max' => '',
-					'acfe_flexible_render_template' => 'acf/clones/page-content.php',
-					'acfe_flexible_render_style' => 'css/theme.css',
+					'acfe_flexible_render_template' => '',
+					'acfe_flexible_render_style' => '',
 					'acfe_flexible_render_script' => '',
 					'acfe_flexible_settings' => array(
 						0 => 'group_61731e9d87eea',
@@ -394,7 +394,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'template' => 'Template',
 	),
-	'modified' => 1635373572,
+	'modified' => 1635967471,
 ));
 
 endif;
