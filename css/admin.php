@@ -160,6 +160,7 @@ function acf_minor_updates() {
 
     div.layout[data-layout="content-block"] .acfe-fc-placeholder,
     div.layout[data-layout="layout-wrapper-start"] .acfe-fc-placeholder,
-    div.layout[data-layout="layout-wrapper-end"] .acfe-fc-placeholder { display: none; }
+    div.layout[data-layout="layout-wrapper-end"] .acfe-fc-placeholder,
+    div.layout.acfe-flexible-layout-hidden .acfe-fc-placeholder { display: none; }
   </style>';
 }

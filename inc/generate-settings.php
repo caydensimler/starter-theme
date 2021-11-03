@@ -46,12 +46,12 @@ function generateSettings($settings) {
 	}
 
 	// Background Colors
-	if (get_sub_field('background_color') && get_sub_field('background') !== 'unset') {
-		$colorSwatch = strip_tags(get_sub_field('background_color'));
-		$backgroundColor = get_string_between($colorSwatch, '[', ']');
+	// if (get_sub_field('background_color') && get_sub_field('background') !== 'unset') {
+	// 	$colorSwatch = strip_tags(get_sub_field('background_color'));
+	// 	$backgroundColor = get_string_between($colorSwatch, '[', ']');
 
-		$contentClasses .= $backgroundColor . ' ';
-	}
+	// 	$contentClasses .= $backgroundColor . ' ';
+	// }
 
 	// Border Colors
 	if (get_sub_field('border_color') && get_sub_field('border_color') !== 'unset') {

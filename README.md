@@ -14,8 +14,6 @@ New or updated features that are either currently being worked on or are in the 
 
 - Adding more post content types: next/previous, categories, and featured image.
 
-- Add another background option for video backgrounds. This should allow me to remove the Page Banner field group completely in favor of utilizing the builder system.
-
 - Rebuilding Sub-Menu (both ACF and CSS portions).
 
 ## Changelogs & Version Control
@@ -39,7 +37,7 @@ I have made a lot of changes since v1, so consider the current theme v2. Followi
 
 Honestly, the best way I can explain this is to break it down based on the elements generated when a section is built using the Flexible Content layout. From outside-in for each layout, the content is generated as follows:
 
-![Content Generation Graphic](https://i.imgur.com/Oy1YzYa.png)
+![Content Generation Graphic](https://i.imgur.com/RtqvSv7.png)
 
 #### 1. Layout `<div class="layout flexible-grid">`
 
