@@ -151,49 +151,6 @@ body h6 { font-size: clamp(17px, 3vw, 18px); }
 
 
 /* ------------------------------------------ */
-/* Page Banner ------------------------------ */
-/* ------------------------------------------ */
-.page-banner h1 { margin: 0; font-style: normal; color: white; font-family: Overpass; }
-
-
-/* Page Banner | Image Only */
-/* ------------------------ */
-.page-banner.image-banner { margin-bottom: -5px; }
-#content .page-banner.image-banner a { position: static; }
-#content .page-banner.image-banner a:after { height: 0px; }
-
-
-/* Page Banner | Image w/ Text */
-/* --------------------------- */
-.page-banner.text-banner { background-size: cover; background-repeat: no-repeat; transition: .3s; }
-@media screen and (max-width: 768px) { .page-banner.text-banner { padding: 60px 0px; } }
-
-
-/* Page Banner | Video */
-/* ------------------- */
-.page-banner.video-banner { position: relative; overflow: hidden; padding: 140px 0px; transition: .3s; }
-.page-banner.video-banner .grid-container { position: relative; z-index: 1; }
-
-.page-banner.video-banner .background-video {
-  position: absolute; top: 0; right: 0;
-  min-width: 100%; min-height: 100%;
-}
-
-.page-banner.video-banner video { width: 100%; max-width: 100%; height: auto; }
-
-@media screen and (min-width: 1400px) {
-  .page-banner.video-banner { padding: 220px 0px; }
-}
-
-@media screen and (max-width: 768px) {
-  .page-banner.video-banner { padding: 70px 0px; }
-  .page-banner.video-banner video { object-fit: cover; }
-}
-
-
-
-
-/* ------------------------------------------ */
 /* Sub-Menu --------------------------------- */
 /* ------------------------------------------ */
 div.sub-menu .menu-container     { background-color: #121212; }
@@ -350,6 +307,22 @@ div.sub-menu .menu-container ul > li {
 /* Containers ------------------------------- */
 /* ------------------------------------------ */
 body.single #content:nth-child(1) > div > div { padding-top: 50px; }
+
+/* Video Background */
+/* ---------------- */
+.video-background.layout-wrapper { position: relative; overflow: hidden; transition: .3s; }
+.video-background.layout-wrapper .grid-container { position: relative; z-index: 1; }
+
+.video-background.layout-wrapper .background-video {
+  position: absolute; top: 0; right: 0;
+  min-width: 100%; min-height: 100%;
+}
+
+.video-background.layout-wrapper video { width: 100%; max-width: 100%; height: auto; }
+
+@media screen and (max-width: 1000px) {
+  .video-background.layout-wrapper video { object-fit: cover; }
+}
 
 
 
