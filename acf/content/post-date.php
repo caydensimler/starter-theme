@@ -6,9 +6,13 @@ else:
 	$settingsArray = generateBasicContent();
 endif;
 
-$format = get_sub_field('format'); 
-$prefix = get_sub_field('prefix');
-$suffix = get_sub_field('suffix');
+if ( have_rows( 'date_formatting' ) ) :
+	while ( have_rows( 'date_formatting' ) ) : the_row();
+		$prefix = get_sub_field('prefix');
+		$format = get_sub_field('format'); 
+		$suffix = get_sub_field('suffix');
+	endwhile;
+endif;
 
 ?>
 

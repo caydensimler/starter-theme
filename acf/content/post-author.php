@@ -6,13 +6,17 @@ else:
 	$settingsArray = generateBasicContent();
 endif;
 
-// Tags link to archive page.
-$linkToArchive = '';
-$linkToArchive = get_sub_field('links_to_archive');
+if ( have_rows( 'author_formatting' ) ) :
+	while ( have_rows( 'author_formatting' ) ) : the_row();
+		// Tags link to archive page.
+		$linkToArchive = '';
+		$linkToArchive = get_sub_field('links_to_archive');
 
-$author = get_the_author_meta('ID');
-$prefix = get_sub_field('prefix');
-$suffix = get_sub_field('suffix');
+		$author = get_the_author_meta('ID');
+		$prefix = get_sub_field('prefix');
+		$suffix = get_sub_field('suffix');
+	endwhile;
+endif;
 
 ?>
 
