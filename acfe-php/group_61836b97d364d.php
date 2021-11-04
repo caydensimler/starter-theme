@@ -142,8 +142,146 @@ acf_add_local_field_group(array(
 				array(
 					array(
 						'field' => 'field_61836ea163cea',
+						'operator' => '!=',
+						'value' => 'image',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '25',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 1,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
+			'key' => 'field_6184315b6943e',
+			'label' => 'Featured Image Size',
+			'name' => 'featured_image_size',
+			'type' => 'button_group',
+			'instructions' => 'Image sizes here are based on what\'s available within WordPress. Sizes are set inside Settings > Media.',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_6183800eed8f6',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+				array(
+					array(
+						'field' => 'field_61836ea163cea',
 						'operator' => '==contains',
 						'value' => 'image',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '25',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'thumbnail' => 'Thumbnail',
+				'medium' => 'Medium',
+				'large' => 'Large',
+				'full' => 'Full',
+			),
+			'allow_null' => 0,
+			'default_value' => '',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+		),
+		array(
+			'key' => 'field_61843f5f58675',
+			'label' => 'Featured Image Links to Post',
+			'name' => 'image_links',
+			'type' => 'true_false',
+			'instructions' => 'Whether or not the image acts as a link to view the post.',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_61836ea163cea',
+						'operator' => '==contains',
+						'value' => 'image',
+					),
+					array(
+						'field' => 'field_6183800eed8f6',
+						'operator' => '!=',
+						'value' => '1',
+					),
+					array(
+						'field' => 'field_61837fe8ed8f5',
+						'operator' => '!=',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '25',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 1,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
+			'key' => 'field_61837ac2cbe09',
+			'label' => 'Title Content Type',
+			'name' => 'type',
+			'type' => 'button_group',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_61836ea163cea',
+						'operator' => '==contains',
+						'value' => 'title',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '25',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'h1' => 'H1',
+				'h2' => 'H2',
+				'h3' => 'H3',
+				'h4' => 'H4',
+				'h5' => 'H5',
+				'h6' => 'H6',
+				'p' => 'P',
+			),
+			'allow_null' => 0,
+			'default_value' => 'h5',
+			'layout' => 'horizontal',
+			'return_format' => 'value',
+		),
+		array(
+			'key' => 'field_618459d8b2f21',
+			'label' => 'Tags Link to their Archive',
+			'name' => 'tag_links_to_archive',
+			'type' => 'true_false',
+			'instructions' => 'Whether or not individual tags link to their respective archive page.',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_61836ea163cea',
+						'operator' => '==contains',
+						'value' => 'tags',
 					),
 				),
 			),
@@ -173,41 +311,6 @@ acf_add_local_field_group(array(
 			),
 			'endpoint' => 1,
 			'columns' => '6/12',
-		),
-		array(
-			'key' => 'field_61837ac2cbe09',
-			'label' => 'Title Content Type',
-			'name' => 'type',
-			'type' => 'button_group',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => array(
-				array(
-					array(
-						'field' => 'field_61836ea163cea',
-						'operator' => '==contains',
-						'value' => 'title',
-					),
-				),
-			),
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array(
-				'h1' => 'H1',
-				'h2' => 'H2',
-				'h3' => 'H3',
-				'h4' => 'H4',
-				'h5' => 'H5',
-				'h6' => 'H6',
-				'p' => 'P',
-			),
-			'allow_null' => 0,
-			'default_value' => 'h5',
-			'layout' => 'horizontal',
-			'return_format' => 'value',
 		),
 		array(
 			'key' => 'field_61837b8b5a648',
@@ -305,7 +408,15 @@ acf_add_local_field_group(array(
 			'type' => 'group',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_61836ea163cea',
+						'operator' => '==contains',
+						'value' => 'author',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -420,7 +531,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'layout' => 'Layout',
 	),
-	'modified' => 1636008736,
+	'modified' => 1636063752,
 ));
 
 endif;

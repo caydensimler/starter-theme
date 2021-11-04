@@ -1633,6 +1633,87 @@
                             "acfe_flexible_thumbnail": false,
                             "acfe_flexible_modal_edit_size": false
                         },
+                        "layout_61843b2461fce": {
+                            "key": "layout_61843b2461fce",
+                            "name": "post-image",
+                            "label": "Post Featured Image",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_61843b2461fcf",
+                                    "label": "Featured Image",
+                                    "name": "",
+                                    "type": "message",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "Displays the featured image for the post.",
+                                    "new_lines": "wpautop",
+                                    "esc_html": 0
+                                },
+                                {
+                                    "key": "field_61843b2461fd0",
+                                    "label": "Featured Image Size",
+                                    "name": "featured_image_size",
+                                    "type": "button_group",
+                                    "instructions": "Image sizes here are based on what's available within WordPress. Sizes are set inside Settings > Media.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "thumbnail": "Thumbnail",
+                                        "medium": "Medium",
+                                        "large": "Large",
+                                        "full": "Full"
+                                    },
+                                    "allow_null": 0,
+                                    "default_value": "medium",
+                                    "layout": "horizontal",
+                                    "return_format": "value"
+                                },
+                                {
+                                    "key": "field_61843c2f7dce0",
+                                    "label": "Image Links to Post",
+                                    "name": "image_links",
+                                    "type": "true_false",
+                                    "instructions": "Whether or not the image acts as a link to view the post.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_category": [
+                                "Post",
+                                "Basic"
+                            ],
+                            "acfe_flexible_settings": "",
+                            "acfe_flexible_settings_size": "large",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_modal_edit_size": false
+                        },
                         "layout_61044a1d6c611": {
                             "key": "layout_61044a1d6c611",
                             "name": "shortcode",
@@ -1726,7 +1807,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636007090,
+    "modified": 1636056229,
     "acfe_categories": {
         "layout": "Layout"
     }

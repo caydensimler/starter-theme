@@ -8,7 +8,7 @@ endif;
 
 // Tags link to archive page.
 $linkToArchive = '';
-$linkToArchive = get_sub_field('links_to_archive');
+$linkToArchive = get_sub_field('tag_links_to_archive');
 
 $tags = get_the_tags(); 
 

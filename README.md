@@ -39,7 +39,7 @@ Honestly, the best way I can explain this is to break it down based on the eleme
 
 ![Content Generation Graphic](https://i.imgur.com/RtqvSv7.png)
 
-#### 1. Layout `<div class="layout flexible-grid">`
+#### 1. Layout Type `<div class="flexible-grid">` `<div class="post-query">`
 
 - The [Layout Type](#layout-types) is added as a class in order to allow CSS targeting for individual layout types. 
 - I technically could just add these classes to the next level (Layout Wrapper) and remove this level, but I like the separation of having two "background level" containers on top of each other on the off-chance it's needed.
