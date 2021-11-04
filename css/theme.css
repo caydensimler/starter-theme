@@ -304,6 +304,22 @@ div.sub-menu .menu-container ul > li {
 
 
 /* ------------------------------------------ */
+/* Layouts ---------------------------------- */
+/* ------------------------------------------ */
+
+/* Post Query */
+/* ---------- */
+.post-query .post-image-background { background-size: cover; background-position: center; }
+
+.post-query .layout-item > div > div:last-child *:last-child { margin-bottom: 0px; }
+.post-query .post-image { margin-bottom: 15px; }
+
+.post-query .post-author, .post-query .post-date { display: inline-block; }
+
+
+
+
+/* ------------------------------------------ */
 /* Containers ------------------------------- */
 /* ------------------------------------------ */
 body.single #content:nth-child(1) > div > div { padding-top: 50px; }
