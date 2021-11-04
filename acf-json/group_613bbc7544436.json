@@ -410,9 +410,7 @@
     "instruction_placement": "tooltip",
     "hide_on_screen": [
         "the_content",
-        "excerpt",
         "discussion",
-        "comments",
         "revisions",
         "slug",
         "format",
@@ -428,7 +426,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636009742,
+    "modified": 1636060054,
     "acfe_categories": {
         "template": "Template"
     }

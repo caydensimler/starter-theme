@@ -415,13 +415,11 @@ acf_add_local_field_group(array(
 	'instruction_placement' => 'tooltip',
 	'hide_on_screen' => array(
 		0 => 'the_content',
-		1 => 'excerpt',
-		2 => 'discussion',
-		3 => 'comments',
-		4 => 'revisions',
-		5 => 'slug',
-		6 => 'format',
-		7 => 'send-trackbacks',
+		1 => 'discussion',
+		2 => 'revisions',
+		3 => 'slug',
+		4 => 'format',
+		5 => 'send-trackbacks',
 	),
 	'active' => true,
 	'description' => 'Flexible content page builder that incorporates ACF extended for maximum flexibility and layout/design control.',
@@ -436,7 +434,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'template' => 'Template',
 	),
-	'modified' => 1636009742,
+	'modified' => 1636060054,
 ));
 
 endif;
