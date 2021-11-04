@@ -14,6 +14,8 @@ New or updated features that are either currently being worked on or are in the 
 
 - Adding more post content types: next/previous, categories, and featured image.
 
+- Building ontop of the Post Query layout to include querying related posts based on tags chosen or dates selected. Also potentially creating a way to define "Featured Posts" for any post type. I still need to implement Categories and Excerpts into post query content, but I'll need to add those as Flexible Content first.
+
 - Rebuilding Sub-Menu (both ACF and CSS portions).
 
 ## Changelogs & Version Control
