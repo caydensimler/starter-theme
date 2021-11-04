@@ -198,6 +198,43 @@ acf_add_local_field_group(array(
 			'return_format' => 'value',
 		),
 		array(
+			'key' => 'field_61843f5f58675',
+			'label' => 'Featured Image Links to Post',
+			'name' => 'image_links',
+			'type' => 'true_false',
+			'instructions' => 'Whether or not the image acts as a link to view the post.',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_61836ea163cea',
+						'operator' => '==contains',
+						'value' => 'image',
+					),
+					array(
+						'field' => 'field_6183800eed8f6',
+						'operator' => '!=',
+						'value' => '1',
+					),
+					array(
+						'field' => 'field_61837fe8ed8f5',
+						'operator' => '!=',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '25',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 1,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
 			'key' => 'field_61837ac2cbe09',
 			'label' => 'Title Content Type',
 			'name' => 'type',
@@ -467,7 +504,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'layout' => 'Layout',
 	),
-	'modified' => 1636055803,
+	'modified' => 1636061191,
 ));
 
 endif;

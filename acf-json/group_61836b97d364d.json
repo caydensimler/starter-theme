@@ -192,6 +192,43 @@
             "return_format": "value"
         },
         {
+            "key": "field_61843f5f58675",
+            "label": "Featured Image Links to Post",
+            "name": "image_links",
+            "type": "true_false",
+            "instructions": "Whether or not the image acts as a link to view the post.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61836ea163cea",
+                        "operator": "==contains",
+                        "value": "image"
+                    },
+                    {
+                        "field": "field_6183800eed8f6",
+                        "operator": "!=",
+                        "value": "1"
+                    },
+                    {
+                        "field": "field_61837fe8ed8f5",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_61837ac2cbe09",
             "label": "Title Content Type",
             "name": "type",
@@ -458,7 +495,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636055803,
+    "modified": 1636061191,
     "acfe_categories": {
         "layout": "Layout"
     }
