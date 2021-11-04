@@ -41,7 +41,7 @@ Honestly, the best way I can explain this is to break it down based on the eleme
 
 #### 1. Layout `<div class="layout flexible-grid">`
 
-- The layout name is added as a class in order to allow CSS targeting for individual layout types. 
+- The [Layout Type](#layout-types) is added as a class in order to allow CSS targeting for individual layout types. 
 - I technically could just add these classes to the next level (Layout Wrapper) and remove this level, but I like the separation of having two "background level" containers on top of each other on the off-chance it's needed.
 
 #### 2. Layout Wrapper `<div class="layout-wrapper">`
@@ -74,7 +74,7 @@ Honestly, the best way I can explain this is to break it down based on the eleme
 
 #### 8. Content `<h1>` `<p>` `<img>` `<a>` `<hr>` `<li>`
 
-- The content layer holds individaul headings, paragraphs, lists, etc. 
+- The content layer holds individaul [Content Types](#content-types). 
 - I know it feels like, "Finally we've made it to the content!" but I swear I try to use each layer to the best of my ability in order to provide form and function.
 
 ---
@@ -91,11 +91,23 @@ I've created a custom post type called Content Blocks that allows individual lay
 
 ---
 
-### Content Types
+#### Layout Types
+
+Layout Types integrate [Content Types](#content-types) via the Layered Content Generation methods outlined above.
+
+1. Flexible Content
+2. Post Query
+3. Content Block
+4. Shortcode
+5. Layout Wrapper
+
+---
+
+#### Content Types
 
 The following are all the content types available to be used within the Flexible Content layout.
 
-#### Basic Content
+##### Basic Content
 
 1. [Text](https://i.imgur.com/U5aE1EN.png)
 2. [Text Area](https://i.imgur.com/ALMMLL7.png)
@@ -105,7 +117,7 @@ The following are all the content types available to be used within the Flexible
 6. [Image](https://i.imgur.com/cGPecH5.png)
 7. [Line Separator](https://i.imgur.com/Md5Bljh.png)
 
-#### Post Content
+##### Post Content
 
 1. [Post Title](https://i.imgur.com/utIKTLS.png)
 2. [Post Date](https://i.imgur.com/aj05zDY.png)
