@@ -162,5 +162,10 @@ function acf_minor_updates() {
     div.layout[data-layout="layout-wrapper-start"] .acfe-fc-placeholder,
     div.layout[data-layout="layout-wrapper-end"] .acfe-fc-placeholder,
     div.layout.acfe-flexible-layout-hidden .acfe-fc-placeholder { display: none; }
+
+    div.layout[data-layout="post-query"] div.acf-field-radio[data-name="post_type"] ul.acf-hl li:nth-child(2),
+    div.layout[data-layout="post-query"] div.acf-field-radio[data-name="post_type"] ul.acf-hl li:nth-child(3),
+    div.layout[data-layout="post-query"] div.acf-field-radio[data-name="post_type"] ul.acf-hl li:nth-child(4),
+    div.layout[data-layout="post-query"] div.acf-field-radio[data-name="post_type"] ul.acf-hl li:nth-child(5) { display: none; }
   </style>';
 }
