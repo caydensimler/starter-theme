@@ -8,6 +8,6 @@ jQuery(document).ready(function ($) {
   })
 
   // Masonry Init
-  $('.masonry-grid').colcade({ items: '.masonry-item', columns: '.grid-item', })
+  $('.masonry-grid').colcade({ items: '.masonry-item', columns: '.layout-item', })
 
 });
