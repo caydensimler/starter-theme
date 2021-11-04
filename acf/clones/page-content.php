@@ -15,7 +15,7 @@ if ( have_rows( 'drag-and-drop' ) ) :
 		} elseif ($layout == 'shortcode') {
 			get_template_part('/acf/layouts/' . $layout);
 		} else {
-			echo '<div class="clearfix layout ' . $layout . '">';
+			echo '<div class="clearfix ' . $layout . '">';
 				// only applies the container wrapper for layouts for non content blocks
 				if ($layout !== 'content-block') { get_template_part('/acf/clones/layout-container'); }
 					get_template_part('/acf/layouts/' . $layout);
