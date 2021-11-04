@@ -208,6 +208,49 @@ acf_add_local_field_group(array(
 					'acfe_flexible_modal_edit_size' => false,
 					'acfe_flexible_category' => false,
 				),
+				'layout_61836c81d4267' => array(
+					'key' => 'layout_61836c81d4267',
+					'name' => 'post-query',
+					'label' => 'Post Query',
+					'display' => 'block',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_61836c9dd4268',
+							'label' => 'Post Query',
+							'name' => 'post_query',
+							'type' => 'clone',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'clone' => array(
+								0 => 'group_61836b97d364d',
+							),
+							'display' => 'seamless',
+							'layout' => 'block',
+							'prefix_label' => 0,
+							'prefix_name' => 0,
+						),
+					),
+					'min' => '',
+					'max' => '',
+					'acfe_flexible_render_template' => 'acf/clones/page-content.php',
+					'acfe_flexible_render_style' => 'css/theme.css',
+					'acfe_flexible_render_script' => 'js/theme.js',
+					'acfe_flexible_settings' => array(
+						0 => 'group_618372d7d9622',
+						1 => 'group_612ff8ca6d684',
+						2 => 'group_61731e9d87eea',
+					),
+					'acfe_flexible_settings_size' => 'xlarge',
+					'acfe_flexible_thumbnail' => '',
+					'acfe_flexible_modal_edit_size' => false,
+					'acfe_flexible_category' => false,
+				),
 				'layout_6143b0ef8e4cc' => array(
 					'key' => 'layout_6143b0ef8e4cc',
 					'name' => 'shortcode',
@@ -394,7 +437,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'template' => 'Template',
 	),
-	'modified' => 1635967471,
+	'modified' => 1636008191,
 ));
 
 endif;
