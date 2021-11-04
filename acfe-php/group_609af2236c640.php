@@ -1607,7 +1607,7 @@ acf_add_local_field_group(array(
 								array(
 									'key' => 'field_6171e67d1be93',
 									'label' => 'Links to Archive',
-									'name' => 'links_to_archive',
+									'name' => 'tag_links_to_archive',
 									'type' => 'true_false',
 									'instructions' => 'Whether or not individual tags link to their respective archive page.',
 									'required' => 0,
@@ -1815,7 +1815,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'layout' => 'Layout',
 	),
-	'modified' => 1636056229,
+	'modified' => 1636065203,
 ));
 
 endif;
