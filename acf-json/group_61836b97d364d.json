@@ -136,7 +136,7 @@
                 [
                     {
                         "field": "field_61836ea163cea",
-                        "operator": "==contains",
+                        "operator": "!=",
                         "value": "image"
                     }
                 ]
@@ -153,20 +153,43 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_61838157147fc",
-            "label": "(Column Endpoint)",
-            "name": "",
-            "type": "acfe_column",
-            "instructions": "",
+            "key": "field_6184315b6943e",
+            "label": "Featured Image Size",
+            "name": "featured_image_size",
+            "type": "button_group",
+            "instructions": "Image sizes here are based on what's available within WordPress. Sizes are set inside Settings > Media.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6183800eed8f6",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_61836ea163cea",
+                        "operator": "==contains",
+                        "value": "image"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
-            "endpoint": 1,
-            "columns": "6\/12"
+            "choices": {
+                "thumbnail": "Thumbnail",
+                "medium": "Medium",
+                "large": "Large",
+                "full": "Full"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
         },
         {
             "key": "field_61837ac2cbe09",
@@ -185,7 +208,7 @@
                 ]
             ],
             "wrapper": {
-                "width": "",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -202,6 +225,22 @@
             "default_value": "h5",
             "layout": "horizontal",
             "return_format": "value"
+        },
+        {
+            "key": "field_61838157147fc",
+            "label": "(Column Endpoint)",
+            "name": "",
+            "type": "acfe_column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "endpoint": 1,
+            "columns": "6\/12"
         },
         {
             "key": "field_61837b8b5a648",
@@ -299,7 +338,15 @@
             "type": "group",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61836ea163cea",
+                        "operator": "==contains",
+                        "value": "author"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -411,7 +458,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636008736,
+    "modified": 1636055803,
     "acfe_categories": {
         "layout": "Layout"
     }

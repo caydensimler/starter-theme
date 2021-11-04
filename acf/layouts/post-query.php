@@ -55,6 +55,8 @@ $postArguments = array(
 $topLevelLinked = get_sub_field('top_level_linked');
 $featuredImageBackground = get_sub_field('featured_image_background');
 
+if (get_sub_field('featured_image_size')) { $imageSize = get_sub_field('featured_image_size'); }
+
 $postQuery = new WP_Query($postArguments); ?>
 
 
@@ -69,9 +71,14 @@ $postQuery = new WP_Query($postArguments); ?>
     <?php endif;
 
     while ( $postQuery->have_posts() ) : $postQuery->the_post(); ?>
+        <?php $imageBackground = ''; $imageBackgroundClass = ''; ?>
+        <?php if ($featuredImageBackground && get_the_post_thumbnail_url(get_the_ID(), $imageSize) && !in_array('image', $queryContent)):
+            $imageBackground = 'style="background-image:url(' . get_the_post_thumbnail_url(get_the_ID(), $imageSize) . ');"';
+            $imageBackgroundClass = ' post-image-background post-image-' . $imageSize;
+        endif; ?>
 
         <div <?php echo $contentClasses; ?>>
-            <div class="item-<?php echo $itemNumber; ?>">
+            <div class="item-<?php echo $itemNumber; ?><?php echo $imageBackgroundClass; ?>" <?php echo $imageBackground; ?>>
 
                 <?php foreach($queryContent as $contentType): ?>
                     <?php echo '<div class="post-' . $contentType . '">'; ?>
