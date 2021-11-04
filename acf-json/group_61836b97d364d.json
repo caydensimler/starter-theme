@@ -264,6 +264,33 @@
             "return_format": "value"
         },
         {
+            "key": "field_618459d8b2f21",
+            "label": "Tags Link to their Archive",
+            "name": "tag_links_to_archive",
+            "type": "true_false",
+            "instructions": "Whether or not individual tags link to their respective archive page.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61836ea163cea",
+                        "operator": "==contains",
+                        "value": "tags"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_61838157147fc",
             "label": "(Column Endpoint)",
             "name": "",
@@ -495,7 +522,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636061191,
+    "modified": 1636063752,
     "acfe_categories": {
         "layout": "Layout"
     }

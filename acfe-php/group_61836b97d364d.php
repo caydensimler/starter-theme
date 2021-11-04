@@ -270,6 +270,33 @@ acf_add_local_field_group(array(
 			'return_format' => 'value',
 		),
 		array(
+			'key' => 'field_618459d8b2f21',
+			'label' => 'Tags Link to their Archive',
+			'name' => 'tag_links_to_archive',
+			'type' => 'true_false',
+			'instructions' => 'Whether or not individual tags link to their respective archive page.',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_61836ea163cea',
+						'operator' => '==contains',
+						'value' => 'tags',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '25',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 1,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
 			'key' => 'field_61838157147fc',
 			'label' => '(Column Endpoint)',
 			'name' => '',
@@ -504,7 +531,7 @@ acf_add_local_field_group(array(
 	'acfe_categories' => array(
 		'layout' => 'Layout',
 	),
-	'modified' => 1636061191,
+	'modified' => 1636063752,
 ));
 
 endif;
