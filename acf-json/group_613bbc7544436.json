@@ -420,13 +420,12 @@
     "description": "Flexible content page builder that incorporates ACF extended for maximum flexibility and layout\/design control.",
     "acfe_display_title": "",
     "acfe_autosync": [
-        "php",
         "json"
     ],
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636060054,
+    "modified": 1636141488,
     "acfe_categories": {
         "template": "Template"
     }

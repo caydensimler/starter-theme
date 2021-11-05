@@ -46,13 +46,12 @@
     "description": "",
     "acfe_display_title": "",
     "acfe_autosync": [
-        "php",
         "json"
     ],
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1634336553,
+    "modified": 1636141384,
     "acfe_categories": {
         "settings": "Settings"
     }

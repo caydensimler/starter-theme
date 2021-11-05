@@ -90,13 +90,12 @@
     "description": "Creates the ability to add pages to a group by setting the name of the group and choosing which pages are grouped with it. Useful for grouping pages together that have the same styles, without needing to use WordPress' native functionality for relating pages together which limits permalink structure.",
     "acfe_display_title": "",
     "acfe_autosync": [
-        "php",
         "json"
     ],
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1631912123,
+    "modified": 1636141462,
     "acfe_categories": {
         "options": "Options"
     }

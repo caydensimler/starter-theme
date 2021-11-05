@@ -122,13 +122,12 @@
     "description": "",
     "acfe_display_title": "",
     "acfe_autosync": [
-        "php",
         "json"
     ],
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1632112266,
+    "modified": 1636141412,
     "acfe_categories": {
         "settings": "Settings"
     }
