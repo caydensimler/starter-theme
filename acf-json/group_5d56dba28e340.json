@@ -239,13 +239,12 @@
     "description": "Fields dedicated to adding third-party styles\/scripts to targeted areas of the site.",
     "acfe_display_title": "",
     "acfe_autosync": [
-        "php",
         "json"
     ],
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1631912125,
+    "modified": 1636141475,
     "acfe_categories": {
         "options": "Options"
     }

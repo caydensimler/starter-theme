@@ -555,13 +555,12 @@
     "description": "Admin theme settings to toggle certain custom post types, functionality of WordPress, and additional JS\/CSS libraries.",
     "acfe_display_title": "",
     "acfe_autosync": [
-        "php",
         "json"
     ],
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1635374271,
+    "modified": 1636141481,
     "acfe_categories": {
         "options": "Options"
     }
