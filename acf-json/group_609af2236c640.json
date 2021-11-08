@@ -933,6 +933,196 @@
                             "acfe_flexible_thumbnail": false,
                             "acfe_flexible_modal_edit_size": false
                         },
+                        "layout_61897d4b4abd1": {
+                            "key": "layout_61897d4b4abd1",
+                            "name": "video-embed",
+                            "label": "Video Embed",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_61897d554abd2",
+                                    "label": "Video Type",
+                                    "name": "type",
+                                    "type": "button_group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "standard": "Standard",
+                                        "youtube": "YouTube",
+                                        "other": "Other"
+                                    },
+                                    "allow_null": 0,
+                                    "default_value": "",
+                                    "layout": "horizontal",
+                                    "return_format": "value"
+                                },
+                                {
+                                    "key": "field_618985516bfe9",
+                                    "label": "Video Attributes",
+                                    "name": "video_attributes",
+                                    "type": "text",
+                                    "instructions": "I would recommend leaving the default attributes and only adding more as necessary. Possible attributes include but are not limited to: autoplay, muted, loop.",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_61897d554abd2",
+                                                "operator": "==",
+                                                "value": "standard"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "100",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "controls width=\"100%\" height=\"auto\"",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_61897d774abd3",
+                                    "label": "Video File",
+                                    "name": "video",
+                                    "type": "file",
+                                    "instructions": "Allowed file type(s): mp4",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_61897d554abd2",
+                                                "operator": "==",
+                                                "value": "standard"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "uploader": "wp",
+                                    "return_format": "url",
+                                    "library": "all",
+                                    "min_size": "",
+                                    "max_size": "",
+                                    "mime_types": "mp4"
+                                },
+                                {
+                                    "key": "field_61897db64abd4",
+                                    "label": "Video Poster",
+                                    "name": "video_poster",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_61897d554abd2",
+                                                "operator": "==",
+                                                "value": "standard"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "uploader": "",
+                                    "acfe_thumbnail": 0,
+                                    "return_format": "url",
+                                    "preview_size": "full",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "library": "all"
+                                },
+                                {
+                                    "key": "field_61897dd74abd5",
+                                    "label": "YouTube Video ID",
+                                    "name": "youtube_video_id",
+                                    "type": "text",
+                                    "instructions": "Get the ID of a YouTube video by opening the video on YouTube and copying the characters after \"?v=\" inside the URL. Be sure not to copy any other attributes such as the starting point (\"?t=\").",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_61897d554abd2",
+                                                "operator": "==",
+                                                "value": "youtube"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "LXb3EKWsInQ",
+                                    "placeholder": "",
+                                    "prepend": "https:\/\/www.youtube.com\/watch?v=",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_61897e9d4abd6",
+                                    "label": "Embed Code",
+                                    "name": "embed_code",
+                                    "type": "acfe_code_editor",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_61897d554abd2",
+                                                "operator": "==",
+                                                "value": "other"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "mode": "text\/html",
+                                    "lines": 1,
+                                    "indent_unit": 4,
+                                    "maxlength": "",
+                                    "rows": 3,
+                                    "max_rows": "",
+                                    "return_entities": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_category": [
+                                "Basic"
+                            ],
+                            "acfe_flexible_settings": "",
+                            "acfe_flexible_settings_size": "large",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_modal_edit_size": false
+                        },
                         "layout_6172fef890f79": {
                             "key": "layout_6172fef890f79",
                             "name": "custom-post-title",
@@ -1806,7 +1996,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636141408,
+    "modified": 1636402614,
     "acfe_categories": {
         "layout": "Layout"
     }
