@@ -39,33 +39,33 @@ function generateLayout($settings) {
   $gridType = get_sub_field('layout_type');
 
   if ($gridType == 'standard') {
-      if (have_rows('standard_columns')) { 
-          while (have_rows('standard_columns')) { the_row();
-              $layoutStructure = get_sub_field( 'desktop' ) . ' ' . get_sub_field('tablet') . ' ' . get_sub_field('mobile');
-          }
-      }
+    if (have_rows('standard_columns')) { 
+        while (have_rows('standard_columns')) { the_row();
+            $layoutStructure = get_sub_field( 'desktop' ) . ' ' . get_sub_field('tablet') . ' ' . get_sub_field('mobile');
+        }
+    }
 
-      $contentClasses .= 'layout-item ';
-      if (get_sub_field('vertical-alignment') !== 'unset') {
-          $contentClasses .= get_sub_field('vertical-alignment') . ' ';
-      }
+    $contentClasses .= 'layout-item ';
+    if (get_sub_field('vertical-alignment') !== 'unset') {
+        $contentClasses .= get_sub_field('vertical-alignment') . ' ';
+    }
 
-      $wrapperClasses .= 'layout grid-display ' . $layoutStructure . ' ';
+    $wrapperClasses .= 'layout grid-display ' . $layoutStructure . ' ';
   } elseif ($gridType == 'masonry') {
-      if (have_rows('masonry_columns')) { 
-          while (have_rows('masonry_columns')) { the_row();
-              $desktopMasonry = get_sub_field( 'desktop' );
-              $containerCount = $desktopMasonry['label'];
-              $layoutStructure = $desktopMasonry['value'] . ' ' . get_sub_field('tablet') . ' ' . get_sub_field('mobile') . 'layout grid-display masonry-grid items-start ';
-          }
-      }
+    if (have_rows('masonry_columns')) { 
+        while (have_rows('masonry_columns')) { the_row();
+            $desktopMasonry = get_sub_field( 'desktop' );
+            $containerCount = $desktopMasonry['label'];
+            $layoutStructure = $desktopMasonry['value'] . ' ' . get_sub_field('tablet') . ' ' . get_sub_field('mobile') . 'layout grid-display masonry-grid items-start ';
+        }
+    }
 
-      $wrapperClasses .= 'masonry-layout ' . $layoutStructure;
-      $contentClasses .= 'masonry-item ';
+    $wrapperClasses .= 'masonry-layout ' . $layoutStructure;
+    $contentClasses .= 'masonry-item ';
   }
 
   if (get_sub_field('layout_id')) { $layoutID = 'id="' . get_sub_field('layout_id') . '"'; } else {
-      $layoutID = '';
+    $layoutID = '';
   }
   if (get_sub_field('layout_classes')) { $wrapperClasses .= get_sub_field('layout_classes') . ' '; }
   if (get_sub_field('layout_item_classes')) { $contentClasses .= get_sub_field('layout_item_classes') . ' '; }
