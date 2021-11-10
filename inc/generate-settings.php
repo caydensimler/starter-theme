@@ -29,6 +29,59 @@ function generateBasicContent() {
 	return $settingsArray;
 }
 
+function generateLayout($settings) {
+	$layoutArray = [];
+	$contentClasses = 'class="';
+	$wrapperClasses = 'class="';
+	$layoutID = '';
+
+  // Grid Type
+  $gridType = get_sub_field('layout_type');
+
+  if ($gridType == 'standard') {
+      if (have_rows('standard_columns')) { 
+          while (have_rows('standard_columns')) { the_row();
+              $layoutStructure = get_sub_field( 'desktop' ) . ' ' . get_sub_field('tablet') . ' ' . get_sub_field('mobile');
+          }
+      }
+
+      $contentClasses .= 'layout-item ';
+      if (get_sub_field('vertical-alignment') !== 'unset') {
+          $contentClasses .= get_sub_field('vertical-alignment') . ' ';
+      }
+
+      $wrapperClasses .= 'layout grid-display ' . $layoutStructure . ' ';
+  } elseif ($gridType == 'masonry') {
+      if (have_rows('masonry_columns')) { 
+          while (have_rows('masonry_columns')) { the_row();
+              $desktopMasonry = get_sub_field( 'desktop' );
+              $containerCount = $desktopMasonry['label'];
+              $layoutStructure = $desktopMasonry['value'] . ' ' . get_sub_field('tablet') . ' ' . get_sub_field('mobile') . 'layout grid-display masonry-grid items-start ';
+          }
+      }
+
+      $wrapperClasses .= 'masonry-layout ' . $layoutStructure;
+      $contentClasses .= 'masonry-item ';
+  }
+
+  if (get_sub_field('layout_id')) { $layoutID = 'id="' . get_sub_field('layout_id') . '"'; } else {
+      $layoutID = '';
+  }
+  if (get_sub_field('layout_classes')) { $wrapperClasses .= get_sub_field('layout_classes') . ' '; }
+  if (get_sub_field('layout_item_classes')) { $contentClasses .= get_sub_field('layout_item_classes') . ' '; }
+
+  // Generate layout and layout wrapper settings
+	$layoutArray['content-classes'] = rtrim($contentClasses) . '"';
+	if (strlen($layoutArray['content-classes']) <= 8 ) { $layoutArray['content-classes'] = '';}
+
+	$layoutArray['wrapper-classes'] = rtrim($wrapperClasses) . '"';
+	if (strlen($layoutArray['wrapper-classes']) <= 8 ) { $layoutArray['wrapper-classes'] = ''; }
+
+	$layoutArray['wrapper-id'] = $layoutID;
+
+	return $layoutArray;
+}
+
 
 function generateSettings($settings) {
 	// Generate classes, styles, and data attributes for the content and its wrapper.
