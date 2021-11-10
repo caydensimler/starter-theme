@@ -3,15 +3,94 @@
     "title": "Post Query",
     "fields": [
         {
+            "key": "field_618c2029ebebc",
+            "label": "Query Type",
+            "name": "query_type",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "100",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "choose": "Choose Posts Manually",
+                "post-type": "Query Posts by Post Type",
+                "category": "Query Posts by Category",
+                "tags": "Query Posts by Tag"
+            },
+            "allow_null": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_618c209cebebd",
+            "label": "Select Posts",
+            "name": "select_posts",
+            "type": "post_object",
+            "instructions": "Posts are displayed in the order they are selected. To move them around, simply drag and drop them before\/after each other.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_618c2029ebebc",
+                        "operator": "==",
+                        "value": "choose"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "save_custom": 0,
+            "save_post_status": "publish",
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "ui": 1
+        },
+        {
             "key": "field_61836be984342",
             "label": "Set Query Amount",
             "name": "post_query_amount",
             "type": "number",
             "instructions": "In order to query all of the posts, set this value to 0.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_618c2029ebebc",
+                        "operator": "==",
+                        "value": "post-type"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_618c2029ebebc",
+                        "operator": "==",
+                        "value": "category"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_618c2029ebebc",
+                        "operator": "==",
+                        "value": "tags"
+                    }
+                ]
+            ],
             "wrapper": {
-                "width": "20",
+                "width": "25",
                 "class": "",
                 "id": ""
             },
@@ -30,7 +109,15 @@
             "type": "acfe_post_types",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_618c2029ebebc",
+                        "operator": "==",
+                        "value": "post-type"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "75",
                 "class": "",
@@ -53,8 +140,74 @@
             "allow_custom": 0
         },
         {
+            "key": "field_618c2eb9fdaf8",
+            "label": "Select Tag",
+            "name": "post_query_tag",
+            "type": "taxonomy",
+            "instructions": "Posts are displayed in the order that the tag is selected. You can change the order by moving around the tags selected.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_618c2029ebebc",
+                        "operator": "==",
+                        "value": "tags"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "post_tag",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "multiple": 0
+        },
+        {
+            "key": "field_618c2fa6fdaf9",
+            "label": "Select Category",
+            "name": "post_query_category",
+            "type": "taxonomy",
+            "instructions": "Posts are displayed in the order that the category is selected. You can change the order by moving around the categories selected.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_618c2029ebebc",
+                        "operator": "==",
+                        "value": "category"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "75",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "field_type": "multi_select",
+            "allow_null": 0,
+            "add_term": 0,
+            "save_terms": 0,
+            "load_terms": 0,
+            "return_format": "id",
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "multiple": 0
+        },
+        {
             "key": "field_61836ea163cea",
-            "label": "Content",
+            "label": "Select Content & Order",
             "name": "post_query_content",
             "type": "select",
             "instructions": "By selecting items here, it defines how content is generated and in which order. To change the order of how things appear, simply drag them left and right of each other.",
@@ -521,7 +674,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636141467,
+    "modified": 1636579733,
     "acfe_categories": {
         "layout": "Layout"
     }
