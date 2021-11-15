@@ -335,7 +335,7 @@ div.sub-menu .menu-container ul > li {
 /* ------------------------------------------ */
 /* Containers ------------------------------- */
 /* ------------------------------------------ */
-body.single #content:nth-child(1) > div > div { padding-top: 50px; padding-bottom: 50px; }
+body.single #content { padding-top: 50px; padding-bottom: 50px; }
 
 /* Video Background */
 /* ---------------- */
