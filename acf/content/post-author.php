@@ -16,6 +16,10 @@ if ( have_rows( 'author_formatting' ) ) :
 		$prefix = get_sub_field('prefix');
 		$suffix = get_sub_field('suffix');
 	endwhile;
+else:
+	$prefix = '';
+	$format = '';
+	$suffix = '';
 endif;
 
 ?>
@@ -27,9 +31,15 @@ endif;
 			<a href="<?php echo $authorLink; ?>" title="View <?php echo esc_attr(get_the_author()) . '\'s Author Archives'; ?>">
 		<?php endif; ?>
 
-			<span class="author-prefix"><?php echo $prefix; ?></span> 
+			<?php if ($prefix): ?>
+				<span class="author-prefix"><?php echo $prefix; ?></span>
+			<?php endif; ?> 
+
 			<span class="author-name"><?php echo get_the_author(); ?></span> 
-			<span class="author-suffix"><?php echo $suffix; ?></span>
+
+			<?php if ($suffix): ?>
+				<span class="author-suffix"><?php echo $suffix; ?></span>
+			<?php endif; ?>
 
 		<?php if ($linkToArchive): ?></a><?php endif; ?>
 	</p>

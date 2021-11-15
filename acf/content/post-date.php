@@ -12,12 +12,24 @@ if ( have_rows( 'date_formatting' ) ) :
 		$format = get_sub_field('format'); 
 		$suffix = get_sub_field('suffix');
 	endwhile;
+else:
+	$prefix = '';
+	$format = '';
+	$suffix = '';
 endif;
 
 ?>
 
 <div <?php echo $settingsArray['wrapper-classes']; ?> <?php echo $settingsArray['data-attributes']; ?>>
 	<p <?php echo $settingsArray['content-classes']; ?>>
-		<span class="date-prefix"><?php echo $prefix; ?></span> <span class="date"><?php echo get_the_date($format); ?></span> <span class="date-suffix"><?php echo $suffix; ?></span>
+		<?php if ($prefix): ?>
+			<span class="date-prefix"><?php echo $prefix; ?></span> 
+		<?php endif; ?>
+
+		<span class="date"><?php echo get_the_date($format); ?></span> 
+
+		<?php if ($suffix): ?>
+			<span class="date-suffix"><?php echo $suffix; ?></span>
+		<?php endif; ?>
 	</p>
 </div>
