@@ -360,29 +360,28 @@ body.single #content:nth-child(1) > div > div { padding-top: 50px; padding-botto
 /* Content Type ----------------------------- */
 /* ------------------------------------------ */
 
-#content a { 
-  position: relative; display: inline-block; transition: .3s; }
-
+#content a {  position: relative; display: inline-block; transition: .3s; }
+#content a.linked-item { color: inherit; }
 
 /* Line Separator */
 .line-separator hr { margin-bottom: 1rem; margin-top: 1rem; }
 
-/* Text Component */
+/* Text */
 .text:last-of-type > div > * { margin-bottom: 0px; }
 
-/* Image Component */
+/* Image */
 .image > div { max-width: 100%; }
 
-/* Link Component */
+/* Link */
 .link button { padding: 0; }
 .link a.button { padding: 15px 30px; }
 .link a.link { background-color: none; }
 
-/* List Component */
+/* List */
 .list > ul { margin-left: 10px; list-style-position: inside; }
 .list > ul li.list-icon { background-size: 20px; padding: 5px 0px 5px 35px; }
 
-/* Post Tags */
+/* Post Categories & Tags */
 .post-tags ul,
 .post-categories ul { list-style-type: none; margin-left: 0px; }
 
