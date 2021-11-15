@@ -58,6 +58,9 @@ if (get_sub_field('featured_image_size')) { $imageSize = get_sub_field('featured
 
             <div <?php echo $layoutArray['content-classes']; ?>>
                 <div class="item-<?php echo $itemNumber; ?><?php echo $imageBackgroundClass; ?>" <?php echo $imageBackground; ?>>
+                    <?php if ($topLevelLinked): ?>
+                        <a class="linked-item" href="<?php echo get_permalink(); ?>" alt="<?php echo get_the_title(); ?>">
+                    <?php endif; ?>
 
                     <?php foreach($queryContent as $contentType):
                         if ($contentType === 'wrapper') {
@@ -70,6 +73,10 @@ if (get_sub_field('featured_image_size')) { $imageSize = get_sub_field('featured
                             echo '</div>';
                         }
                     endforeach; ?>
+
+                    <?php if ($topLevelLinked): ?>
+                        </a>
+                    <?php endif; ?>
 
                 </div>
             </div><?php $itemNumber++; ?>
