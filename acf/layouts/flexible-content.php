@@ -9,7 +9,7 @@ endwhile; ?>
 		<?php $itemNumber = 1; ?>
 
 		<?php if ($gridType === 'masonry'): ?>
-			<?php for ($i = 1; $i <= $containerCount; $i++): ?>
+			<?php for ($i = 1; $i <= $layoutArray['container-count']; $i++): ?>
 				<div class="layout-item col-<?php echo $i; ?>"></div>
 			<?php endfor; ?>
 		<?php endif; ?>

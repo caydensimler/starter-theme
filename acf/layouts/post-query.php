@@ -42,7 +42,7 @@ if (get_sub_field('featured_image_size')) { $imageSize = get_sub_field('featured
     <?php $itemNumber = 1;
 
     if ($gridType === 'masonry'):
-        for ($i = 1; $i <= $containerCount; $i++): ?>
+        for ($i = 1; $i <= $layoutArray['container-count']; $i++): ?>
             <div class="layout-item col-<?php echo $i; ?>"></div>
         <?php endfor;
     endif;

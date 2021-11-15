@@ -33,6 +33,7 @@ function generateLayout($settings) {
 	$layoutArray = [];
 	$contentClasses = 'class="';
 	$wrapperClasses = 'class="';
+	$containerCount = '';
 	$layoutID = '';
 
   // Grid Type
@@ -78,6 +79,7 @@ function generateLayout($settings) {
 	if (strlen($layoutArray['wrapper-classes']) <= 8 ) { $layoutArray['wrapper-classes'] = ''; }
 
 	$layoutArray['wrapper-id'] = $layoutID;
+	$layoutArray['container-count'] = $containerCount;
 
 	return $layoutArray;
 }
