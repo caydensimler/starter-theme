@@ -8,8 +8,8 @@ $postArguments = [];
 
 if ($queryType !== 'choose') {
     $queryAmount = get_sub_field('post_query_amount');
-    if ($queryAmount === 0) { $queryAmount = -1; }
 
+    if ($queryAmount === 0) { $queryAmount = -1; }
     $postArguments['posts_per_page'] = $queryAmount; 
 } else {
     $selectedPosts = get_sub_field('select_posts');

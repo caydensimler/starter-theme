@@ -1999,6 +1999,69 @@
                             "acfe_flexible_thumbnail": false,
                             "acfe_flexible_modal_edit_size": false
                         },
+                        "layout_6191e03b6e818": {
+                            "key": "layout_6191e03b6e818",
+                            "name": "post-link",
+                            "label": "Post Link",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6191e05f6e819",
+                                    "label": "Links To",
+                                    "name": "links_to",
+                                    "type": "button_group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "25",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "previous": "Previous",
+                                        "current": "Current",
+                                        "next": "Next"
+                                    },
+                                    "allow_null": 0,
+                                    "default_value": "current",
+                                    "layout": "horizontal",
+                                    "return_format": "value"
+                                },
+                                {
+                                    "key": "field_6191e2970e992",
+                                    "label": "Link Text",
+                                    "name": "link_text",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "75",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_category": [
+                                "Post",
+                                "Basic"
+                            ],
+                            "acfe_flexible_settings": "",
+                            "acfe_flexible_settings_size": "large",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_modal_edit_size": false
+                        },
                         "layout_61044a1d6c611": {
                             "key": "layout_61044a1d6c611",
                             "name": "shortcode",
@@ -2092,7 +2155,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636947083,
+    "modified": 1636952613,
     "acfe_categories": {
         "layout": "Layout"
     }

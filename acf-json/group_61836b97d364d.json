@@ -220,13 +220,14 @@
             },
             "choices": {
                 "title": "Title",
-                "wrapper": "Wrapper (Start)",
                 "author": "Author",
                 "date": "Date",
+                "excerpt": "Excerpt",
                 "tags": "Tags",
                 "categories": "Categories",
                 "image": "Featured Image",
-                "excerpt": "Excerpt",
+                "link": "Link",
+                "wrapper": "Wrapper (Start)",
                 "wrapper-end": "Wrapper (End)"
             },
             "default_value": [],
@@ -384,41 +385,6 @@
             "ui_off_text": ""
         },
         {
-            "key": "field_61837ac2cbe09",
-            "label": "Title Content Type",
-            "name": "type",
-            "type": "button_group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_61836ea163cea",
-                        "operator": "==contains",
-                        "value": "title"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "25",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "h1": "H1",
-                "h2": "H2",
-                "h3": "H3",
-                "h4": "H4",
-                "h5": "H5",
-                "h6": "H6",
-                "p": "P"
-            },
-            "allow_null": 0,
-            "default_value": "h5",
-            "layout": "horizontal",
-            "return_format": "value"
-        },
-        {
             "key": "field_618459d8b2f21",
             "label": "Tags Link to their Archive",
             "name": "tag_links_to_archive",
@@ -471,6 +437,105 @@
             "ui": 1,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_6191ea2ef3956",
+            "label": "Title Links to Post",
+            "name": "title_links",
+            "type": "true_false",
+            "instructions": "Whether or not the title acts as a link to view the post.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61836ea163cea",
+                        "operator": "==contains",
+                        "value": "title"
+                    },
+                    {
+                        "field": "field_61837fe8ed8f5",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_61837ac2cbe09",
+            "label": "Title Content Type",
+            "name": "type",
+            "type": "button_group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61836ea163cea",
+                        "operator": "==contains",
+                        "value": "title"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "h1": "H1",
+                "h2": "H2",
+                "h3": "H3",
+                "h4": "H4",
+                "h5": "H5",
+                "h6": "H6",
+                "p": "P"
+            },
+            "allow_null": 0,
+            "default_value": "h5",
+            "layout": "horizontal",
+            "return_format": "value"
+        },
+        {
+            "key": "field_6191e410a6e0d",
+            "label": "Link Text",
+            "name": "link_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61836ea163cea",
+                        "operator": "==contains",
+                        "value": "link"
+                    },
+                    {
+                        "field": "field_61837fe8ed8f5",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_61838157147fc",
@@ -704,7 +769,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636947097,
+    "modified": 1636953801,
     "acfe_categories": {
         "layout": "Layout"
     }
