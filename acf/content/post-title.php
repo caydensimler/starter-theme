@@ -7,6 +7,9 @@ else:
 endif; 
 
 $textType = get_sub_field('type'); 
+if (!$textType) {
+	$textType = 'h1';
+}
 $titleLinks = get_sub_field('title_links'); ?>
 
 <div <?php echo $settingsArray['wrapper-classes']; ?> <?php echo $settingsArray['data-attributes']; ?>>
