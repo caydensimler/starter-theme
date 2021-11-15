@@ -111,17 +111,26 @@ The following are all the content types available to be used within the Flexible
 
 ##### Basic Content
 
-1. [Text](https://i.imgur.com/U5aE1EN.png)
-2. [Text Area](https://i.imgur.com/ALMMLL7.png)
-3. [WYSIWYG](https://i.imgur.com/xlN1zvf.png)
-4. [Link](https://i.imgur.com/mOjtkJX.png)
-5. [List](https://i.imgur.com/9NiIXSL.png)
-6. [Image](https://i.imgur.com/cGPecH5.png)
-7. [Line Separator](https://i.imgur.com/Md5Bljh.png)
+1. Text
+2. Text Area
+3. WYSIWYG
+4. Link
+5. List
+6. Image
+7. Line Separator
+8. Video Embed
 
 ##### Post Content
 
-1. [Post Title](https://i.imgur.com/utIKTLS.png)
-2. [Post Date](https://i.imgur.com/aj05zDY.png)
-3. [Post Author](https://i.imgur.com/iqGl6MD.png)
-4. [Post Tags](https://i.imgur.com/hSJ52m1.png)
+1. Post Title
+2. Post Date
+3. Post Author
+4. Post Tags
+5. Post Categories
+6. Post Featured Image
+7. Post Link
+8. Post Excerpt
+
+##### Specialty Content
+
+1. Wrapper

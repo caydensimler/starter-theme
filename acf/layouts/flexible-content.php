@@ -31,7 +31,7 @@ endwhile; ?>
 
 							<?php if ($contentType == 'wrapper'): ?>
 								<?php get_template_part('acf/content/' . $contentType); ?>
-							<?php elseif ($contentType == 'wrapper_end'): ?>
+							<?php elseif ($contentType == 'wrapper-end'): ?>
 								<?php echo '</div></div>'; ?>
 							<?php else: ?>
 								<div class="<?php echo $contentType; ?>">

@@ -327,7 +327,7 @@ div.sub-menu .menu-container ul > li {
 .post-query .layout-item > div > div:last-child *:last-child { margin-bottom: 0px; }
 .post-query .post-image { margin-bottom: 15px; }
 
-.post-query .post-author, .post-query .post-date { display: inline-block; }
+.post-query .post-author, .post-query .post-date { display: inline-block; margin-right: 2px; }
 
 
 
@@ -335,7 +335,7 @@ div.sub-menu .menu-container ul > li {
 /* ------------------------------------------ */
 /* Containers ------------------------------- */
 /* ------------------------------------------ */
-body.single #content:nth-child(1) > div > div { padding-top: 50px; }
+body.single #content:nth-child(1) > div > div { padding-top: 50px; padding-bottom: 50px; }
 
 /* Video Background */
 /* ---------------- */
@@ -360,6 +360,10 @@ body.single #content:nth-child(1) > div > div { padding-top: 50px; }
 /* Content Type ----------------------------- */
 /* ------------------------------------------ */
 
+#content a { 
+  position: relative; display: inline-block; transition: .3s; }
+
+
 /* Line Separator */
 .line-separator hr { margin-bottom: 1rem; margin-top: 1rem; }
 
@@ -379,7 +383,11 @@ body.single #content:nth-child(1) > div > div { padding-top: 50px; }
 .list > ul li.list-icon { background-size: 20px; padding: 5px 0px 5px 35px; }
 
 /* Post Tags */
-.post-tags ul { list-style-type: none; margin-left: 0px; }
+.post-tags ul,
+.post-categories ul { list-style-type: none; margin-left: 0px; }
 
-.post-tags ul > * { display: inline-block; margin-right: 15px; }
-.post-tags ul > *:last-of-type { margin-right: 0px; }
+.post-tags ul > *,
+.post-categories ul > * { display: inline-block; margin-right: 15px; }
+
+.post-tags ul > *:last-of-type,
+.post-categories ul > *:last-of-type { margin-right: 0px; }

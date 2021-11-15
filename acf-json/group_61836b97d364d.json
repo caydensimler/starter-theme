@@ -222,10 +222,13 @@
                 "title": "Title",
                 "author": "Author",
                 "date": "Date",
+                "excerpt": "Excerpt",
                 "tags": "Tags",
                 "categories": "Categories",
                 "image": "Featured Image",
-                "excerpt": "Excerpt"
+                "link": "Link",
+                "wrapper": "Wrapper (Start)",
+                "wrapper-end": "Wrapper (End)"
             },
             "default_value": [],
             "allow_null": 0,
@@ -382,6 +385,92 @@
             "ui_off_text": ""
         },
         {
+            "key": "field_618459d8b2f21",
+            "label": "Tags Link to their Archive",
+            "name": "tag_links_to_archive",
+            "type": "true_false",
+            "instructions": "Whether or not individual tags link to their respective archive page.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61836ea163cea",
+                        "operator": "==contains",
+                        "value": "tags"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6191c7bdc9cb3",
+            "label": "Categories Link to their Archive",
+            "name": "category_links_to_archive",
+            "type": "true_false",
+            "instructions": "Whether or not individual tags link to their respective archive page.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61836ea163cea",
+                        "operator": "==contains",
+                        "value": "categories"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6191ea2ef3956",
+            "label": "Title Links to Post",
+            "name": "title_links",
+            "type": "true_false",
+            "instructions": "Whether or not the title acts as a link to view the post.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61836ea163cea",
+                        "operator": "==contains",
+                        "value": "title"
+                    },
+                    {
+                        "field": "field_61837fe8ed8f5",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_61837ac2cbe09",
             "label": "Title Content Type",
             "name": "type",
@@ -417,18 +506,23 @@
             "return_format": "value"
         },
         {
-            "key": "field_618459d8b2f21",
-            "label": "Tags Link to their Archive",
-            "name": "tag_links_to_archive",
-            "type": "true_false",
-            "instructions": "Whether or not individual tags link to their respective archive page.",
+            "key": "field_6191e410a6e0d",
+            "label": "Link Text",
+            "name": "link_text",
+            "type": "text",
+            "instructions": "",
             "required": 0,
             "conditional_logic": [
                 [
                     {
                         "field": "field_61836ea163cea",
                         "operator": "==contains",
-                        "value": "tags"
+                        "value": "link"
+                    },
+                    {
+                        "field": "field_61837fe8ed8f5",
+                        "operator": "!=",
+                        "value": "1"
                     }
                 ]
             ],
@@ -437,11 +531,11 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         },
         {
             "key": "field_61838157147fc",
@@ -667,6 +761,7 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
+    "show_in_rest": 0,
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
@@ -674,7 +769,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636579733,
+    "modified": 1636953801,
     "acfe_categories": {
         "layout": "Layout"
     }

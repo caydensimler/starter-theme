@@ -8,8 +8,8 @@ $postArguments = [];
 
 if ($queryType !== 'choose') {
     $queryAmount = get_sub_field('post_query_amount');
-    if ($queryAmount === 0) { $queryAmount = -1; }
 
+    if ($queryAmount === 0) { $queryAmount = -1; }
     $postArguments['posts_per_page'] = $queryAmount; 
 } else {
     $selectedPosts = get_sub_field('select_posts');
@@ -60,9 +60,15 @@ if (get_sub_field('featured_image_size')) { $imageSize = get_sub_field('featured
                 <div class="item-<?php echo $itemNumber; ?><?php echo $imageBackgroundClass; ?>" <?php echo $imageBackground; ?>>
 
                     <?php foreach($queryContent as $contentType):
-                        echo '<div class="post-' . $contentType . '">';
-                            get_template_part('acf/content/post-' . $contentType);
-                        echo '</div>';
+                        if ($contentType === 'wrapper') {
+                            get_template_part('acf/content/' . $contentType);
+                        } elseif ($contentType === 'wrapper-end') {
+                            echo '</div></div>';
+                        } else {   
+                            echo '<div class="post-' . $contentType . '">';
+                                get_template_part('acf/content/post-' . $contentType);
+                            echo '</div>';
+                        }
                     endforeach; ?>
 
                 </div>

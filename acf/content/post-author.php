@@ -21,12 +21,16 @@ endif;
 ?>
 
 <div <?php echo $settingsArray['wrapper-classes']; ?> <?php echo $settingsArray['data-attributes']; ?>>
-	<?php if ($linkToArchive): ?>
-		<?php $authorLink = get_author_posts_url($author); ?>
-		<a href="<?php echo $authorLink; ?>" title="View <?php echo esc_attr(get_the_author()) . '\'s Author Archives'; ?>">
-	<?php endif; ?>
-			<p <?php echo $settingsArray['content-classes']; ?>><span class="author-prefix"><?php echo $prefix; ?></span> <span class="author-name"><?php echo get_the_author(); ?></span> <span class="author-suffix"><?php echo $suffix; ?></span></p>
-	<?php if ($linkToArchive): ?>
-		</a>
-	<?php endif; ?>
+	<p <?php echo $settingsArray['content-classes']; ?>>
+		<?php if ($linkToArchive): ?>
+			<?php $authorLink = get_author_posts_url($author); ?>
+			<a href="<?php echo $authorLink; ?>" title="View <?php echo esc_attr(get_the_author()) . '\'s Author Archives'; ?>">
+		<?php endif; ?>
+
+			<span class="author-prefix"><?php echo $prefix; ?></span> 
+			<span class="author-name"><?php echo get_the_author(); ?></span> 
+			<span class="author-suffix"><?php echo $suffix; ?></span>
+
+		<?php if ($linkToArchive): ?></a><?php endif; ?>
+	</p>
 </div>
