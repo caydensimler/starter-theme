@@ -335,7 +335,7 @@ div.sub-menu .menu-container ul > li {
 /* ------------------------------------------ */
 /* Containers ------------------------------- */
 /* ------------------------------------------ */
-body.single #content:nth-child(1) > div > div { padding-top: 50px; }
+body.single #content:nth-child(1) > div > div { padding-top: 50px; padding-bottom: 50px; }
 
 /* Video Background */
 /* ---------------- */
@@ -361,7 +361,8 @@ body.single #content:nth-child(1) > div > div { padding-top: 50px; }
 /* ------------------------------------------ */
 
 #content a { 
-  position:  relative; transition: .3s; }
+  position: relative; display: inline-block; transition: .3s; }
+
 
 /* Line Separator */
 .line-separator hr { margin-bottom: 1rem; margin-top: 1rem; }
