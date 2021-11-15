@@ -220,12 +220,14 @@
             },
             "choices": {
                 "title": "Title",
+                "wrapper": "Wrapper (Start)",
                 "author": "Author",
                 "date": "Date",
                 "tags": "Tags",
                 "categories": "Categories",
                 "image": "Featured Image",
-                "excerpt": "Excerpt"
+                "excerpt": "Excerpt",
+                "wrapper-end": "Wrapper (End)"
             },
             "default_value": [],
             "allow_null": 0,
@@ -429,6 +431,33 @@
                         "field": "field_61836ea163cea",
                         "operator": "==contains",
                         "value": "tags"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "25",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6191c7bdc9cb3",
+            "label": "Categories Link to their Archive",
+            "name": "category_links_to_archive",
+            "type": "true_false",
+            "instructions": "Whether or not individual tags link to their respective archive page.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61836ea163cea",
+                        "operator": "==contains",
+                        "value": "categories"
                     }
                 ]
             ],
@@ -667,6 +696,7 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
+    "show_in_rest": 0,
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
@@ -674,7 +704,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636579733,
+    "modified": 1636947097,
     "acfe_categories": {
         "layout": "Layout"
     }
