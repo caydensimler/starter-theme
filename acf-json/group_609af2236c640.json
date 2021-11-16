@@ -1123,6 +1123,123 @@
                             "acfe_flexible_thumbnail": false,
                             "acfe_flexible_modal_edit_size": false
                         },
+                        "layout_61941bd12a2b1": {
+                            "key": "layout_61941bd12a2b1",
+                            "name": "form",
+                            "label": "Form",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_61941bd82a2b2",
+                                    "label": "Form ID",
+                                    "name": "form_id",
+                                    "type": "number",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "20",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "gravityform id=",
+                                    "append": "",
+                                    "min": 1,
+                                    "max": "",
+                                    "step": 1
+                                },
+                                {
+                                    "key": "field_61941bfd2a2b3",
+                                    "label": "Tab Index",
+                                    "name": "tab_index",
+                                    "type": "text",
+                                    "instructions": "Having an issue where pressing tab on your keyboard brings your user to another form on your page? That is because Gravity Forms assumes its tabindex values, and you can have overlap. You need to change the tabindex on your forms so that they work as expected.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "20",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_61941c742a2b5",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "20",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "Shown",
+                                    "ui_off_text": "Hidden"
+                                },
+                                {
+                                    "key": "field_61941c5f2a2b4",
+                                    "label": "Description",
+                                    "name": "description",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "20",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "Shown",
+                                    "ui_off_text": "Hidden"
+                                },
+                                {
+                                    "key": "field_61941cac2a2b6",
+                                    "label": "Ajax",
+                                    "name": "ajax",
+                                    "type": "true_false",
+                                    "instructions": "Specify whether or not to use AJAX to submit the form.",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "20",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "Enabled",
+                                    "ui_off_text": "Disabled"
+                                }
+                            ],
+                            "min": "",
+                            "max": "",
+                            "acfe_flexible_category": [
+                                "Basic"
+                            ],
+                            "acfe_flexible_settings": "",
+                            "acfe_flexible_settings_size": "large",
+                            "acfe_flexible_render_template": false,
+                            "acfe_flexible_render_style": false,
+                            "acfe_flexible_render_script": false,
+                            "acfe_flexible_thumbnail": false,
+                            "acfe_flexible_modal_edit_size": false
+                        },
                         "layout_6172fef890f79": {
                             "key": "layout_6172fef890f79",
                             "name": "custom-post-title",
@@ -2155,7 +2272,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636952613,
+    "modified": 1637096641,
     "acfe_categories": {
         "layout": "Layout"
     }
