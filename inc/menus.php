@@ -10,13 +10,11 @@ function add_additional_class_on_li($classes, $item, $args) {
 add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
 
 
-if (function_exists('have_rows')) {
-	if (have_rows('register_menus', 'option')) {
-		while (have_rows('register_menus', 'option')) { the_row();
-			$menuName = get_sub_field( 'menu_name' );
-			$menuSlug = slug($menuName);
-
-			register_nav_menu($menuSlug, $menuName);
-		}
-	}
-}
+// function register_my_menus() {
+//   register_nav_menus(
+//     array(
+//       'new-menu' => __( 'New Menu' ),
+//     )
+//   );
+// }
+// add_action( 'init', 'register_my_menus' );
