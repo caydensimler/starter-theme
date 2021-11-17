@@ -863,6 +863,7 @@ input[type="submit"],
 .columns-3-2 { grid-template-columns: 3fr 2fr; }
 .columns-4-1 { grid-template-columns: 4fr 1fr; }
 
+.grid-display.header-row .layout-item:nth-child(1) { grid-column: 1/-1; }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .tablet-columns-1 { grid-template-columns: 1fr;}

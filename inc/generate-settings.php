@@ -52,6 +52,7 @@ function generateLayout($settings) {
     }
 
     $wrapperClasses .= 'layout grid-display ' . $layoutStructure . ' ';
+    if (get_sub_field('header_row')) {$wrapperClasses .= 'header-row '; }
   } elseif ($gridType == 'masonry') {
     if (have_rows('masonry_columns')) { 
         while (have_rows('masonry_columns')) { the_row();

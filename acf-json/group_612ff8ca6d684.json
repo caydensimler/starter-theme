@@ -171,6 +171,33 @@
             ]
         },
         {
+            "key": "field_619592b5172e9",
+            "label": "Header Row",
+            "name": "header_row",
+            "type": "true_false",
+            "instructions": "Whether or not a header row is included in the layout to allow for a full-width grid item to act as a header for the entire layout.",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_613a8cde9bc94",
+                        "operator": "==",
+                        "value": "standard"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "Enabled",
+            "ui_off_text": "Disabled"
+        },
+        {
             "key": "field_616923223394a",
             "label": "Masonry Columns",
             "name": "masonry_columns",
@@ -401,6 +428,7 @@
     "hide_on_screen": "",
     "active": false,
     "description": "Settings and styles for the grid layout used in [Layout] Flexible Grid. Adds the ability to manage design aspects for the Flexible Grid layout directly inside the WordPress backend.",
+    "show_in_rest": 0,
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
@@ -408,7 +436,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636141455,
+    "modified": 1637192473,
     "acfe_categories": {
         "settings": "Settings"
     }
