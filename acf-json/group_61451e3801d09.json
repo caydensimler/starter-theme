@@ -23,7 +23,7 @@
             "other_choice": 1,
             "save_other_choice": 0,
             "default_value": "contained",
-            "layout": "vertical",
+            "layout": "horizontal",
             "return_format": "value"
         }
     ],
@@ -44,6 +44,7 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
+    "show_in_rest": 0,
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
@@ -51,7 +52,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636141384,
+    "modified": 1638084193,
     "acfe_categories": {
         "settings": "Settings"
     }
