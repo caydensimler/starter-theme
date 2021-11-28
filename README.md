@@ -10,13 +10,9 @@ This is a starter theme that builds on top of the [GeneratePress Child Theme by 
 
 New or updated features that are either currently being worked on or are in the queue.
 
-- Implementing an expand/collapse content button that generates a basic toggle button for dropdowns and accordions. 
+- Implementing an expand/collapse content button that generates a basic toggle button for dropdowns and accordions. (honestly, several weeks after having this here, I've realized that it would make more sense to just build a JS library for something like this and as much fun as that sounds right now, I need several more weeks of it being in my head before I'm ready to start that. HOWEVER, once that does get done, i would probably come up with a cool way to implement it into my current thing I've got going here. idk. we'll see)
 
-- Adding more post content types: next/previous, categories, and featured image.
-
-- Building ontop of the Post Query layout to include querying related posts based on tags chosen or dates selected. Also potentially creating a way to define "Featured Posts" for any post type. I still need to implement Categories and Excerpts into post query content, but I'll need to add those as Flexible Content first.
-
-- Rebuilding Sub-Menu (both ACF and CSS portions).
+- Rebuilding Sub-Menu (both ACF and CSS portions - or maybe just the CSS, we'll see).
 
 ## Changelogs & Version Control
 
@@ -30,8 +26,8 @@ I have made a lot of changes since v1, so consider the current theme v2. Followi
 ## Core Concepts
 
 1. Layered Content Generation
-2. Reusability and Scalability
-3. Add-On Library
+1. Reusability and Scalability
+1. Add-On Library
 
 ---
 
@@ -97,11 +93,12 @@ I've created a custom post type called Content Blocks that allows individual lay
 
 Layout Types integrate [Content Types](#content-types) via the Layered Content Generation methods outlined above.
 
+1. Standard Content
 1. Flexible Content
-2. Post Query
-3. Content Block
-4. Shortcode
-5. Layout Wrapper
+1. Post Query
+1. Content Block
+1. Shortcode
+1. Layout Wrapper
 
 ---
 
@@ -112,24 +109,24 @@ The following are all the content types available to be used within the Flexible
 ##### Basic Content
 
 1. Text
-2. Text Area
-3. WYSIWYG
-4. Link
-5. List
-6. Image
-7. Line Separator
-8. Video Embed
+1. Text Area
+1. WYSIWYG
+1. Link
+1. List
+1. Image
+1. Line Separator
+1. Video Embed
 
 ##### Post Content
 
 1. Post Title
-2. Post Date
-3. Post Author
-4. Post Tags
-5. Post Categories
-6. Post Featured Image
-7. Post Link
-8. Post Excerpt
+1. Post Date
+1. Post Author
+1. Post Tags
+1. Post Categories
+1. Post Featured Image
+1. Post Link
+1. Post Excerpt
 
 ##### Specialty Content
 
