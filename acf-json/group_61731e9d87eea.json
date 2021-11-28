@@ -121,6 +121,27 @@
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0
+        },
+        {
+            "key": "field_61a325d18aa07",
+            "label": "Horizontal Alignment",
+            "name": "horizontal_alignment",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "field_613fc3fee2c4c"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -152,6 +173,7 @@
     "hide_on_screen": "",
     "active": false,
     "description": "Used in addition to ACF: Extended, the Layouts settings include options for updating background attributes, responsiveness, sizing, and spacing for each layout or group of layouts added to a page.",
+    "show_in_rest": 0,
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
@@ -159,7 +181,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636141382,
+    "modified": 1638082047,
     "acfe_categories": {
         "settings": "Settings"
     }

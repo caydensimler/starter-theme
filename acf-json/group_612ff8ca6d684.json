@@ -306,7 +306,7 @@
             "label": "Vertical Alignment",
             "name": "vertical-alignment",
             "type": "button_group",
-            "instructions": "Vertically align elements in the same row in regards to the tallest row.",
+            "instructions": "Vertically align elements in the same row based on the tallest item in the row.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -331,27 +331,6 @@
             "default_value": "",
             "layout": "horizontal",
             "return_format": "value"
-        },
-        {
-            "key": "field_6179bcac7d55f",
-            "label": "Horizontal Alignment",
-            "name": "horizontal_alignment",
-            "type": "clone",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "clone": [
-                "field_613fc3fee2c4c"
-            ],
-            "display": "seamless",
-            "layout": "block",
-            "prefix_label": 0,
-            "prefix_name": 0
         },
         {
             "key": "field_6148eb66768bc",
@@ -436,7 +415,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1637192473,
+    "modified": 1638082140,
     "acfe_categories": {
         "settings": "Settings"
     }
