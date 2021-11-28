@@ -30,8 +30,8 @@ I have made a lot of changes since v1, so consider the current theme v2. Followi
 ## Core Concepts
 
 1. Layered Content Generation
-2. Reusability and Scalability
-3. Add-On Library
+1. Reusability and Scalability
+1. Add-On Library
 
 ---
 
@@ -97,11 +97,12 @@ I've created a custom post type called Content Blocks that allows individual lay
 
 Layout Types integrate [Content Types](#content-types) via the Layered Content Generation methods outlined above.
 
+1. Standard Content
 1. Flexible Content
-2. Post Query
-3. Content Block
-4. Shortcode
-5. Layout Wrapper
+1. Post Query
+1. Content Block
+1. Shortcode
+1. Layout Wrapper
 
 ---
 
@@ -112,24 +113,24 @@ The following are all the content types available to be used within the Flexible
 ##### Basic Content
 
 1. Text
-2. Text Area
-3. WYSIWYG
-4. Link
-5. List
-6. Image
-7. Line Separator
-8. Video Embed
+1. Text Area
+1. WYSIWYG
+1. Link
+1. List
+1. Image
+1. Line Separator
+1. Video Embed
 
 ##### Post Content
 
 1. Post Title
-2. Post Date
-3. Post Author
-4. Post Tags
-5. Post Categories
-6. Post Featured Image
-7. Post Link
-8. Post Excerpt
+1. Post Date
+1. Post Author
+1. Post Tags
+1. Post Categories
+1. Post Featured Image
+1. Post Link
+1. Post Excerpt
 
 ##### Specialty Content
 
