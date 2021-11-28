@@ -29,6 +29,29 @@ function generateBasicContent() {
 	return $settingsArray;
 }
 
+function generateBasicLayout() {
+	$layoutArray = [];
+	$contentClasses = 'class="';
+	$wrapperClasses = 'class="';
+	$containerCount = '';
+	$layoutID = '';
+
+	$gridType = 'standard';
+	$layoutStructure = 'columns-1';
+
+	$contentClasses .= 'layout-item ';
+	$wrapperClasses .= 'layout grid-display ' . $layoutStructure . ' ';
+
+	// Generate layout and layout wrapper settings
+	$layoutArray['content-classes'] = rtrim($contentClasses) . '"';
+	if (strlen($layoutArray['content-classes']) <= 8 ) { $layoutArray['content-classes'] = '';}
+
+	$layoutArray['wrapper-classes'] = rtrim($wrapperClasses) . '"';
+	if (strlen($layoutArray['wrapper-classes']) <= 8 ) { $layoutArray['wrapper-classes'] = ''; }
+
+	return $layoutArray;
+}
+
 function generateLayout($settings) {
 	$layoutArray = [];
 	$contentClasses = 'class="';
