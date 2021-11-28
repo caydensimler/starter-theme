@@ -10,13 +10,9 @@ This is a starter theme that builds on top of the [GeneratePress Child Theme by 
 
 New or updated features that are either currently being worked on or are in the queue.
 
-- Implementing an expand/collapse content button that generates a basic toggle button for dropdowns and accordions. 
+- Implementing an expand/collapse content button that generates a basic toggle button for dropdowns and accordions. (honestly, several weeks after having this here, I've realized that it would make more sense to just build a JS library for something like this and as much fun as that sounds right now, I need several more weeks of it being in my head before I'm ready to start that. HOWEVER, once that does get done, i would probably come up with a cool way to implement it into my current thing I've got going here. idk. we'll see)
 
-- Adding more post content types: next/previous, categories, and featured image.
-
-- Building ontop of the Post Query layout to include querying related posts based on tags chosen or dates selected. Also potentially creating a way to define "Featured Posts" for any post type. I still need to implement Categories and Excerpts into post query content, but I'll need to add those as Flexible Content first.
-
-- Rebuilding Sub-Menu (both ACF and CSS portions).
+- Rebuilding Sub-Menu (both ACF and CSS portions - or maybe just the CSS, we'll see).
 
 ## Changelogs & Version Control
 
