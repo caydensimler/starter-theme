@@ -20,7 +20,7 @@
         },
         {
             "key": "field_613fc3fee2c4c",
-            "label": "Alignment",
+            "label": "Horizontal Alignment",
             "name": "alignment",
             "type": "group",
             "instructions": "",
@@ -127,6 +127,7 @@
     "hide_on_screen": "",
     "active": false,
     "description": "",
+    "show_in_rest": 0,
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
@@ -134,7 +135,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636141430,
+    "modified": 1637351541,
     "acfe_categories": {
         "settings": "Settings"
     }

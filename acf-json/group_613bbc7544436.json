@@ -87,6 +87,52 @@
                     "acfe_flexible_modal_edit_size": false,
                     "acfe_flexible_category": false
                 },
+                "layout_61a3238fce914": {
+                    "key": "layout_61a3238fce914",
+                    "name": "standard-content",
+                    "label": "Standard Content",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_61a3238fce915",
+                            "label": "Flexible Content Clone",
+                            "name": "flexible_content_clone",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_609af2236c640"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0,
+                            "acfe_seamless_style": 0,
+                            "acfe_clone_modal": 0,
+                            "acfe_clone_modal_close": 0,
+                            "acfe_clone_modal_button": "",
+                            "acfe_clone_modal_size": "large"
+                        }
+                    ],
+                    "min": "",
+                    "max": "",
+                    "acfe_flexible_render_template": "acf\/clones\/page-content.php",
+                    "acfe_flexible_render_style": "css\/theme.css",
+                    "acfe_flexible_render_script": "js\/theme.js",
+                    "acfe_flexible_settings": [
+                        "group_61731e9d87eea"
+                    ],
+                    "acfe_flexible_settings_size": "xlarge",
+                    "acfe_flexible_thumbnail": "",
+                    "acfe_flexible_modal_edit_size": false,
+                    "acfe_flexible_category": false
+                },
                 "layout_6009d5442e592": {
                     "key": "layout_6009d5442e592",
                     "name": "content-block",
@@ -418,6 +464,7 @@
     ],
     "active": true,
     "description": "Flexible content page builder that incorporates ACF extended for maximum flexibility and layout\/design control.",
+    "show_in_rest": 0,
     "acfe_display_title": "",
     "acfe_autosync": [
         "json"
@@ -425,7 +472,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1636141488,
+    "modified": 1638081445,
     "acfe_categories": {
         "template": "Template"
     }
