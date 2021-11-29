@@ -16,16 +16,16 @@ if (have_rows('layout_item')) { $itemNumber = 1;
 					} elseif ($contentType == 'wrapper-end') {
 						echo '</div></div>';
 					} else {
-						echo '<div class="' . $contentType . 'item-' . $itemNumber . '">';
+						echo '<div class="' . $contentType . ' content-item-' . $itemNumber . '">';
 							get_template_part('acf/content/' . $contentType);
 						echo '</div>'; // close content type wrapper
 					}
+
+					$itemNumber ++;
 				}} // endif endwhile (have_rows('content_type'))
 
 			echo '</div>'; // close layout item container
 		echo '</div>'; // close layout item wrapper
-
-		$itemNumber ++;
 	} // endwhile (have_rows('layout_item'))
 
 	echo '</div>';
