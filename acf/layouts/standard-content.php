@@ -27,4 +27,6 @@ if (have_rows('layout_item')) { $itemNumber = 1;
 
 		$itemNumber ++;
 	} // endwhile (have_rows('layout_item'))
+
+	echo '</div>';
 } // endif (have_rows('layout_item'))
