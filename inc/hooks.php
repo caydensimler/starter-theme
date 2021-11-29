@@ -1,6 +1,33 @@
 <?php
 // Guide to GP Hooks - https://docs.generatepress.com/article/hooks-visual-guide/
 
+// Header Code Embed
+function header_embeds() {
+	echo '<!-- Google Font - Overpass -->';
+	echo '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">';
+}
+add_action('wp_head', 'header_embeds');
+
+// Footer Code Embed
+function footer_embeds() {}
+// add_action('wp_footer', 'footer_embeds');
+
+
+// Google Analytics
+function add_google_analytics() { ?>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=TRACKING_ID_GOES_HERE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'TRACKING_ID_GOES_HERE');
+  </script>
+<?php }
+// add_action('wp_head', 'add_google_analytics');
+
+
 // Custom Font Filter
 add_filter( 'generate_typography_default_fonts', function( $fonts ) {
     $fonts[] = 'Overpass';
@@ -77,15 +104,15 @@ if (function_exists('have_rows')) {
 
 
 // Header Hooks
-add_action('generate_before_header', 'before_header');
-function before_header() {
-	get_template_part('acf/layouts/header/before-navigation');
-}
+// add_action('generate_before_header', 'before_header');
+// function before_header() {
+// 	get_template_part('acf/layouts/header/before-navigation');
+// }
 
-add_action('generate_after_header', 'after_header');
-function after_header(){
-	get_template_part('acf/layouts/header/after-navigation');
-}
+// add_action('generate_after_header', 'after_header');
+// function after_header(){
+// 	get_template_part('acf/layouts/header/after-navigation');
+// }
 
 
 
