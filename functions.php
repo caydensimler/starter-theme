@@ -126,50 +126,6 @@ function df_disable_comments_admin_bar() {
 add_action('init', 'df_disable_comments_admin_bar');
 
 
-// Add the Global Styles/Scripts to the Header and Footer via the wp_head and wp_footer hooks.
-if (function_exists('have_rows')) {
-  function add_to_header() {
-    if (have_rows( 'global_stylesscripts_header', 'option' )) {
-      while (have_rows( 'global_stylesscripts_header', 'option' )) {
-        the_row();
-        echo '<!--' . get_sub_field( 'stylescript_name' ) . '-->';
-        the_sub_field( 'stylescript' );
-      }
-    }
-  }
-  add_action('wp_head', 'add_to_header');
-
-  function add_to_footer() {
-    if (have_rows( 'global_stylesscripts_footer', 'option' )) {
-      while (have_rows( 'global_stylesscripts_footer', 'option' )) {
-        the_row();
-        echo '<!--' . get_sub_field( 'stylescript_name' ) . '-->';
-        the_sub_field( 'stylescript' );
-      }
-    }
-  }
-  add_action('wp_footer', 'add_to_footer');
-}
-
-if (function_exists('get_field')) {
-  if (get_field( 'ga_tracking_id', 'option' )) {
-    function add_google_analytics() { ?>
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-      <script async src="https://www.googletagmanager.com/gtag/js?id=<?php the_field( 'ga_tracking_id', 'option' ); ?>"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', '<?php the_field( 'ga_tracking_id', 'option' ); ?>');
-      </script>
-    <?php }
-
-    add_action('wp_head', 'add_google_analytics');
-  }
-}
-
-
 // Converts a string to a slug.
 function slug($str){
 	$str = strtolower(trim($str));
