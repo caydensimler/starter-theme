@@ -6,6 +6,9 @@
 else:
 	$settingsArray = generateBasicContent();
 	$imageLink = get_sub_field( 'links_to' );
+
+	$maxImageWidth = get_sub_field('max_image_width');
+	if ($maxImageWidth) { $imageSize = ' style="max-width: ' . $maxImageWidth . 'px;"'; } else { $imageSize = ''; }
 endif; ?>
 
 
@@ -15,7 +18,7 @@ endif; ?>
 		<?php if ($imageLink): ?>
 			<a href="<?php echo esc_url( $imageLink['url'] ); ?>" target="<?php echo esc_attr( $imageLink['target'] ); ?>" title="<?php echo esc_html( $imageLink['title'] ); ?>">
 		<?php endif; ?>
-			<img <?php echo $settingsArray['content-classes']; ?> <?php echo $settingsArray['content-styles']; ?> src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" title="<?php echo esc_attr( $image['title'] ); ?>" />
+			<img <?php echo $settingsArray['content-classes']; ?> <?php echo $settingsArray['content-styles']; ?> src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" title="<?php echo esc_attr( $image['title'] ); ?>" <?php echo $imageSize; ?> />
 		<?php if ($imageLink): ?>
 			</a>
 		<?php endif; ?>
