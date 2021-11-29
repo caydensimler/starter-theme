@@ -171,33 +171,6 @@
             ]
         },
         {
-            "key": "field_619592b5172e9",
-            "label": "Header Row",
-            "name": "header_row",
-            "type": "true_false",
-            "instructions": "Whether or not a header row is included in the layout to allow for a full-width grid item to act as a header for the entire layout.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_613a8cde9bc94",
-                        "operator": "==",
-                        "value": "standard"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 0,
-            "ui": 1,
-            "ui_on_text": "Enabled",
-            "ui_off_text": "Disabled"
-        },
-        {
             "key": "field_616923223394a",
             "label": "Masonry Columns",
             "name": "masonry_columns",
@@ -302,11 +275,11 @@
             ]
         },
         {
-            "key": "field_61453b9d4d12d",
-            "label": "Vertical Alignment",
-            "name": "vertical-alignment",
-            "type": "button_group",
-            "instructions": "Vertically align elements in the same row based on the tallest item in the row.",
+            "key": "field_61a55bd4c91d7",
+            "label": "Additional Options",
+            "name": "additional_options",
+            "type": "group",
+            "instructions": "",
             "required": 0,
             "conditional_logic": [
                 [
@@ -322,21 +295,78 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "unset": "Top",
-                "valign-center": "Center",
-                "valign-bottom": "Bottom"
-            },
-            "allow_null": 0,
-            "default_value": "",
-            "layout": "horizontal",
-            "return_format": "value"
+            "layout": "block",
+            "acfe_seamless_style": 1,
+            "acfe_group_modal": 0,
+            "sub_fields": [
+                {
+                    "key": "field_61453b9d4d12d",
+                    "label": "Vertical Alignment",
+                    "name": "vertical-alignment",
+                    "type": "button_group",
+                    "instructions": "Vertically align elements in the same row based on the tallest item in the row.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "unset": "Top",
+                        "valign-center": "Center",
+                        "valign-bottom": "Bottom"
+                    },
+                    "allow_null": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_619592b5172e9",
+                    "label": "Include Header Row",
+                    "name": "header_row",
+                    "type": "true_false",
+                    "instructions": "Whether or not a header row is included in the layout to allow for a full-width grid item to act as a header for the entire layout.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Enabled",
+                    "ui_off_text": "Disabled"
+                },
+                {
+                    "key": "field_61a55a861eb35",
+                    "label": "Centered Images",
+                    "name": "centered_images",
+                    "type": "true_false",
+                    "instructions": "Whether or not all images within the layout are centered.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                }
+            ]
         },
         {
-            "key": "field_6148eb66768bc",
-            "label": "Layout ID",
-            "name": "layout_id",
-            "type": "text",
+            "key": "field_61a55b7fc91d5",
+            "label": "Layout Attributes",
+            "name": "layout_attributes",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -345,49 +375,68 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_616915a4c7d97",
-            "label": "Layout Class(es)",
-            "name": "layout_classes",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_616915fac7d98",
-            "label": "Layout Item Class(es)",
-            "name": "layout_item_classes",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+            "layout": "block",
+            "acfe_seamless_style": 1,
+            "acfe_group_modal": 0,
+            "sub_fields": [
+                {
+                    "key": "field_6148eb66768bc",
+                    "label": "Layout ID",
+                    "name": "layout_id",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_616915a4c7d97",
+                    "label": "Layout Class(es)",
+                    "name": "layout_classes",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_616915fac7d98",
+                    "label": "Layout Item Class(es)",
+                    "name": "layout_item_classes",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "33",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -415,7 +464,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1638082140,
+    "modified": 1638227142,
     "acfe_categories": {
         "settings": "Settings"
     }
