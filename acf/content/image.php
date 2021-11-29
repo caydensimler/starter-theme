@@ -9,10 +9,10 @@ else:
 
 	$maxImageWidth = get_sub_field('max_image_width');
 	if ($maxImageWidth) { $imageSize = ' style="max-width: ' . $maxImageWidth . 'px; width: 100%;"'; } else { $imageSize = ''; }
-endif; ?>
+endif;
 
+$image = get_sub_field( 'image' ); ?>
 
-<?php $image = get_sub_field( 'image' ); ?>
 <?php if ( $image ) : ?>
 	<div <?php echo $settingsArray['wrapper-classes']; ?> <?php echo $settingsArray['data-attributes']; ?>>
 		<?php if ($imageLink): ?>
