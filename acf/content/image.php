@@ -8,7 +8,7 @@ else:
 	$imageLink = get_sub_field( 'links_to' );
 
 	$maxImageWidth = get_sub_field('max_image_width');
-	if ($maxImageWidth) { $imageSize = ' style="max-width: ' . $maxImageWidth . 'px;"'; } else { $imageSize = ''; }
+	if ($maxImageWidth) { $imageSize = ' style="max-width: ' . $maxImageWidth . 'px; width: 100%;"'; } else { $imageSize = ''; }
 endif; ?>
 
 
