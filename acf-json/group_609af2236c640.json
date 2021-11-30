@@ -203,30 +203,25 @@
                             "display": "block",
                             "sub_fields": [
                                 {
-                                    "key": "field_6171c1a1b378d",
-                                    "label": "Image",
-                                    "name": "image",
-                                    "type": "image",
+                                    "key": "field_61a558f5cdc3a",
+                                    "label": "Max Image Width",
+                                    "name": "max_image_width",
+                                    "type": "number",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "75",
+                                        "width": "25",
                                         "class": "",
                                         "id": ""
                                     },
-                                    "uploader": "",
-                                    "acfe_thumbnail": 0,
-                                    "return_format": "array",
-                                    "preview_size": "full",
-                                    "min_width": "",
-                                    "min_height": "",
-                                    "min_size": "",
-                                    "max_width": "",
-                                    "max_height": "",
-                                    "max_size": "",
-                                    "mime_types": "",
-                                    "library": "all"
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "px",
+                                    "min": "",
+                                    "max": "",
+                                    "step": ""
                                 },
                                 {
                                     "key": "field_6178d4b647ee8",
@@ -237,11 +232,37 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "25",
+                                        "width": "75",
                                         "class": "",
                                         "id": ""
                                     },
                                     "return_format": "array"
+                                },
+                                {
+                                    "key": "field_6171c1a1b378d",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "uploader": "",
+                                    "acfe_thumbnail": 0,
+                                    "return_format": "array",
+                                    "preview_size": "medium_large",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "library": "all"
                                 }
                             ],
                             "min": "",
@@ -1471,7 +1492,7 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1638218772,
+    "modified": 1638226224,
     "acfe_categories": {
         "layout": "Layout"
     }

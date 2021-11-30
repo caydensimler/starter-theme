@@ -6,16 +6,19 @@
 else:
 	$settingsArray = generateBasicContent();
 	$imageLink = get_sub_field( 'links_to' );
-endif; ?>
 
+	$maxImageWidth = get_sub_field('max_image_width');
+	if ($maxImageWidth) { $imageSize = ' style="max-width: ' . $maxImageWidth . 'px; width: 100%;"'; } else { $imageSize = ''; }
+endif;
 
-<?php $image = get_sub_field( 'image' ); ?>
+$image = get_sub_field( 'image' ); ?>
+
 <?php if ( $image ) : ?>
 	<div <?php echo $settingsArray['wrapper-classes']; ?> <?php echo $settingsArray['data-attributes']; ?>>
 		<?php if ($imageLink): ?>
 			<a href="<?php echo esc_url( $imageLink['url'] ); ?>" target="<?php echo esc_attr( $imageLink['target'] ); ?>" title="<?php echo esc_html( $imageLink['title'] ); ?>">
 		<?php endif; ?>
-			<img <?php echo $settingsArray['content-classes']; ?> <?php echo $settingsArray['content-styles']; ?> src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" title="<?php echo esc_attr( $image['title'] ); ?>" />
+			<img <?php echo $settingsArray['content-classes']; ?> <?php echo $settingsArray['content-styles']; ?> src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>" title="<?php echo esc_attr( $image['title'] ); ?>" <?php echo $imageSize; ?> />
 		<?php if ($imageLink): ?>
 			</a>
 		<?php endif; ?>

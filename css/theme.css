@@ -371,6 +371,7 @@ body.single #content { padding-top: 50px; padding-bottom: 50px; }
 
 /* Image */
 .image > div { max-width: 100%; }
+.centered-images .image { text-align: center; }
 
 /* Link */
 .link button { padding: 0; }

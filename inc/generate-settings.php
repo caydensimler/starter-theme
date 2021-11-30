@@ -64,18 +64,20 @@ function generateLayout($settings) {
 
   if ($gridType == 'standard') {
     if (have_rows('standard_columns')) { 
-        while (have_rows('standard_columns')) { the_row();
-            $layoutStructure = get_sub_field( 'desktop' ) . ' ' . get_sub_field('tablet') . ' ' . get_sub_field('mobile');
-        }
+      while (have_rows('standard_columns')) { the_row();
+          $layoutStructure = get_sub_field( 'desktop' ) . ' ' . get_sub_field('tablet') . ' ' . get_sub_field('mobile');
+      }
     }
 
     $contentClasses .= 'layout-item ';
-    if (get_sub_field('vertical-alignment') !== 'unset') {
-        $contentClasses .= get_sub_field('vertical-alignment') . ' ';
-    }
-
     $wrapperClasses .= 'layout grid-display ' . $layoutStructure . ' ';
-    if (get_sub_field('header_row')) {$wrapperClasses .= 'header-row '; }
+
+    if (have_rows('additional_options')) : while (have_rows('additional_options')) : the_row();
+    	if (get_sub_field('vertical-alignment') !== 'unset') { $contentClasses .= get_sub_field('vertical-alignment') . ' '; }
+    	if (get_sub_field('header_row')) { $wrapperClasses .= 'header-row '; }
+    	if (get_sub_field('centered_images')) { $wrapperClasses .= 'centered-images '; }
+    endwhile; endif;
+    
   } elseif ($gridType == 'masonry') {
     if (have_rows('masonry_columns')) { 
         while (have_rows('masonry_columns')) { the_row();
@@ -89,11 +91,12 @@ function generateLayout($settings) {
     $contentClasses .= 'masonry-item ';
   }
 
-  if (get_sub_field('layout_id')) { $layoutID = 'id="' . get_sub_field('layout_id') . '"'; } else {
-    $layoutID = '';
-  }
-  if (get_sub_field('layout_classes')) { $wrapperClasses .= get_sub_field('layout_classes') . ' '; }
-  if (get_sub_field('layout_item_classes')) { $contentClasses .= get_sub_field('layout_item_classes') . ' '; }
+  if ( have_rows( 'layout_attributes' ) ) : while ( have_rows( 'layout_attributes' ) ) : the_row();
+  	if (get_sub_field('layout_id')) { $layoutID = 'id="' . get_sub_field('layout_id') . '"'; } else { $layoutID = ''; }
+  	if (get_sub_field('layout_classes')) { $wrapperClasses .= get_sub_field('layout_classes') . ' '; }
+  	if (get_sub_field('layout_item_classes')) { $contentClasses .= get_sub_field('layout_item_classes') . ' '; }
+  endwhile; endif;
+  
 
   // Generate layout and layout wrapper settings
 	$layoutArray['content-classes'] = rtrim($contentClasses) . '"';
